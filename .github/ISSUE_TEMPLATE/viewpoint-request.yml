@@ -1,0 +1,25 @@
+name: Design question request / 観点の依頼
+description: Ask for a new design question in an existing genre's playbook.
+title: "[Question] "
+labels: ["viewpoint-request"]
+body:
+  - type: input
+    id: genre
+    attributes:
+      label: Genre / ジャンル
+      placeholder: e.g. roguelite, deckbuilding roguelike
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: The design question / 設計の問い
+      description: What are you trying to decide?
+      placeholder: e.g. Should card removal be cheap or expensive?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Your situation / いまの状況
+      description: Optional. What you have tried, and what is making the call hard.
