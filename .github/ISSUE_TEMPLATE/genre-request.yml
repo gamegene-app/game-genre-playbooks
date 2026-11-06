@@ -1,0 +1,25 @@
+name: Genre request / ジャンルの依頼
+description: Ask for a playbook for a new genre.
+title: "[Genre] "
+labels: ["genre-request"]
+body:
+  - type: input
+    id: genre
+    attributes:
+      label: Genre / ジャンル
+      placeholder: e.g. colony sim, metroidvania, auto-battler
+    validations:
+      required: true
+  - type: textarea
+    id: decisions
+    attributes:
+      label: Design decisions you are stuck on / 迷っている設計判断
+      description: The calls you face in this genre. These shape the first questions in the playbook.
+      placeholder: e.g. How harsh should failure be? How do I keep the late game from getting automated away?
+    validations:
+      required: true
+  - type: textarea
+    id: games
+    attributes:
+      label: Games you would compare against / 比べたい作品
+      description: Optional. Games whose developers' decisions you would like to see.
