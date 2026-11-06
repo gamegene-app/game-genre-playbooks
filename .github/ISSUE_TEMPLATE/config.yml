@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: A specific game or research question / 個別の作品・調査の依頼
+    url: https://gamegene.app/feedback?panel=submit
+    about: Send it to GameGene directly. It goes into the research queue and is usually handled sooner. / GameGene の調査依頼へ。こちらのほうが早く対応できます。
