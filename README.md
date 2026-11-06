@@ -1,27 +1,66 @@
 # game-genre-playbooks
 
-Genre-by-genre game design playbooks for AI agents (Claude Code, Codex, Cursor and others that read skills), built from what developers said they decided and threw away, with sources.
+**Stuck on a design decision in your genre? See how shipped games in that genre decided it, and what they threw away.**
 
-> **Status: in preparation.** No skills are published yet.
+Making a game in a crowded genre means making the same calls again and again. Should a broken combo stay in? How much of the next fight should the player see? Is my twist really new, or just a reskin? An AI assistant will give you a sensible general answer. What you usually need is something else: which games in *your* genre faced the same call, what their developers chose, why, and what they cut.
 
-## What this is
+These playbooks give your AI agent (Claude Code, Codex, Cursor and others that read skills) exactly that, one genre at a time, with every case traced to a talk, interview or postmortem.
 
-General game design skills already cover the basics well: core loops, economy, difficulty, onboarding, playtesting. This repository does not repeat them.
+> **Status: in preparation.** The first playbook is not published yet.
 
-Each playbook here focuses on **one genre**. For each design question in that genre, it points to the decisions shipped games made, the reasons their developers gave, and the ideas they cut, each traced to a talk, interview or postmortem.
+## When to reach for a playbook
 
-## Planned genres
+- You are choosing between two mechanics and want precedents, not opinions
+- You suspect your idea already exists in your genre and want to check
+- You want to stand out without making "a worse version of that famous game"
+- You need to explain a design call to your team, a publisher or players, with a source to point to
 
-1. **Roguelites**, including **deckbuilding roguelikes**. First, because that is where the records are thickest.
+## What you get
+
+- The design questions that matter in that genre, in the order you hit them
+- For each question, the games that faced it, what their developers decided, and the ideas they dropped
+- The design principles (joseki) behind those decisions, with who first stated them, and the games that deliberately broke them
+- Sources for every case, so you can read the original and decide for yourself
+
+General game design (core loops, economy, difficulty, onboarding, playtesting) is already well covered by other skills. These playbooks do not repeat it.
+
+## Genres
+
+1. **Roguelites, including deckbuilding roguelikes.** First, because the records are thickest here.
 2. More genres are added only once their records are complete enough.
+
+## Where the data comes from
+
+Everything here is generated from [**GameGene**](https://gamegene.app/about), a sourced database of game design lineage. GameGene records where a mechanic came from and where it went, in the developers' own words, and keeps a developer's statement apart from a critic's reading.
+
+A playbook carries the questions and the principles. For the full cases and sources, connect the [**GameGene MCP server**](https://gamegene.app/mcp) to your AI app (a free account is enough). With it connected, your agent pulls the cases while it reviews your design.
+
+## Requests
+
+| What you want | Where to ask |
+|---|---|
+| A new **genre** playbook | [Open an issue here](../../issues/new?template=genre-request.yml) |
+| A new **design question** or viewpoint for an existing genre | [Open an issue here](../../issues/new?template=viewpoint-request.yml) |
+| A specific **game**, or a **research question** about one | [Send a research request on GameGene](https://gamegene.app/feedback?panel=submit). It goes straight into GameGene's research queue, so it is usually handled sooner than an issue here, and the result reaches every playbook that uses it |
 
 ## How it works
 
-The playbooks are generated from [GameGene](https://gamegene.app/about), a sourced database of game design lineage. A playbook gives you the questions to ask and the name of each design principle with who first stated it. For the full cases and sources, connect the [GameGene MCP server](https://gamegene.app/mcp) (free account).
+The playbooks are generated from GameGene's database on a schedule, without an LLM, and committed here only when something changed. No skill in this repository calls the network on its own; the cases come from the GameGene MCP server when you connect it.
 
 ---
 
-ジャンルごとのゲームデザインの作戦帳です。一般的な観点は扱わず、1つのジャンルに絞って、作り手が何を決め、何を捨てたかを出典つきで引きます。準備中で、最初はローグライト（デッキ構築ローグライクを含む）から公開します。
+## 日本語
+
+**ジャンルの設計判断で迷ったら、同じジャンルの作品がどう決め、何を捨てたかを見る。**
+
+人の多いジャンルでは、同じ判断を何度も迫られます。壊れたコンボを残すか。次の戦いをどこまで見せるか。自分のひねりは新しいのか、見た目を替えただけか。AI に聞けば一般論は返ってきます。けれど本当に要るのは、自分のジャンルで同じ判断をした作品と、その作り手が何を選び、なぜそうし、何を削ったかです。
+
+この作戦帳は、それをジャンルごとに、講演・インタビュー・ポストモーテムの出典つきで AI に渡します。
+
+- データの出どころは [GameGene](https://gamegene.app/about)。全部の事例と出典は [GameGene MCP](https://gamegene.app/mcp)（無料のアカウントで使えます）で引けます
+- 新しいジャンルや観点の依頼は、このリポジトリの Issue へ
+- 個別の作品や調査の依頼は [GameGene の調査依頼](https://gamegene.app/feedback?panel=submit) へ。GameGene の調査の順番に直接入るので、こちらのほうが早く対応できます
+- 最初はローグライト（デッキ構築ローグライクを含む）から。準備中です
 
 ## License
 
