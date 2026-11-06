@@ -1,5 +1,12 @@
 # game-genre-playbooks
 
+[![Status: in preparation](https://img.shields.io/badge/status-in%20preparation-lightgrey)](#genres)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Data: GameGene](https://img.shields.io/badge/data-GameGene-c8553d)](https://gamegene.app/about)
+[![Connect the GameGene MCP](https://img.shields.io/badge/MCP-connect%20GameGene-6e56cf)](https://gamegene.app/mcp)
+[![mcptry](https://mcptry.com/badge/app.gamegene/gamegene)](https://mcptry.com/servers/app.gamegene/gamegene)
+[![GameGene MCP connector – tool definition quality and endpoint health on Glama](https://glama.ai/mcp/connectors/app.gamegene/gamegene/badges/score.svg)](https://glama.ai/mcp/connectors/app.gamegene/gamegene)
+
 **Stuck on a design decision in your genre? See how shipped games in that genre decided it, and what they threw away.**
 
 Making a game in a crowded genre means making the same calls again and again. Should a broken combo stay in? How much of the next fight should the player see? Is my twist really new, or just a reskin? An AI assistant will give you a sensible general answer. What you usually need is something else: which games in *your* genre faced the same call, what their developers chose, why, and what they cut.
