@@ -7,9 +7,9 @@
 [![mcptry](https://mcptry.com/badge/app.gamegene/gamegene)](https://mcptry.com/servers/app.gamegene/gamegene)
 [![GameGene MCP connector – tool definition quality and endpoint health on Glama](https://glama.ai/mcp/connectors/app.gamegene/gamegene/badges/score.svg)](https://glama.ai/mcp/connectors/app.gamegene/gamegene)
 
-**Stuck on a design decision in your genre? See how shipped games in that genre decided it, and what they threw away.**
+**Stuck on a design call in your genre? Get the answer other developers in that genre gave, and what it cost them.**
 
-Making a game in a crowded genre means making the same calls again and again. Should a broken combo stay in? How much of the next fight should the player see? Is my twist really new, or just a reskin? An AI assistant will give you a sensible general answer. What you usually need is something else: which games in *your* genre faced the same call, what their developers chose, why, and what they cut.
+Making a game in a crowded genre means making the same calls again and again. Should a card that never gets stronger be retuned or cut? How much of the next fight should the player see? Is my twist new, or a reskin? An AI assistant will give you a sensible general answer. What you usually need is something else: which shipped games faced the same call, what their developers chose, why, and what they gave up.
 
 These playbooks give your AI agent (Claude Code, Codex, Cursor and others that read skills) exactly that, one genre at a time, with every case traced to a talk, interview or postmortem.
 
@@ -30,21 +30,35 @@ cp -R game-genre-playbooks/skills/roguelite <your-project>/.claude/skills/roguel
 
 Other agents that read `SKILL.md` folders (Codex, Cursor and others) take the same folder. Then ask your agent about a design call, for example "Should my deckbuilder let players skip card rewards?"
 
-## When to reach for a playbook
+## What a game maker gets
 
-- You are choosing between two mechanics and want precedents, not opinions
-- You suspect your idea already exists in your genre and want to check
-- You want to stand out without making "a worse version of that famous game"
-- You need to explain a design call to your team, a publisher or players, with a source to point to
+From a solo developer who used the roguelite playbook on their own deckbuilder ([full write-up](../../issues/2)):
 
-## What you get
+- **Less time going in circles.** A card that numbers could not fix stopped being an endless tuning loop once the answer came back that Balatro's developer cut cards more often than he retuned them.
+- **The cost of the road not taken, before you build it.** Into the Breach's cap on battle length came with its downside: it keeps fights moving, and it punishes slow, careful play.
+- **A reason you can point to.** Each decision rests on a named game, a named developer and a source, so you can explain it to your team, a publisher, players, or your future self.
+- **"Not on record" is an answer too.** When nothing is recorded, the playbook says so instead of inventing a case. That marks the spot you will have to test yourself, and maybe where you are doing something new.
+- **Words for your game's core.** Principles such as "information horizon" and "input vs output randomness" turn a hunch about why your battles work into something you can write in a design doc.
+- **No digging.** You do not have to hunt through talks and postmortems. Ask in your own language; the agent picks up the playbook without being told its name.
 
-- The design questions that matter in that genre, in the order you hit them
-- For each question, the games that faced it, what their developers decided, and the ideas they dropped
-- The design principles (joseki) behind those decisions, with who first stated them, and the games that deliberately broke them
-- Sources for every case, so you can read the original and decide for yourself
+The playbook adds sourced precedents to a decision. Your own playtests and numbers still decide it.
 
-General game design (core loops, economy, difficulty, onboarding, playtesting) is already well covered by other skills. These playbooks do not repeat it.
+## Does it help? (measured)
+
+The same developer had Claude Code answer 10 design questions from their project, 3 times each, under each condition. A separate Claude graded the answers without knowing the condition ([method and details](../../issues/3)).
+
+| Condition | Score (0–1) |
+|---|---|
+| No playbook, no GameGene | 0.31 |
+| GameGene MCP only | 0.74 |
+| This playbook | 0.92 |
+| This playbook + GameGene MCP | 0.94 |
+
+- Without a source of precedents, every precedent-related item scored zero
+- The playbook alone used under half the tokens of the MCP alone
+- No condition produced an invented precedent in the graded answers
+
+The grader is the same model family as the answerer and each condition has 30 answers, so read the numbers as a rough guide. The playbook rows are the current SKILL.md, revised after this test.
 
 ## Genres
 
@@ -55,7 +69,7 @@ General game design (core loops, economy, difficulty, onboarding, playtesting) i
 
 Everything here is generated from [**GameGene**](https://gamegene.app/about), a sourced database of game design lineage. GameGene records where a mechanic came from and where it went, in the developers' own words, and keeps a developer's statement apart from a critic's reading.
 
-A playbook carries the questions and the principles. For the full cases and sources, connect the [**GameGene MCP server**](https://gamegene.app/mcp) to your AI app (a free account is enough). With it connected, your agent pulls the cases while it reviews your design.
+A playbook carries the questions, the principles and a few hand-picked cases for each. For the full set of cases, records that arrived after the last update, and games in other genres, connect the [**GameGene MCP server**](https://gamegene.app/mcp) to your AI app (a free account is enough).
 
 ## Requests
 
@@ -67,22 +81,41 @@ A playbook carries the questions and the principles. For the full cases and sour
 
 ## How it works
 
-The playbooks are generated from GameGene's database on a schedule, without an LLM, and committed here only when something changed. No skill in this repository calls the network on its own; the cases come from the GameGene MCP server when you connect it.
+The playbooks are generated from GameGene's database, without an LLM, and committed here only when something changed. No skill in this repository calls the network on its own.
+
+With the GameGene MCP server connected, the playbook tells your agent to use it for two things only: filling a question's "not on record yet" gaps, and finding games in other genres that share the same mechanism. Each question lists GameGene entry points (principle and gene slugs), so the agent can go straight to the records instead of searching.
 
 ---
 
 ## 日本語
 
-**ジャンルの設計判断で迷ったら、同じジャンルの作品がどう決め、何を捨てたかを見る。**
+**ジャンルの設計判断で迷ったら、同じジャンルの作り手が出した答えと、その代償を手元に。**
 
-人の多いジャンルでは、同じ判断を何度も迫られます。壊れたコンボを残すか。次の戦いをどこまで見せるか。自分のひねりは新しいのか、見た目を替えただけか。AI に聞けば一般論は返ってきます。けれど本当に要るのは、自分のジャンルで同じ判断をした作品と、その作り手が何を選び、なぜそうし、何を削ったかです。
+人の多いジャンルでは、同じ判断を何度も迫られます。数値を直しても強くならない札は、直すか外すか。次の戦いをどこまで見せるか。自分のひねりは新しいのか、見た目を替えただけか。AI に聞けば一般論は返ってきます。けれど本当に要るのは、同じ判断をした作品と、その作り手が何を選び、なぜそうし、何を捨てたかです。この作戦帳は、それをジャンルごとに、講演・インタビュー・ポストモーテムの出典つきで AI に渡します。
 
-この作戦帳は、それをジャンルごとに、講演・インタビュー・ポストモーテムの出典つきで AI に渡します。
+### 作り手が受け取るもの
 
-- データの出どころは [GameGene](https://gamegene.app/about)。全部の事例と出典は [GameGene MCP](https://gamegene.app/mcp)（無料のアカウントで使えます）で引けます
-- 新しいジャンルや観点の依頼は、このリポジトリの Issue へ
-- 個別の作品や調査の依頼は [GameGene の調査依頼](https://gamegene.app/feedback?panel=submit) へ。GameGene の調査の順番に直接入るので、こちらのほうが早く対応できます
-- 最初の1本は [ローグライト（デッキ構築ローグライクを含む）](skills/roguelite/SKILL.md) で、問いは16本です。入れ方は上の Install（`skills/roguelite` を `~/.claude/skills/` へ写す。1つのプロジェクトだけで使うなら `<プロジェクト>/.claude/skills/` へ）
+自分のデッキ構築ローグライクで使い込んだソロ開発者の声から（[全文](../../issues/2)）:
+
+- **堂々巡りが短くなる。** 数値を直しても強くならない札に悩んでいたとき、«Balatro の作り手は数値を直すより外すことが多かった» と返ってきて、直すか外すかを1枚ずつ決める方針に切り替えられた
+- **選ばなかった案の代償が、作る前に分かる。** Into the Breach が戦闘に上限を置いた判断は、«戦いは進むが、慎重に遊ぶ人を罰する» という代償と一緒に届いた
+- **決めた理由を人に説明できる。** 作品・作り手・出典を指せるので、チームやパブリッシャー、遊ぶ人、未来の自分に話せる
+- **«記録が無い» も答えになる。** 作り話をせず «まだ記録に無い» と言うので、そこが自分で確かめる場所だと分かる
+- **自分のゲームの芯を言葉にできる。** «情報の地平線» «入力の運と出力の運» のような定石の言葉で、なぜ面白いのかを設計書に書ける
+- **調べ物が要らない。** 日本語で相談するだけで、スキル名を出さなくても前例が添えられる
+
+最後に決めるのは、自分のゲームの試遊と数字です。作戦帳はその判断に出典つきの前例を添えます。
+
+### 効果の計測
+
+同じ開発者が、自分のゲームの設計判断10問を各条件で3回ずつ答えさせ、条件を伏せて別の Claude に採点させました（[方法と詳細](../../issues/3)）。前例の情報源が無いと 0.31、GameGene MCP だけで 0.74、この作戦帳で 0.92、作戦帳と MCP で 0.94 でした。作戦帳だけのときのトークンは MCP だけのときの半分以下で、どの条件でも作り話の前例は出ませんでした。採点者は答える側と同じ系統のモデルで、1条件30回答の規模なので、目安として読んでください。
+
+### 入れ方と依頼
+
+- 入れ方は上の Install。`skills/roguelite` を `~/.claude/skills/` へ写す（1つのプロジェクトだけなら `<プロジェクト>/.claude/skills/` へ）
+- 最初の1本は [ローグライト（デッキ構築ローグライクを含む）](skills/roguelite/SKILL.md) で、問いは16本
+- データの出どころは [GameGene](https://gamegene.app/about)。全部の事例と出典は [GameGene MCP](https://gamegene.app/mcp)（無料のアカウントで使えます）で引ける
+- 新しいジャンルや観点の依頼は、このリポジトリの Issue へ。個別の作品や調査の依頼は [GameGene の調査依頼](https://gamegene.app/feedback?panel=submit) へ（GameGene の調査の順番に直接入るので、こちらのほうが早い）
 
 ## License
 
