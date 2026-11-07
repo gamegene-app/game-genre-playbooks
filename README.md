@@ -55,10 +55,10 @@ The same developer had Claude Code answer 10 design questions from their project
 | This playbook + GameGene MCP | 0.94 |
 
 - Without a source of precedents, every precedent-related item scored zero
-- The playbook alone used under half the tokens of the MCP alone
+- The playbook alone used about half the tokens of the MCP alone
 - No condition produced an invented precedent in the graded answers
 
-The grader is the same model family as the answerer and each condition has 30 answers, so read the numbers as a rough guide. The playbook rows are the current SKILL.md, revised after this test.
+The grader is the same model family as the answerer and each condition has 30 answers, so read the numbers as a rough guide. The two playbook rows are the current SKILL.md, measured in a second run on the same questions; the other two rows are from the first run.
 
 ## Genres
 
@@ -108,7 +108,7 @@ With the GameGene MCP server connected, the playbook tells your agent to use it 
 
 ### 効果の計測
 
-同じ開発者が、自分のゲームの設計判断10問を各条件で3回ずつ答えさせ、条件を伏せて別の Claude に採点させました（[方法と詳細](../../issues/3)）。前例の情報源が無いと 0.31、GameGene MCP だけで 0.74、この作戦帳で 0.92、作戦帳と MCP で 0.94 でした。作戦帳だけのときのトークンは MCP だけのときの半分以下で、どの条件でも作り話の前例は出ませんでした。採点者は答える側と同じ系統のモデルで、1条件30回答の規模なので、目安として読んでください。
+同じ開発者が、自分のゲームの設計判断10問を各条件で3回ずつ答えさせ、条件を伏せて別の Claude に採点させました（[方法と詳細](../../issues/3)）。前例の情報源が無いと 0.31、GameGene MCP だけで 0.74、この作戦帳で 0.92、作戦帳と MCP で 0.94 でした。作戦帳だけのときのトークンは MCP だけのときの半分ほどで、どの条件でも作り話の前例は出ませんでした。採点者は答える側と同じ系統のモデルで、1条件30回答の規模なので、目安として読んでください。作戦帳の2行は今の SKILL.md を同じ問いで測り直した値で、ほかの2行は最初の計測の値です。
 
 ### 入れ方と依頼
 
