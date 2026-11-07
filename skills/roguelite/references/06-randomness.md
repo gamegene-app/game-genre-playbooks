@@ -1,5 +1,7 @@
 # Where should randomness live?
 
+**Also matches:** RNG, luck, hit chance, input vs output randomness, fairness
+
 **What to weigh:** Randomness before the decision (what you are dealt) gives variety; randomness after it (whether the attack lands) feels unfair.
 
 ### Principle: Reduce output randomness
@@ -43,6 +45,8 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 ## 日本語
 
 # 運をどこに残すか
+
+**この言葉でも当たる:** 乱数, 運, 命中率, 入力の運と出力の運, 公平
 
 **何を量るか:** 決める前の運 (何が配られるか) は変化になる。決めた後の運 (当たるかどうか) は理不尽に感じられる。
 

@@ -1,5 +1,7 @@
 # Should broken combos be allowed to stay?
 
+**Also matches:** overpowered, infinite combo, dominant strategy, one best deck, nerf, a card numbers cannot fix, cutting a card
+
 **What to weigh:** In a single-player run, overpowered builds can be the reward; they become a problem when one easy build replaces all the others.
 
 ### Principle: A solo run can afford broken power
@@ -48,6 +50,10 @@ Mark Cooke names as a design goal the moment when the one piece you were hoping 
 - Source: [Shiny Shoe's CEO Talks Monster Train, Inkbound, & Creating "Poggable Moments" For Players](https://screenrant.com/inkbound-monster-train-mark-cooke-interview/) (Screen Rant, 2024)
 - GameGene: https://gamegene.app/en/library/records/claims/2d4a32cc-91ed-4e3b-9e6c-ae3508db4200
 
+### Related cases filed under other questions
+
+- Rogue Legacy 2: the opposite problem: options too weak to pick, fixed by attaching a payoff → [16 What to do with cards and options that almost nobody uses?](16-unused-options.md)
+
 All cases, related games and newer records: the GameGene MCP server (`gamegene_joseki`, `gamegene_claims`).
 
 ---
@@ -55,6 +61,8 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 ## 日本語
 
 # 壊れたコンボを残すか
+
+**この言葉でも当たる:** 壊れ, 無限コンボ, 最強デッキ, ナーフ, 数値で直らない, 外す, 作り直す
 
 **何を量るか:** 1人で遊ぶ run では、強すぎる組み合わせがご褒美になりうる。どの回も同じ1つの楽な組み方になると、問題になる。
 
@@ -103,5 +111,9 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - この定石の逆を選んだ (`solo-run-permits-broken-power`)
 - 出典: [Shiny Shoe's CEO Talks Monster Train, Inkbound, & Creating "Poggable Moments" For Players](https://screenrant.com/inkbound-monster-train-mark-cooke-interview/) (Screen Rant, 2024)
 - GameGene: https://gamegene.app/library/records/claims/2d4a32cc-91ed-4e3b-9e6c-ae3508db4200
+
+### ほかの問いに置いた関係する事例
+
+- Rogue Legacy 2: 逆の問題、弱すぎて選ばれない選択肢に見返りを付けて直した → [16 ほとんど使われない札や選択肢をどうするか](16-unused-options.md)
 
 全部の事例・関連作・新しい記録は GameGene の MCP (`gamegene_joseki`・`gamegene_claims`) で引ける。

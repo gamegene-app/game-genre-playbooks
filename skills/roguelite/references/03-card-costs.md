@@ -1,5 +1,7 @@
 # How does the player pay for cards?
 
+**Also matches:** energy, mana, action points, resource per turn
+
 **What to weigh:** The cost system decides whether a turn is a puzzle over a hand or just playing everything you drew.
 
 ### Shipped games that faced this call
@@ -34,6 +36,8 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 ## 日本語
 
 # 札のコストを何で払わせるか
+
+**この言葉でも当たる:** エネルギー, マナ, コスト, 手番の資源
 
 **何を量るか:** コストの仕組みで、1手番が手札の組み立てになるか、引いた札を全部出すだけになるかが決まる。
 

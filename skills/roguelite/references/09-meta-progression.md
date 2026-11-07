@@ -1,5 +1,7 @@
 # What should carry over between runs?
 
+**Also matches:** meta progression, unlocks, permanent upgrades, carry-over
+
 **What to weigh:** Carry-over softens the reset and gives each death a purpose, at the cost of some of the roguelike's clean slate.
 
 ### Shipped games that faced this call
@@ -34,6 +36,8 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 ## 日本語
 
 # run と run のあいだに何を持ち越させるか
+
+**この言葉でも当たる:** 恒久の成長, アンロック, 持ち越し, メタ進行
 
 **何を量るか:** 持ち越しは振り出しへの戻りを和らげ、死ぬたびに意味を持たせる。そのぶん、毎回まっさらから始まる良さは減る。
 

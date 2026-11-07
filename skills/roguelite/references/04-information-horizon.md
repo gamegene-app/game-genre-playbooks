@@ -1,5 +1,7 @@
 # How much of the enemy's next move should the player see?
 
+**Also matches:** enemy intent, telegraphing, attack preview, countdown timers
+
 **What to weigh:** Showing intent turns a guess into a solvable problem, but every attack must then stay readable at a glance.
 
 ### Principle: Set the information horizon
@@ -28,13 +30,12 @@ Anthony Giovannetti says enemy intents were not in the original design. Monsters
 - Source: [MA 8: Anthony Giovannetti on Mastery and Learning through Games](https://maintainersanonymous.com/games/) (Maintainers Anonymous)
 - GameGene: https://gamegene.app/en/library/records/claims/cdb7785b-e82b-4f35-804c-ff2867dfe054
 
-#### Into the Breach
+#### Wildfrost
 
-Matthew Davis wanted each battle to read like a small chess puzzle, where you can see who attacks whom without checking the pieces. Radius threat ranges on enemy artillery and clover-shaped player weapons made that impossible, so attacks were cut down to straight lines up, down, left or right, and enemy units were kept fixed. Justin Ma says the need for a UI clear at a glance forced the game to be small and simple.
+Gaz says the pair kept returning to a dynamic counter system where each action counts as a turn and both sides attack on a turn timer; Will Lewis says a physical card game helped iron out some of it. In a 2022 demo, standard actions removed one counter from every unit, and cards could delay enemies or hasten allies.
 
-- Source: [Design Lessons from FTL and Into the Breach (TGDF 2018), 8:02-10:21](https://www.youtube.com/watch?v=4LDazcvZwzI&t=482s) (IGDA Taiwan (YouTube))
-- Source: [Into the Breach Design Postmortem (GDC 2019), 22:34-24:40](https://www.youtube.com/watch?v=s_I07Iq_2XM&t=1354s) (GDC (YouTube), 2019)
-- GameGene: https://gamegene.app/en/library/records/claims/38d1c8c6-b0cd-4fed-81c9-ed89f442b268
+- Source: [When We Made… Wildfrost](https://mcvuk.com/business-news/when-we-made-wildfrost/) (MCV/DEVELOP, 2023)
+- GameGene: https://gamegene.app/en/library/records/claims/322ea322-114b-4835-8d76-53b17bca7195
 
 All cases, related games and newer records: the GameGene MCP server (`gamegene_joseki`, `gamegene_claims`).
 
@@ -43,6 +44,8 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 ## 日本語
 
 # 敵の次の手をどこまで見せるか
+
+**この言葉でも当たる:** 敵の意図, 予告, 次の行動の表示, カウンター
 
 **何を量るか:** 次の手を見せると、当て推量が解ける問題に変わる。代わりに、どの攻撃も一目で読めることが要る。
 
@@ -72,12 +75,11 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - 出典: [MA 8: Anthony Giovannetti on Mastery and Learning through Games](https://maintainersanonymous.com/games/) (Maintainers Anonymous)
 - GameGene: https://gamegene.app/library/records/claims/cdb7785b-e82b-4f35-804c-ff2867dfe054
 
-#### Into the Breach
+#### Wildfrost
 
-マシュー・デイヴィスは、駒を確かめなくても誰が誰を撃つか見えるチェスのように、戦闘を小さな詰め問題にしたかった。敵の砲兵の円い射程や自機の四つ葉の形の攻撃ではそれが読めないので、攻撃を上下左右の直線に絞り、敵の性能も固定した。ジャスティン・マも、一目で分かる画面の必要がゲームを小さく単純にしたと語る。
+ガジターは、行動ひとつが1手になり敵も味方も手数のタイマーで攻撃する «動くカウンター» の案に2人で何度も戻ったと語り、ルイスは紙のカードゲームでその一部を詰めたと語る。2022年の体験版では標準の行動ごとに全ユニットの残り手数が1つ減り、カードで敵を遅らせ味方を早められた。
 
-- 出典: [Design Lessons from FTL and Into the Breach (TGDF 2018), 8:02-10:21](https://www.youtube.com/watch?v=4LDazcvZwzI&t=482s) (IGDA Taiwan (YouTube))
-- 出典: [Into the Breach Design Postmortem (GDC 2019), 22:34-24:40](https://www.youtube.com/watch?v=s_I07Iq_2XM&t=1354s) (GDC (YouTube), 2019)
-- GameGene: https://gamegene.app/library/records/claims/38d1c8c6-b0cd-4fed-81c9-ed89f442b268
+- 出典: [When We Made… Wildfrost](https://mcvuk.com/business-news/when-we-made-wildfrost/) (MCV/DEVELOP, 2023)
+- GameGene: https://gamegene.app/library/records/claims/322ea322-114b-4835-8d76-53b17bca7195
 
 全部の事例・関連作・新しい記録は GameGene の MCP (`gamegene_joseki`・`gamegene_claims`) で引ける。

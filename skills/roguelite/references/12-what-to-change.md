@@ -1,5 +1,7 @@
 # Which part of the familiar formula should change?
 
+**Also matches:** differentiation, Slay the Spire clone, twist, reskin
+
 **What to weigh:** Swapping one axis of the Slay the Spire frame (what cards fight, where they sit, how the map works) changes more than reskinning all of it.
 
 ### Shipped games that faced this call
@@ -34,6 +36,8 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 ## 日本語
 
 # 見慣れた骨格のどこを差し替えるか
+
+**この言葉でも当たる:** 差別化, 二番煎じ, ひねり, 骨格
 
 **何を量るか:** Slay the Spire の骨格の1つの軸 (札で何と戦うか・札をどこに置くか・地図の形) を差し替えるほうが、全部の見た目を替えるより変わる。
 

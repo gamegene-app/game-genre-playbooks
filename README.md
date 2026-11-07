@@ -22,6 +22,12 @@ git clone https://github.com/gamegene-app/game-genre-playbooks.git
 cp -R game-genre-playbooks/skills/roguelite ~/.claude/skills/roguelite-playbook
 ```
 
+To use it in one project only, copy it into that project's `.claude/skills/` instead:
+
+```bash
+cp -R game-genre-playbooks/skills/roguelite <your-project>/.claude/skills/roguelite-playbook
+```
+
 Other agents that read `SKILL.md` folders (Codex, Cursor and others) take the same folder. Then ask your agent about a design call, for example "Should my deckbuilder let players skip card rewards?"
 
 ## When to reach for a playbook
@@ -42,7 +48,7 @@ General game design (core loops, economy, difficulty, onboarding, playtesting) i
 
 ## Genres
 
-1. **[Roguelites, including deckbuilding roguelikes](skills/roguelite/SKILL.md)** (12 questions). First, because the records are thickest here.
+1. **[Roguelites, including deckbuilding roguelikes](skills/roguelite/SKILL.md)** (16 questions). First, because the records are thickest here.
 2. More genres are added only once their records are complete enough.
 
 ## Where the data comes from
@@ -76,7 +82,7 @@ The playbooks are generated from GameGene's database on a schedule, without an L
 - データの出どころは [GameGene](https://gamegene.app/about)。全部の事例と出典は [GameGene MCP](https://gamegene.app/mcp)（無料のアカウントで使えます）で引けます
 - 新しいジャンルや観点の依頼は、このリポジトリの Issue へ
 - 個別の作品や調査の依頼は [GameGene の調査依頼](https://gamegene.app/feedback?panel=submit) へ。GameGene の調査の順番に直接入るので、こちらのほうが早く対応できます
-- 最初の1本は [ローグライト（デッキ構築ローグライクを含む）](skills/roguelite/SKILL.md) で、問いは12本です。入れ方は上の Install（`skills/roguelite` を AI のスキルのフォルダへ写す）
+- 最初の1本は [ローグライト（デッキ構築ローグライクを含む）](skills/roguelite/SKILL.md) で、問いは16本です。入れ方は上の Install（`skills/roguelite` を `~/.claude/skills/` へ写す。1つのプロジェクトだけで使うなら `<プロジェクト>/.claude/skills/` へ）
 
 ## License
 

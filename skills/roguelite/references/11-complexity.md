@@ -1,5 +1,7 @@
 # How much complexity, and where does it enter?
 
+**Also matches:** keywords, onboarding, rules complexity, cognitive load
+
 **What to weigh:** Depth comes from how few rules interact, not how many there are; complexity that arrives later is easier to learn.
 
 ### Principle: Reach the depth limit with the least complexity
@@ -35,6 +37,10 @@ Justin Ma says they spent about a year on a strategy layer of cities, income and
 - Source: [Designer Notes 71: Matthew Davis, 2:12:48](http://feeds.soundcloud.com/stream/1392653923-idlethumbs-designer-notes-71-matthew-davis.mp3#t=7968) (Idle Thumbs)
 - GameGene: https://gamegene.app/en/library/records/claims/51c41032-fa32-44b8-a827-b66ae0880038
 
+### Related cases filed under other questions
+
+- Into the Breach: shrank the battle itself, not only the strategy layer → [14 How should a battle that will not end be brought to an end?](14-stalemates.md)
+
 All cases, related games and newer records: the GameGene MCP server (`gamegene_joseki`, `gamegene_claims`).
 
 ---
@@ -42,6 +48,8 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 ## 日本語
 
 # 複雑さをどれだけ、どこから入れるか
+
+**この言葉でも当たる:** 複雑さ, キーワード能力, 覚えやすさ, 情報量
 
 **何を量るか:** 深さは規則の数でなく、少ない規則の噛み合いから来る。後から出てくる複雑さのほうが覚えやすい。
 
@@ -77,5 +85,9 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - 出典: [Designer Notes 71: Matthew Davis, 2:10:47](http://feeds.soundcloud.com/stream/1392653923-idlethumbs-designer-notes-71-matthew-davis.mp3#t=7847) (Idle Thumbs)
 - 出典: [Designer Notes 71: Matthew Davis, 2:12:48](http://feeds.soundcloud.com/stream/1392653923-idlethumbs-designer-notes-71-matthew-davis.mp3#t=7968) (Idle Thumbs)
 - GameGene: https://gamegene.app/library/records/claims/51c41032-fa32-44b8-a827-b66ae0880038
+
+### ほかの問いに置いた関係する事例
+
+- Into the Breach: 戦略の層だけでなく、戦闘そのものも縮めた → [14 決着しない戦いをどう終わらせるか](14-stalemates.md)
 
 全部の事例・関連作・新しい記録は GameGene の MCP (`gamegene_joseki`・`gamegene_claims`) で引ける。

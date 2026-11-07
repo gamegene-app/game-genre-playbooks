@@ -1,5 +1,7 @@
 # How should losing feel?
 
+**Also matches:** permadeath, death, unfair loss, frustration, save scumming
+
 **What to weigh:** Permadeath works when the player can see why they lost; a loss from nowhere makes them quit.
 
 ### Principle: Do not make a loss feel unfair
@@ -47,6 +49,10 @@ Tyler Sigman prefers permissive save systems himself, but the team wanted Darkes
 - Source: [Darkest Dungeon: A Design Postmortem (GDC 2016) 32:21](https://www.youtube.com/watch?v=0IUaGQhlPwo&t=1941s) (GDC)
 - GameGene: https://gamegene.app/en/library/records/claims/d7f3906b-61ca-4352-a5a1-a8ef635ec88d
 
+### Related cases filed under other questions
+
+- Into the Breach: a battle that cannot drag on also cannot be lost slowly to attrition → [14 How should a battle that will not end be brought to an end?](14-stalemates.md)
+
 All cases, related games and newer records: the GameGene MCP server (`gamegene_joseki`, `gamegene_claims`).
 
 ---
@@ -54,6 +60,8 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 ## 日本語
 
 # 負けをどう感じさせるか
+
+**この言葉でも当たる:** 永久の死, 負け, 理不尽, 詰み, セーブ
 
 **何を量るか:** 永久の死が効くのは、なぜ負けたかが見えるとき。どこからともなく来た負けは、遊ぶのをやめさせる。
 
@@ -101,5 +109,9 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - 出典: [Darkest Dungeon: A Design Postmortem (GDC 2016) 22:12](https://www.youtube.com/watch?v=0IUaGQhlPwo&t=1332s) (GDC)
 - 出典: [Darkest Dungeon: A Design Postmortem (GDC 2016) 32:21](https://www.youtube.com/watch?v=0IUaGQhlPwo&t=1941s) (GDC)
 - GameGene: https://gamegene.app/library/records/claims/d7f3906b-61ca-4352-a5a1-a8ef635ec88d
+
+### ほかの問いに置いた関係する事例
+
+- Into the Breach: 長引かない戦いは、じわじわ削られて負けることも無い → [14 決着しない戦いをどう終わらせるか](14-stalemates.md)
 
 全部の事例・関連作・新しい記録は GameGene の MCP (`gamegene_joseki`・`gamegene_claims`) で引ける。

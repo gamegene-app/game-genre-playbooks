@@ -1,5 +1,7 @@
 # How thick should the deck be, and how easy should removing cards be?
 
+**Also matches:** deck thinning, card removal, deck bloat, trimming the deck
+
 **What to weigh:** A thin deck makes each pick matter and lets combos fire reliably; cheap removal makes thinning the dominant strategy.
 
 ### Shipped games that faced this call
@@ -33,6 +35,8 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 ## 日本語
 
 # デッキの厚さと、札を取り除く手段をどこまで用意するか
+
+**この言葉でも当たる:** デッキ圧縮, 札の除去, デッキが膨らむ, 薄いデッキ
 
 **何を量るか:** 薄いデッキは1枚の選択を重くし、コンボを確実に回す。取り除く手段が安いと、薄くすることが最善の一手になる。
 

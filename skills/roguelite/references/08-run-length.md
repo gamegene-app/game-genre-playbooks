@@ -1,5 +1,7 @@
 # How long should one run be?
 
+**Also matches:** session length, run time, pacing, short runs
+
 **What to weigh:** A long run raises the stakes of each death; letting players pick the length can serve both sides.
 
 ### Principle: Value the player's time
@@ -28,13 +30,9 @@ Thing Trunk's Maciej Biedrzycki and his colleagues, now adults with jobs and fam
 - Source: [Interview: Book of Demons Mixes Diablo with Paper Mario](https://www.vgchartz.com/article/263560/interview-book-of-demons-mixes-diablo-with-paper-mario/) (VGChartz, 2016)
 - GameGene: https://gamegene.app/en/library/records/claims/4305b0d1-b646-4629-95ab-9a4018c6e3f0
 
-#### Into the Breach
+### Related cases filed under other questions
 
-In 2017 Matthew Davis said mopping up the last alien in a turn-based game isn't fun and that they wanted a hard limit on battles to keep the game moving. To offer many missions, he said, the experience had to shrink to something not exactly like XCOM with its hour-long battles.
-
-- Made the same call as this principle, without naming it (GameGene's reading) (`value-the-players-time`)
-- Source: [Into the Breach Preview: FTL's Creators Pit Mechs Against Aliens in Post-Apocalyptic Warfare](https://www.shacknews.com/article/99108/into-the-breach-preview-ftls-creators-pit-mechs-against-aliens-in-post-apocalyptic-warfare) (Shacknews, 2017)
-- GameGene: https://gamegene.app/en/library/records/claims/f075e7a8-665d-49f9-961d-9ad8747f2885
+- Into the Breach: capped each battle so mopping up the last enemy never drags a run out → [14 How should a battle that will not end be brought to an end?](14-stalemates.md)
 
 All cases, related games and newer records: the GameGene MCP server (`gamegene_joseki`, `gamegene_claims`).
 
@@ -43,6 +41,8 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 ## 日本語
 
 # 1回の run の長さをどう決めるか
+
+**この言葉でも当たる:** 1回の長さ, プレイ時間, テンポ, 短いラン
 
 **何を量るか:** 長い run は1回の死を重くする。長さを遊び手に選ばせると、両方に応えられることがある。
 
@@ -72,12 +72,8 @@ Thing Trunk のマチェイ・ビェドジツキらは、大人になって仕�
 - 出典: [Interview: Book of Demons Mixes Diablo with Paper Mario](https://www.vgchartz.com/article/263560/interview-book-of-demons-mixes-diablo-with-paper-mario/) (VGChartz, 2016)
 - GameGene: https://gamegene.app/library/records/claims/4305b0d1-b646-4629-95ab-9a4018c6e3f0
 
-#### Into the Breach
+### ほかの問いに置いた関係する事例
 
-マシュー・デイヴィスは2017年、ターン制のゲームで最後の1体を探してターンを送る掃討は面白くないと言い、戦闘に上限を置いてゲームを進ませたかったと語った。多くの任務を出すには、1時間かかる XCOM の戦闘とは違う形へ縮める必要があったという。
-
-- 名指してはいないが、この定石と同じ判断を語っている (GameGene の読み) (`value-the-players-time`)
-- 出典: [Into the Breach Preview: FTL's Creators Pit Mechs Against Aliens in Post-Apocalyptic Warfare](https://www.shacknews.com/article/99108/into-the-breach-preview-ftls-creators-pit-mechs-against-aliens-in-post-apocalyptic-warfare) (Shacknews, 2017)
-- GameGene: https://gamegene.app/library/records/claims/f075e7a8-665d-49f9-961d-9ad8747f2885
+- Into the Breach: 最後の1体を探す掃討で run が間延びしないよう、戦闘に上限を置いた → [14 決着しない戦いをどう終わらせるか](14-stalemates.md)
 
 全部の事例・関連作・新しい記録は GameGene の MCP (`gamegene_joseki`・`gamegene_claims`) で引ける。

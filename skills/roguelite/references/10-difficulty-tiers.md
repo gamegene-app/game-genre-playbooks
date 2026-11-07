@@ -1,5 +1,7 @@
 # How should difficulty tiers be built?
 
+**Also matches:** ascension, heat, difficulty modifiers, challenge levels, enemy scaling
+
 **What to weigh:** Tiers on top of a balanced base keep veterans playing; how each tier raises the challenge decides whether it stays interesting.
 
 ### Principle: Raise difficulty with new patterns and speed, not inflated numbers
@@ -47,6 +49,10 @@ In Risk of Rain, enemies grow harder the longer a run lasts. Hopoo Games calls t
 - Source: [Why Risk of Rain Returns is taking the series back to 2D](https://www.gamedeveloper.com/design/risk-of-rain-interview) (Game Developer, 2024)
 - GameGene: https://gamegene.app/en/library/records/claims/42107b89-51b3-4dab-af28-ef6be1d4ffab
 
+### Related cases filed under other questions
+
+- Luck be a Landlord: moved the harsher settings the developer liked into higher tiers instead of imposing them on everyone → [01 How thick should the deck be, and how easy should removing cards be?](01-deck-size.md)
+
 ### Not on record yet
 
 - Why a developer chose to raise difficulty by changing patterns or rules rather than numbers, and what they dropped (Hades shows the what, not yet the why)
@@ -60,6 +66,8 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 ## 日本語
 
 # 難度の段をどう積むか
+
+**この言葉でも当たる:** アセンション, 難易度の段, 縛り, 高難度, 敵の強化
 
 **何を量るか:** 釣り合いを取った基本の上に段を積むと、慣れた遊び手が残る。段ごとに何を厳しくするかで、面白さが続くかが決まる。
 
@@ -107,6 +115,10 @@ Supergiant は2018年の FAQ で、挑戦の重さは遊び手ごとに違うと
 - 出典: [Hopoo Games Interview: Devs Talk All Things Risk of Rain Returns](https://gamerant.com/risk-rain-returns-remake-interview/) (Game Rant, 2023)
 - 出典: [Why Risk of Rain Returns is taking the series back to 2D](https://www.gamedeveloper.com/design/risk-of-rain-interview) (Game Developer, 2024)
 - GameGene: https://gamegene.app/library/records/claims/42107b89-51b3-4dab-af28-ef6be1d4ffab
+
+### ほかの問いに置いた関係する事例
+
+- Luck be a Landlord: 作り手の好んだ厳しい設定を、全員には課さず上の段へ移した → [01 デッキの厚さと、札を取り除く手段をどこまで用意するか](01-deck-size.md)
 
 ### まだ記録に無いもの
 

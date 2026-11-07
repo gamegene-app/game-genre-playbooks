@@ -1,5 +1,7 @@
 # How should card rewards be offered, and can the player turn them down?
 
+**Also matches:** card draft, reward screen, skipping a reward, what to offer
+
 **What to weigh:** Showing rewards early lets players plan; a pick that is always correct stops being a choice.
 
 ### Shipped games that faced this call
@@ -32,6 +34,8 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 ## 日本語
 
 # 報酬の札をどう見せ、断れるようにするか
+
+**この言葉でも当たる:** カード報酬, ドラフト, 報酬を断る, スキップ
 
 **何を量るか:** 報酬を先に見せると計画が立つ。毎回取るのが正解になる札は、選択でなくなる。
 
