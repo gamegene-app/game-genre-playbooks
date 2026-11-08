@@ -2,7 +2,7 @@
   "version": 1,
   "genre": "roguelite",
   "playbook": "game-design-playbook",
-  "playbookCommit": "deb36c9",
+  "playbookCommit": "4f60938",
   "notes": "Genre-level design questions a deckbuilding roguelite developer typically asks. Each prompt is given in Japanese and English (run.mjs --lang picks one). goldQuestions = ids of the playbook questions (references/**/NN-<id>.md) a good answer should land on; the shared and genre layers are both searched. goldCases = cases the playbook itself holds for those questions (any condition may find them; the MCP may find others). expectGap = what the playbook lists as not on record, so a good answer says so instead of inventing; null when the playbook has no gap for it. The last question is a control with no matching reference. Re-check goldCases and expectGap against the references whenever the playbook is regenerated, and update playbookCommit.",
   "questions": [
     {

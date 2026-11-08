@@ -2,7 +2,7 @@
   "version": 1,
   "genre": "horror",
   "playbook": "game-design-playbook",
-  "playbookCommit": "",
+  "playbookCommit": "4f60938",
   "team": {
     "ja": "一人称のサバイバルホラーを作っている小さなインディーチーム",
     "en": "a small indie team making a first-person survival horror game"
@@ -15,7 +15,11 @@
         "ja": "プレイヤーに武器を持たせず、逃げて隠れるだけのゲームにするか、最低限の反撃手段（一時的に怯ませる道具など）を残すか迷っている。武器なしだと単調にならないか心配。",
         "en": "We can't decide whether the player should have no weapons at all and only run and hide, or keep a minimal way to fight back (a tool that stuns the monster for a moment). We worry that no weapons will get monotonous."
       },
-      "goldQuestions": ["fight-or-flee", "escape-and-hiding", "facing-the-threat"],
+      "goldQuestions": [
+        "fight-or-flee",
+        "escape-and-hiding",
+        "facing-the-threat"
+      ],
       "goldCases": [
         "Amnesia (no means of defence: a weapon would define the player's role)",
         "Alien: Isolation (the alien cannot be killed; flamethrower and noise only drive it off; the player is prey)",
@@ -31,7 +35,10 @@
         "ja": "ロッカーに隠れれば絶対に見つからない作りにしているが、テストで『隠れていれば済む』と言われた。隠れ場所が失敗する確率を入れるか、怪物がロッカーを調べる仕掛けを入れるべき？",
         "en": "Hiding in a locker is always safe in our game, and playtesters say they just wait it out. Should hiding spots have a chance to fail, or should the monster sometimes search the lockers?"
       },
-      "goldQuestions": ["escape-and-hiding", "randomness"],
+      "goldQuestions": [
+        "escape-and-hiding",
+        "randomness"
+      ],
       "goldCases": [
         "Clock Tower (whether a hiding place works is settled by chance, on purpose)",
         "Clock Tower (running and panicking drain vitality, recovered only by resting)",
@@ -45,7 +52,11 @@
         "ja": "追ってくる怪物を、決まった巡回ルートで動かすか、プレイヤーの音や位置に反応するAIにするか。AIにすると、理不尽な見つかり方をする回が出そうで怖い。",
         "en": "Should our stalker monster follow fixed patrol routes, or be an AI that reacts to the player's noise and position? With an AI we're afraid some encounters will feel unfair."
       },
-      "goldQuestions": ["monster-ai", "pacing-fear", "losing"],
+      "goldQuestions": [
+        "monster-ai",
+        "pacing-fear",
+        "losing"
+      ],
       "goldCases": [
         "Alien: Isolation (a director that always knows the player's position measures pressure, gives the alien hints and sends it into the vents; the alien finds the player by its own senses)",
         "Rain World (creatures act on their own goals with no fixed patrol routes)"
@@ -58,7 +69,10 @@
         "ja": "テストプレイで『怖すぎて30分でやめた』という声が何人かから出た。怖さを薄めずに、最後まで遊んでもらうにはどうすればいい？",
         "en": "Several playtesters said they quit after 30 minutes because it was too scary. How do we get people to the end without watering down the fear?"
       },
-      "goldQuestions": ["pacing-fear", "monster-ai"],
+      "goldQuestions": [
+        "pacing-fear",
+        "monster-ai"
+      ],
       "goldCases": [
         "Fatal Frame II (after the first game was called too scary to finish, started gentle and ramped up, carried by the story)",
         "Alien: Isolation (constant fear makes players quit, so the director lets the alien withdraw when pressure peaks)",
@@ -72,7 +86,10 @@
         "ja": "セーブをいつでもできるようにするか、セーブポイント制にするか、回数に制限をつけるか。死んだときに長く巻き戻されるとイライラされそうだが、いつでもセーブできると緊張感がなくなる気もする。",
         "en": "Save anywhere, save points, or a limited number of saves? Losing a lot of progress on death will annoy players, but saving anywhere may kill the tension."
       },
-      "goldQuestions": ["saving", "losing"],
+      "goldQuestions": [
+        "saving",
+        "losing"
+      ],
       "goldCases": [
         "Alien: Isolation (dropped checkpoints for manual saves at terminals, where the player can be attacked while saving)",
         "Darkest Dungeon (saves after every action so choices cannot be taken back)"
@@ -85,7 +102,10 @@
         "ja": "いまは三人称の肩越し視点で作っているが、一人称に変えるべきか迷っている。三人称のほうが主人公の怯える演技を見せられる。",
         "en": "We're building it with an over-the-shoulder third-person camera, and wondering whether to switch to first person. Third person lets us show the character acting scared."
       },
-      "goldQuestions": ["camera-and-viewpoint", "fight-or-flee"],
+      "goldQuestions": [
+        "camera-and-viewpoint",
+        "fight-or-flee"
+      ],
       "goldCases": [
         "Alien: Isolation (built in third person for a long time, found it not scary enough because the alien hunted the character on screen, went back to first person)",
         "Resident Evil (fixed cameras came from technical limits, not from fear, and became a source of fear)",
@@ -99,7 +119,10 @@
         "ja": "主人公に同行するNPC（妹）を付けたい。守る対象にすると護衛ミッションの面倒さが出るし、強くすると怖くなくなる。どう設計すればいい？",
         "en": "We want an NPC (the hero's sister) to travel with the player. If she needs protecting it becomes an annoying escort mission; if she's strong the game stops being scary. How should we design her?"
       },
-      "goldQuestions": ["companions", "losing"],
+      "goldQuestions": [
+        "companions",
+        "losing"
+      ],
       "goldCases": [
         "Fatal Frame II (tuned Mayu so she does not die easily, because an easily-killed companion would be resented)",
         "Rule of Rose (gave the helpless heroine a dog that tracks scents, with a limited range)"
@@ -112,7 +135,10 @@
         "ja": "正気度ゲージを入れて、下がると幻覚が見えたり画面が歪んだりする仕組みを考えている。入れる価値はある？",
         "en": "We're thinking about a sanity meter: as it drops, the player sees hallucinations and the screen distorts. Is it worth adding?"
       },
-      "goldQuestions": ["stress-and-sanity", "escape-and-hiding"],
+      "goldQuestions": [
+        "stress-and-sanity",
+        "escape-and-hiding"
+      ],
       "goldCases": [
         "Darkest Dungeon (stress as wargame morale: stressed heroes disobey)",
         "Darkest Dungeon (stress is worked off in town buildings with limited slots, like a board game)",
@@ -126,7 +152,9 @@
         "ja": "物語はメモや録音テープを拾って読ませる形で伝えるつもりだが、『拾い物を読むだけだと退屈』という意見がある。どうすればいい？",
         "en": "We plan to tell the story through notes and tape recordings the player picks up, but some say reading found items is boring. What should we do?"
       },
-      "goldQuestions": ["telling-the-story"],
+      "goldQuestions": [
+        "telling-the-story"
+      ],
       "goldCases": [
         "Firewatch (kept logs and notes, but gave equal weight to events happening now because the player is there: 'a participant, not an archaeologist')",
         "Her Story (a search box from text parser games: the story appears only when the player guesses the words)"
