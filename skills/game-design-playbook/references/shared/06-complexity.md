@@ -1,6 +1,6 @@
 # How much complexity, and where does it enter?
 
-**Also matches:** keywords, onboarding, rules complexity, cognitive load
+**Also matches:** keywords, onboarding, rules complexity, cognitive load, controls
 
 **What to weigh:** Depth comes from how few rules interact, not how many there are; complexity that arrives later is easier to learn.
 
@@ -14,7 +14,7 @@ Separate complexity, the cost of learning before play, from depth, the supply of
 
 ### Shipped games that faced this call
 
-#### Luck be a Landlord
+#### Luck be a Landlord (roguelite)
 
 Dan DiIorio says he tends to follow Magic: The Gathering's "New World Order" idea of putting less complexity on Common cards. Because the first few spins offer only Common symbols, new players start with simple symbols and meet more complex ones as they gain experience.
 
@@ -22,14 +22,14 @@ Dan DiIorio says he tends to follow Magic: The Gathering's "New World Order" ide
 - Source: [Questions and Danswers](https://blog.trampolinetales.com/questions-and-danswers/) (The TrampolineTales Newsletter, 2023)
 - GameGene: https://gamegene.app/en/library/records/claims/5c49bf96-93c6-4d2e-a62c-f16b59875f53
 
-#### Dicey Dungeons
+#### Dicey Dungeons (roguelite)
 
 Terry Cavanagh says the idea of having classes at all came from Dream Quest, where each class changes which cards you find. What he added was varying the core rules between classes: the Robot, designed while he was reading a lot about classic dice games, rolls toward a target instead of getting two dice, and going over ends the turn.
 
 - Source: [Dicey Dungeons: Terry Cavanagh interview](https://filmstories.co.uk/gaming/dicey-dungeons-terry-cavanagh-interview/) (Film Stories (Wireframe), 2018)
 - GameGene: https://gamegene.app/en/library/records/claims/f21b29fb-c837-4d9f-994a-2b7d2aa2bc66
 
-#### Into the Breach
+#### Into the Breach (roguelite)
 
 Justin Ma says they spent about a year on a strategy layer of cities, income and research, but it was overly complicated with very few interesting decisions, so they made the game about combat and kept only simple choices between missions. Matthew Davis says the big strategy layers they tried felt flat, and that switching between tight battles and a slow layer caused whiplash, so players only pop out of battles briefly.
 
@@ -37,9 +37,16 @@ Justin Ma says they spent about a year on a strategy layer of cities, income and
 - Source: [Designer Notes 71: Matthew Davis, 2:12:48](http://feeds.soundcloud.com/stream/1392653923-idlethumbs-designer-notes-71-matthew-davis.mp3#t=7968) (Idle Thumbs)
 - GameGene: https://gamegene.app/en/library/records/claims/51c41032-fa32-44b8-a827-b66ae0880038
 
+#### Lorelei and the Laser Eyes (horror)
+
+Simogo wanted the complexity of the game to revolve completely around unlocking and understanding its world, never around dexterity. Wanting almost anyone to be able to play it, the team decided to only ever use one button along with directional input, and distilled every interaction down to that.
+
+- Source: [Lorelei and the Laser Eyes (Gameplay & Development)](https://simogo.com/work/loreleiandthelasereyes/) (Simogo)
+- GameGene: https://gamegene.app/en/library/records/claims/79509d2a-2f5c-46c3-bffd-794dcea89895
+
 ### Related cases filed under other questions
 
-- Into the Breach: shrank the battle itself, not only the strategy layer → [14 How should a battle that will not end be brought to an end?](14-stalemates.md)
+- Into the Breach: shrank the battle itself, not only the strategy layer → [07 How should a battle that will not end be brought to an end?](../shared/07-stalemates.md)
 
 All cases, related games and newer records: the GameGene MCP server (`gamegene_joseki`, `gamegene_claims`).
 
@@ -49,7 +56,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 # 複雑さをどれだけ、どこから入れるか
 
-**この言葉でも当たる:** 複雑さ, キーワード能力, 覚えやすさ, 情報量
+**この言葉でも当たる:** 複雑さ, キーワード能力, 覚えやすさ, 情報量, 操作の数
 
 **何を量るか:** 深さは規則の数でなく、少ない規則の噛み合いから来る。後から出てくる複雑さのほうが覚えやすい。
 
@@ -63,7 +70,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 ### この判断をした作品
 
-#### Luck be a Landlord
+#### Luck be a Landlord (roguelite)
 
 ダン・ディオリオは、コモンのカードほど複雑さを抑えるマジック：ザ・ギャザリングの «ニュー・ワールド・オーダー» の考えに従う傾向があると語る。最初の数回の回転ではコモンの絵柄しか出ないので、新しい遊び手は易しい絵柄から始め、慣れるにつれて込み入った絵柄に出会う。
 
@@ -71,14 +78,14 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - 出典: [Questions and Danswers](https://blog.trampolinetales.com/questions-and-danswers/) (The TrampolineTales Newsletter, 2023)
 - GameGene: https://gamegene.app/library/records/claims/5c49bf96-93c6-4d2e-a62c-f16b59875f53
 
-#### Dicey Dungeons
+#### Dicey Dungeons (roguelite)
 
 テリー・カヴァナーは、クラスを置く発想はドリームクエストから来たと語る。そこではクラスが見つかる札の傾向を変えるが、彼はそれを推し進めてクラスごとに核のルールを変えた。昔ながらのさいころ遊びを多く読んでいたころに作ったロボットは、2個のさいころの代わりに目標の数へ向けて好きなだけ振り、超えれば手番が終わる。
 
 - 出典: [Dicey Dungeons: Terry Cavanagh interview](https://filmstories.co.uk/gaming/dicey-dungeons-terry-cavanagh-interview/) (Film Stories (Wireframe), 2018)
 - GameGene: https://gamegene.app/library/records/claims/f21b29fb-c837-4d9f-994a-2b7d2aa2bc66
 
-#### Into the Breach
+#### Into the Breach (roguelite)
 
 ジャスティン・マは、都市・収入・研究を回す戦略の層を1年ほど試したが、複雑なわりに面白い判断が少なかったので、ゲームを戦闘中心にし、任務の合間の簡単な選択だけを残したと語る。マシュー・デイヴィスは、試した大きな戦略の層はどれも平板で、戦闘との行き来も頭の切り替えを強いたので、合間に短く出るだけにしたと言う。
 
@@ -86,8 +93,15 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - 出典: [Designer Notes 71: Matthew Davis, 2:12:48](http://feeds.soundcloud.com/stream/1392653923-idlethumbs-designer-notes-71-matthew-davis.mp3#t=7968) (Idle Thumbs)
 - GameGene: https://gamegene.app/library/records/claims/51c41032-fa32-44b8-a827-b66ae0880038
 
+#### Lorelei and the Laser Eyes (horror)
+
+シモゴは、ゲームの複雑さを世界が開けて深く分かっていくことにだけ置き、指先の器用さには置かないことにした。ほとんど誰でも遊べるよう、使うのは方向の入力とボタン1つだけと決め、すべての操作をその形に落とし込んだ。
+
+- 出典: [Lorelei and the Laser Eyes (Gameplay & Development)](https://simogo.com/work/loreleiandthelasereyes/) (Simogo)
+- GameGene: https://gamegene.app/library/records/claims/79509d2a-2f5c-46c3-bffd-794dcea89895
+
 ### ほかの問いに置いた関係する事例
 
-- Into the Breach: 戦略の層だけでなく、戦闘そのものも縮めた → [14 決着しない戦いをどう終わらせるか](14-stalemates.md)
+- Into the Breach: 戦略の層だけでなく、戦闘そのものも縮めた → [07 決着しない戦いをどう終わらせるか](../shared/07-stalemates.md)
 
 全部の事例・関連作・新しい記録は GameGene の MCP (`gamegene_joseki`・`gamegene_claims`) で引ける。

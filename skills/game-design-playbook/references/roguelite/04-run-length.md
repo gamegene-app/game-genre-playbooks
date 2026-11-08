@@ -32,7 +32,7 @@ Thing Trunk's Maciej Biedrzycki and his colleagues, now adults with jobs and fam
 
 ### Related cases filed under other questions
 
-- Into the Breach: capped each battle so mopping up the last enemy never drags a run out → [14 How should a battle that will not end be brought to an end?](14-stalemates.md)
+- Into the Breach: capped each battle so mopping up the last enemy never drags a run out → [shared 07 How should a battle that will not end be brought to an end?](../shared/07-stalemates.md)
 
 All cases, related games and newer records: the GameGene MCP server (`gamegene_joseki`, `gamegene_claims`).
 
@@ -74,6 +74,6 @@ Thing Trunk のマチェイ・ビェドジツキらは、大人になって仕�
 
 ### ほかの問いに置いた関係する事例
 
-- Into the Breach: 最後の1体を探す掃討で run が間延びしないよう、戦闘に上限を置いた → [14 決着しない戦いをどう終わらせるか](14-stalemates.md)
+- Into the Breach: 最後の1体を探す掃討で run が間延びしないよう、戦闘に上限を置いた → [shared 07 決着しない戦いをどう終わらせるか](../shared/07-stalemates.md)
 
 全部の事例・関連作・新しい記録は GameGene の MCP (`gamegene_joseki`・`gamegene_claims`) で引ける。

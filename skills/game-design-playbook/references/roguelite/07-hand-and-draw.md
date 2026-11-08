@@ -23,7 +23,7 @@ Starting from how much he enjoyed card-game lethal puzzles, Nihohe made wiping o
 
 ### Related cases filed under other questions
 
-- One Turn Kill: draws from the deck are the cost of playing a card → [03 How does the player pay for cards?](03-card-costs.md)
+- One Turn Kill: draws from the deck are the cost of playing a card → [03 How does the player pay for cards?](../roguelite/03-card-costs.md)
 
 ### Not on record yet
 
@@ -62,7 +62,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 ### ほかの問いに置いた関係する事例
 
-- One Turn Kill: 札を使うコストが山札からのドローになっている → [03 札のコストを何で払わせるか](03-card-costs.md)
+- One Turn Kill: 札を使うコストが山札からのドローになっている → [03 札のコストを何で払わせるか](../roguelite/03-card-costs.md)
 
 ### まだ記録に無いもの
 
