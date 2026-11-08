@@ -1,6 +1,6 @@
 # game-genre-playbooks
 
-[![Playbooks: 1](https://img.shields.io/badge/playbooks-1-2ea043)](#genres)
+[![Genres: 2 + shared](https://img.shields.io/badge/genres-2%20%2B%20shared-2ea043)](#genres)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Data: GameGene](https://img.shields.io/badge/data-GameGene-c8553d)](https://gamegene.app/about)
 [![Connect the GameGene MCP](https://img.shields.io/badge/MCP-connect%20GameGene-6e56cf)](https://gamegene.app/mcp)
@@ -11,24 +11,26 @@
 
 Making a game in a crowded genre means making the same calls again and again. Should a card that never gets stronger be retuned or cut? How much of the next fight should the player see? Is my twist new, or a reskin? An AI assistant will give you a sensible general answer. What you usually need is something else: which shipped games faced the same call, what their developers chose, why, and what they gave up.
 
-These playbooks give your AI agent (Claude Code, Codex, Cursor and others that read skills) exactly that, one genre at a time, with every case traced to a talk, interview or postmortem.
+This playbook gives your AI agent (Claude Code, Codex, Cursor and others that read skills) exactly that, with every case traced to a talk, interview or postmortem. It is one skill in two layers: design calls that cross genres, and the calls specific to each genre.
 
 ## Install
 
-Copy a playbook folder into your agent's skills folder. For Claude Code:
+Copy the playbook folder into your agent's skills folder. For Claude Code:
 
 ```bash
 git clone https://github.com/gamegene-app/game-genre-playbooks.git
-cp -R game-genre-playbooks/skills/roguelite ~/.claude/skills/roguelite-playbook
+cp -R game-genre-playbooks/skills/game-design-playbook ~/.claude/skills/game-design-playbook
 ```
 
 To use it in one project only, copy it into that project's `.claude/skills/` instead:
 
 ```bash
-cp -R game-genre-playbooks/skills/roguelite <your-project>/.claude/skills/roguelite-playbook
+cp -R game-genre-playbooks/skills/game-design-playbook <your-project>/.claude/skills/game-design-playbook
 ```
 
-Other agents that read `SKILL.md` folders (Codex, Cursor and others) take the same folder. Then ask your agent about a design call, for example "Should my deckbuilder let players skip card rewards?"
+Other agents that read `SKILL.md` folders (Codex, Cursor and others) take the same folder. Then ask your agent about a design call, for example "Should my deckbuilder let players skip card rewards?" or "Should the player in my horror game be able to fight back?" If your project's CLAUDE.md or README names the genre, the agent picks the genre's questions from there.
+
+**Upgrading from the roguelite playbook.** Until 8 November 2026 this repository shipped `skills/roguelite`, installed as `roguelite-playbook`. Its 16 questions are all in `game-design-playbook` now: 9 moved to the shared layer and 7 stayed in the roguelite layer. Delete the old folder (`rm -rf ~/.claude/skills/roguelite-playbook`) so the agent does not see both.
 
 ## What a game maker gets
 
@@ -60,16 +62,38 @@ The same developer had Claude Code answer 10 design questions from their project
 
 The grader is the same model family as the answerer and each condition has 30 answers, so read the numbers as a rough guide. The two playbook rows are the current SKILL.md, measured in a second run on the same questions; the other two rows are from the first run.
 
+After the playbook was split into a shared layer and genre layers (8 November 2026), we re-ran the [eval kit](eval/) without a project, from empty folders, playbook only (no MCP), 3 answers per question:
+
+| Questions | Before the split | After the split |
+|---|---|---|
+| 12 roguelite questions | 0.94 | 0.95 |
+
+And the new horror layer, 10 horror questions × 2 answers each:
+
+| Condition | Score (0–1) | Blind ranking (1 = best) |
+|---|---|---|
+| No playbook, no GameGene | 0.56 | 2.0 |
+| This playbook | 0.94 | 1.0 (first on all 10 questions) |
+
+No invented precedent was found in any of these answers either. Same caveats as above: same-family grader, small numbers.
+
 ## Genres
 
-1. **[Roguelites, including deckbuilding roguelikes](skills/roguelite/SKILL.md)** (16 questions). First, because the records are thickest here.
-2. More genres are added only once their records are complete enough.
+All in one skill, [`game-design-playbook`](skills/game-design-playbook/SKILL.md):
+
+| Layer | Questions | Examples |
+|---|---|---|
+| **Any genre** (shared) | 9 | how much of the enemy's next move to show, where randomness lives, how losing feels, difficulty tiers, stalemates, options nobody uses |
+| **Roguelites**, including deckbuilding roguelikes | 7 | deck size and card removal, card rewards, run length, meta progression, what to change from Slay the Spire |
+| **Horror** | 10 | whether the player can fight back, what escaping and hiding cost, pacing fear, monster AI, camera, saving, sanity |
+
+Roguelites came first because the records are thickest there; horror second, because its developers' own statements are nearly as many. A genre is scoped by GameGene's game tags, and each case in the shared layer is labelled with its game's genres, so the agent can prefer a precedent from your genre and still reach across genres. More genres are added once their records are complete enough; the next candidates are puzzle games and cozy/farming games.
 
 ## Where the data comes from
 
 Everything here is generated from [**GameGene**](https://gamegene.app/about), a sourced database of game design lineage. GameGene records where a mechanic came from and where it went, in the developers' own words, and keeps a developer's statement apart from a critic's reading.
 
-A playbook carries the questions, the principles and a few hand-picked cases for each. For the full set of cases, records that arrived after the last update, and games in other genres, connect the [**GameGene MCP server**](https://gamegene.app/mcp) to your AI app (a free account is enough).
+The playbook carries the questions, the principles and a few hand-picked cases for each. For the full set of cases, records that arrived after the last update, and games in other genres, connect the [**GameGene MCP server**](https://gamegene.app/mcp) to your AI app (a free account is enough).
 
 ## Requests
 
@@ -91,7 +115,7 @@ With the GameGene MCP server connected, the playbook tells your agent to use it 
 
 **ジャンルの設計判断で迷ったら、同じジャンルの作り手が出した答えと、その代償を手元に。**
 
-人の多いジャンルでは、同じ判断を何度も迫られます。数値を直しても強くならない札は、直すか外すか。次の戦いをどこまで見せるか。自分のひねりは新しいのか、見た目を替えただけか。AI に聞けば一般論は返ってきます。けれど本当に要るのは、同じ判断をした作品と、その作り手が何を選び、なぜそうし、何を捨てたかです。この作戦帳は、それをジャンルごとに、講演・インタビュー・ポストモーテムの出典つきで AI に渡します。
+人の多いジャンルでは、同じ判断を何度も迫られます。数値を直しても強くならない札は、直すか外すか。次の戦いをどこまで見せるか。自分のひねりは新しいのか、見た目を替えただけか。AI に聞けば一般論は返ってきます。けれど本当に要るのは、同じ判断をした作品と、その作り手が何を選び、なぜそうし、何を捨てたかです。この作戦帳は、それを講演・インタビュー・ポストモーテムの出典つきで AI に渡します。ジャンルをまたぐ判断の層と、ジャンルごとの判断の層の2段でできた、1つのスキルです。
 
 ### 作り手が受け取るもの
 
@@ -110,10 +134,13 @@ With the GameGene MCP server connected, the playbook tells your agent to use it 
 
 同じ開発者が、自分のゲームの設計判断10問を各条件で3回ずつ答えさせ、条件を伏せて別の Claude に採点させました（[方法と詳細](../../issues/3)）。前例の情報源が無いと 0.31、GameGene MCP だけで 0.74、この作戦帳で 0.92、作戦帳と MCP で 0.94 でした。作戦帳だけのときのトークンは MCP だけのときの半分ほどで、どの条件でも作り話の前例は出ませんでした。採点者は答える側と同じ系統のモデルで、1条件30回答の規模なので、目安として読んでください。作戦帳の2行は今の SKILL.md を同じ問いで測り直した値で、ほかの2行は最初の計測の値です。
 
+共通の層とジャンルの層に分けた後（2026年11月8日）、[評価キット](eval/)で空のフォルダから作戦帳だけ（MCP なし）を測り直しました。ローグライトの12問（各3回）は分ける前 0.94、分けた後 0.95。新しいホラーの層は、ホラーの10問（各2回）で作戦帳なし 0.56、作戦帳あり 0.94 で、条件を伏せた順位づけでは10問すべてで作戦帳ありが1位でした。どの回答にも作り話の前例はありませんでした。
+
 ### 入れ方と依頼
 
-- 入れ方は上の Install。`skills/roguelite` を `~/.claude/skills/` へ写す（1つのプロジェクトだけなら `<プロジェクト>/.claude/skills/` へ）
-- 最初の1本は [ローグライト（デッキ構築ローグライクを含む）](skills/roguelite/SKILL.md) で、問いは16本
+- 入れ方は上の Install。`skills/game-design-playbook` を `~/.claude/skills/` へ写す（1つのプロジェクトだけなら `<プロジェクト>/.claude/skills/` へ）
+- 中身は [`game-design-playbook`](skills/game-design-playbook/SKILL.md) の1つで、ジャンルをまたぐ問い9本・ローグライト（デッキ構築ローグライクを含む）7本・ホラー10本。ジャンルの範囲は GameGene の作品のタグで切る。次の候補はパズルとコージー・農場もの
+- 2026年11月8日までの `skills/roguelite`（`roguelite-playbook` として入れたもの）は、16問すべてがこのスキルに入った（9問は共通の層へ、7問はローグライトの層へ）。古いフォルダは消す（`rm -rf ~/.claude/skills/roguelite-playbook`）
 - データの出どころは [GameGene](https://gamegene.app/about)。全部の事例と出典は [GameGene MCP](https://gamegene.app/mcp)（無料のアカウントで使えます）で引ける
 - 新しいジャンルや観点の依頼は、このリポジトリの Issue へ。個別の作品や調査の依頼は [GameGene の調査依頼](https://gamegene.app/feedback?panel=submit) へ（GameGene の調査の順番に直接入るので、こちらのほうが早い）
 

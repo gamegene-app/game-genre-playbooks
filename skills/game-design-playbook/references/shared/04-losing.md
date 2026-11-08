@@ -1,8 +1,8 @@
 # How should losing feel?
 
-**Also matches:** permadeath, death, unfair loss, frustration, save scumming
+**Also matches:** permadeath, death, unfair loss, frustration, save scumming, getting stuck
 
-**What to weigh:** Permadeath works when the player can see why they lost; a loss from nowhere makes them quit.
+**What to weigh:** Permadeath and harsh failure work when the player can see why they lost; a loss from nowhere makes them quit.
 
 ### Principle: Do not make a loss feel unfair
 
@@ -14,7 +14,7 @@ Avoid deaths without warning, dead ends and forced restarts, so that when the pl
 
 ### Shipped games that faced this call
 
-#### Darkest Dungeon
+#### Darkest Dungeon (roguelite, horror)
 
 Tyler Sigman says that without Death's Door a single crit could kill a hero at two-thirds health, which under permadeath left players either tense all the time or never tense. The team added Death's Door, so one blow cannot kill and there may be a chance to heal the hero before death.
 
@@ -22,7 +22,7 @@ Tyler Sigman says that without Death's Door a single crit could kill a hero at t
 - Source: [Darkest Dungeon: A Design Postmortem (GDC 2016) 34:22](https://www.youtube.com/watch?v=0IUaGQhlPwo&t=2062s) (GDC)
 - GameGene: https://gamegene.app/en/library/records/claims/5c21b99a-4a9a-4d7e-b148-66d8a7601619
 
-#### Into the Breach
+#### Into the Breach (roguelite)
 
 Matthew Davis says many players felt FTL's boss came out of nowhere, broke the rules and was unfair, so Into the Breach's final mission asks only for the skills used all game. Separately, since the game is about defense, he says a huge enemy to kill there does not work for most squads, such as one built on freezing.
 
@@ -30,7 +30,7 @@ Matthew Davis says many players felt FTL's boss came out of nowhere, broke the r
 - Source: [How Subset Games made the jump from FTL to Into the Breach](https://www.gamedeveloper.com/business/how-subset-games-made-the-jump-from-i-ftl-i-to-i-into-the-breach-i-) (Gamasutra, 2018)
 - GameGene: https://gamegene.app/en/library/records/claims/1e5d5f83-e2a7-4b75-be3a-bfcdedcbbd54
 
-#### Noita
+#### Noita (roguelite)
 
 Petri Purho says the difference between players hating a permadeath game and blaming themselves "really is almost, I think," how it communicates its emergent systems. Oil making players more flammable confused them until Noita added icons over the player showing which liquid they were covered in; then players began attributing even unimplemented effects to the system.
 
@@ -38,9 +38,16 @@ Petri Purho says the difference between players hating a permadeath game and bla
 - Source: [Exploring the Tech and Design of Noita (Petri Purho, GDC talk, from 26:20)](https://www.youtube.com/watch?v=prXuyMCgbTc&t=1580s) (Game Developers Conference)
 - GameGene: https://gamegene.app/en/library/records/claims/337abb7a-fe26-4e56-bf42-41b7133ec8c1
 
+#### Rain World (horror)
+
+So that a lucky player who rushed several regions ahead would not end up out of their depth, Joar Jakobsson added karma symbols that rise with each survived day and fall on death, and region gates open only at a set level. A skilled player at the top level can roam freely.
+
+- Source: [Crafting the complex, chaotic ecosystem of Rain World](https://www.gamedeveloper.com/design/crafting-the-complex-chaotic-ecosystem-of-i-rain-world-i-) (Game Developer (Gamasutra), 2017)
+- GameGene: https://gamegene.app/en/library/records/claims/b834d23c-be63-4ec4-874f-4ced19137651
+
 ### Games that went the other way
 
-#### Darkest Dungeon
+#### Darkest Dungeon (roguelite, horror)
 
 Tyler Sigman prefers permissive save systems himself, but the team wanted Darkest Dungeon's players always weighing whether to push a little further. The game saves constantly so actions are permanent, and save scumming takes great lengths.
 
@@ -51,7 +58,8 @@ Tyler Sigman prefers permissive save systems himself, but the team wanted Darkes
 
 ### Related cases filed under other questions
 
-- Into the Breach: a battle that cannot drag on also cannot be lost slowly to attrition → [14 How should a battle that will not end be brought to an end?](14-stalemates.md)
+- Into the Breach: a battle that cannot drag on also cannot be lost slowly to attrition → [07 How should a battle that will not end be brought to an end?](../shared/07-stalemates.md)
+- Alien: Isolation: a horror game that made the act of saving itself dangerous → [horror 07 Should saving be safe, scarce or dangerous?](../horror/07-saving.md)
 
 All cases, related games and newer records: the GameGene MCP server (`gamegene_joseki`, `gamegene_claims`).
 
@@ -61,9 +69,9 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 # 負けをどう感じさせるか
 
-**この言葉でも当たる:** 永久の死, 負け, 理不尽, 詰み, セーブ
+**この言葉でも当たる:** 永久の死, 負け, 理不尽, 詰み, セーブ, 行き詰まり
 
-**何を量るか:** 永久の死が効くのは、なぜ負けたかが見えるとき。どこからともなく来た負けは、遊ぶのをやめさせる。
+**何を量るか:** 永久の死や重い失敗が効くのは、なぜ負けたかが見えるとき。どこからともなく来た負けは、遊ぶのをやめさせる。
 
 ### 定石: 理不尽に負けさせない
 
@@ -75,7 +83,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 ### この判断をした作品
 
-#### Darkest Dungeon
+#### Darkest Dungeon (roguelite, horror)
 
 タイラー・シグマンによれば、«死の扉» が無いと体力が3分の2残っていても会心の1発で死ぬことがあり、パーマデスの下では遊び手が «いつも張り詰めるか、まったく張り詰めないか» になった。そこでチームは1撃では死なない «死の扉» を足し、死ぬ前に回復できる見込みを残した。
 
@@ -83,7 +91,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - 出典: [Darkest Dungeon: A Design Postmortem (GDC 2016) 34:22](https://www.youtube.com/watch?v=0IUaGQhlPwo&t=2062s) (GDC)
 - GameGene: https://gamegene.app/library/records/claims/5c21b99a-4a9a-4d7e-b148-66d8a7601619
 
-#### Into the Breach
+#### Into the Breach (roguelite)
 
 マシュー・デイヴィスは、FTL のボスが唐突に難しく、規則を破る理不尽なものと受け取られたと振り返る。そこで Into the Breach の最終任務は、それまでと同じ腕だけを求める形にした。これとは別に、守りのゲームなので、凍らせるチームなど多くのチームには最終任務で倒すべき巨大な敵が合わないとも言う。
 
@@ -91,7 +99,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - 出典: [How Subset Games made the jump from FTL to Into the Breach](https://www.gamedeveloper.com/business/how-subset-games-made-the-jump-from-i-ftl-i-to-i-into-the-breach-i-) (Gamasutra, 2018)
 - GameGene: https://gamegene.app/library/records/claims/1e5d5f83-e2a7-4b75-be3a-bfcdedcbbd54
 
-#### Noita
+#### Noita (roguelite)
 
 ペトリ・プルホは、パーマデスのゲームを嫌われるか遊び手に自分を責めてもらえるかの差は «ほぼ、伝え方だと思う» と語る。油を浴びると燃えやすくなる効果は分かりにくかったが、浴びた液体を頭上の印で見せると、遊び手は濡れれば感電に弱いといった実装していない効果まで仕組みに帰すようになった。
 
@@ -99,9 +107,16 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - 出典: [Exploring the Tech and Design of Noita (Petri Purho, GDC talk, from 26:20)](https://www.youtube.com/watch?v=prXuyMCgbTc&t=1580s) (Game Developers Conference)
 - GameGene: https://gamegene.app/library/records/claims/337abb7a-fe26-4e56-bf42-41b7133ec8c1
 
+#### Rain World (horror)
+
+ヨアル・ヤコブソンは、運よく何地域も先へ進んだ遊び手が手に負えない場所で行き詰まらないよう、1日生き延びると上がり死ぬと下がるカルマの印を置き、印が足りないと次の地域への門が開かないようにした。最上位まで上げた熟練者は自由に動き回れる。
+
+- 出典: [Crafting the complex, chaotic ecosystem of Rain World](https://www.gamedeveloper.com/design/crafting-the-complex-chaotic-ecosystem-of-i-rain-world-i-) (Game Developer (Gamasutra), 2017)
+- GameGene: https://gamegene.app/library/records/claims/b834d23c-be63-4ec4-874f-4ced19137651
+
 ### 逆を選んだ作品
 
-#### Darkest Dungeon
+#### Darkest Dungeon (roguelite, horror)
 
 タイラー・シグマンは自分では好きにセーブできる作りを好むが、チームはダーケストダンジョンの遊び手に «もう少し先へ進むか» を常に迷わせたかった。そこで絶えず保存して行動を取り消せなくし、セーブのやり直しはひどく手間のかかるものになった。
 
@@ -112,6 +127,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 ### ほかの問いに置いた関係する事例
 
-- Into the Breach: 長引かない戦いは、じわじわ削られて負けることも無い → [14 決着しない戦いをどう終わらせるか](14-stalemates.md)
+- Into the Breach: 長引かない戦いは、じわじわ削られて負けることも無い → [07 決着しない戦いをどう終わらせるか](../shared/07-stalemates.md)
+- Alien: Isolation: セーブする行為そのものを危険にしたホラー → [horror 07 セーブを安全にするか、限るか、危険にするか](../horror/07-saving.md)
 
 全部の事例・関連作・新しい記録は GameGene の MCP (`gamegene_joseki`・`gamegene_claims`) で引ける。

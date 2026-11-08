@@ -1,6 +1,6 @@
 // Answer each question under each condition with headless `claude -p`, and record what was used.
 //
-//   node run.mjs --playbook=../skills/roguelite --conditions=A,B,C,D --reps=3
+//   node run.mjs --conditions=A,B,C,D --reps=3   (add --questions-file=questions/horror.json for horror)
 //   node run.mjs --questions=Q01,Q02 --conditions=A,A-trial --run=trial1
 //
 // Each condition answers from its own empty temp folder that holds only its playbook skill (or
@@ -11,6 +11,7 @@ import { appendFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import {
   answerPrompt,
+  teamOf,
   conditionArgs,
   latestAnswers,
   loadQuestions,
@@ -136,7 +137,7 @@ console.log(`answers: ${answersPath}`);
 async function answerOne({ q, cond, rep, key }) {
   const started = Date.now();
   const { code, stdout, stderr } = await runClaude(
-    answerPrompt(q, cfg.lang),
+    answerPrompt(q, cfg.lang, teamOf(cfg)),
     ["--output-format", "stream-json", "--verbose", ...modelArgs, ...conditionArgs(cfg, cond)],
     { cwd: workspaces[cond] },
   );

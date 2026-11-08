@@ -35,9 +35,10 @@ function skillNameOf(skillMd) {
 
 /**
  * Resolve the eval config for a new run from CLI flags and env:
- *   --questions-file  questions file (default questions/roguelite.json)
+ *   --questions-file  questions file (default questions/roguelite.json; questions/horror.json for horror)
  *   --playbook   playbook folder holding SKILL.md + references/ (env PLAYBOOK_DIR;
- *                default <kit>/../skills/<genre> from the questions file)
+ *                default <kit>/../skills/<playbook> from the questions file, or <genre> for
+ *                older files)
  *   --skill      skill name to install it as (default: the name in its SKILL.md)
  *   --lang       ja | en: which prompt text to ask (default ja)
  *   --runs-dir   where runs are written (default <kit>/runs)
@@ -46,7 +47,9 @@ export function resolveConfig(args) {
   const questionsFile = abs(args["questions-file"] ?? join(KIT_DIR, "questions", "roguelite.json"));
   const qdoc = JSON.parse(readFileSync(questionsFile, "utf8"));
   const playbookDir = abs(
-    args.playbook ?? process.env.PLAYBOOK_DIR ?? join(KIT_DIR, "..", "skills", qdoc.genre ?? ""),
+    args.playbook ??
+      process.env.PLAYBOOK_DIR ??
+      join(KIT_DIR, "..", "skills", qdoc.playbook ?? qdoc.genre ?? ""),
   );
   if (!existsSync(join(playbookDir, "SKILL.md")))
     throw new Error(`no SKILL.md in ${playbookDir}: pass --playbook=<folder> or set PLAYBOOK_DIR`);
@@ -204,16 +207,23 @@ export function conditionArgs(cfg, condKey) {
   ];
 }
 
+// Who the assistant works for. A questions file may set `team` ({ ja, en }) for its genre; the
+// default is the deckbuilding roguelike team the first questions file was written for.
+const DEFAULT_TEAM = {
+  ja: "デッキ構築ローグライク（ローグライト）を作っているチーム",
+  en: "a team making a deckbuilding roguelike (roguelite)",
+};
+
 const PREAMBLE = {
-  ja: [
-    "あなたは、デッキ構築ローグライク（ローグライト）を作っているチームの開発アシスタントです。",
+  ja: (team) => [
+    `あなたは、${team}の開発アシスタントです。`,
     "開発者から次のゲームデザインの相談を受けました。普段どおりに、使えるスキル・資料・ツールがあれば使って答えてください。",
     "ファイルの作成・変更はしないでください。",
     "",
     "相談:",
   ],
-  en: [
-    "You are a development assistant on a team making a deckbuilding roguelike (roguelite).",
+  en: (team) => [
+    `You are a development assistant on ${team}.`,
     "A developer brings you the game design question below. Answer as you normally would, using any skills, documents or tools you have.",
     "Do not create or change files.",
     "",
@@ -221,8 +231,14 @@ const PREAMBLE = {
   ],
 };
 
-export function answerPrompt(question, lang) {
-  return [...PREAMBLE[lang], `"${promptOf(question, lang)}"`].join("\n");
+/** The team a questions file names, or the default (roguelite) team. */
+export function teamOf(cfg) {
+  const qdoc = JSON.parse(readFileSync(cfg.questionsFile, "utf8"));
+  return { ...DEFAULT_TEAM, ...(qdoc.team ?? {}) };
+}
+
+export function answerPrompt(question, lang, team = DEFAULT_TEAM) {
+  return [...PREAMBLE[lang](team[lang]), `"${promptOf(question, lang)}"`].join("\n");
 }
 
 /**
@@ -426,19 +442,39 @@ export const RUBRIC = [
   },
 ];
 
-/** The playbook reference files for the given question numbers, concatenated for a judge prompt. */
-export function referencesFor(cfg, nums) {
+/** Every reference file under the playbook's references/ folder, as paths relative to it. */
+function referenceFiles(dir, prefix = "") {
+  return readdirSync(dir, { withFileTypes: true }).flatMap((e) =>
+    e.isDirectory()
+      ? referenceFiles(join(dir, e.name), `${prefix}${e.name}/`)
+      : e.name.endsWith(".md")
+        ? [`${prefix}${e.name}`]
+        : [],
+  );
+}
+
+/**
+ * The playbook reference files for the given gold questions, concatenated for a judge prompt.
+ * A gold question is a question id (`stalemates`), matched as `NN-<id>.md` in any folder under
+ * references/, so the same questions file works for a one-genre playbook (references/NN-id.md)
+ * and a layered one (references/<layer>/NN-id.md). A number is the older form: the NN- prefix
+ * in references/ itself.
+ */
+export function referencesFor(cfg, golds) {
   const dir = join(cfg.playbookDir, "references");
   if (!existsSync(dir)) return "";
-  const files = readdirSync(dir);
-  return nums
-    .map((n) => files.find((f) => f.startsWith(`${String(n).padStart(2, "0")}-`)))
+  const files = referenceFiles(dir).sort();
+  return golds
+    .map((g) =>
+      typeof g === "number"
+        ? files.find((f) => !f.includes("/") && f.startsWith(`${String(g).padStart(2, "0")}-`))
+        : files.find((f) => /^\d+-(.+)\.md$/.exec(f.split("/").pop())?.[1] === g),
+    )
     .filter(Boolean)
     .map((f) => `--- ${f} ---\n${readFileSync(join(dir, f), "utf8")}`)
     .join("\n\n");
 }
 
-/** The first {...} block in a model reply, parsed, or null. */
 export function extractJson(text) {
   const start = text.indexOf("{");
   const end = text.lastIndexOf("}");

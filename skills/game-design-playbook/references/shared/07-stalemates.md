@@ -6,7 +6,7 @@
 
 ### Shipped games that faced this call
 
-#### Into the Breach
+#### Into the Breach (roguelite)
 
 In 2017 Matthew Davis said mopping up the last alien in a turn-based game isn't fun and that they wanted a hard limit on battles to keep the game moving. To offer many missions, he said, the experience had to shrink to something not exactly like XCOM with its hour-long battles.
 
@@ -15,7 +15,7 @@ In 2017 Matthew Davis said mopping up the last alien in a turn-based game isn't 
 
 ### Related cases filed under other questions
 
-- Risk of Rain: a clock that strengthens enemies, at the scale of the whole run rather than one battle → [10 How should difficulty tiers be built?](10-difficulty-tiers.md)
+- Risk of Rain: a clock that strengthens enemies, at the scale of the whole run rather than one battle → [05 How should difficulty tiers be built?](../shared/05-difficulty-tiers.md)
 
 ### Not on record yet
 
@@ -37,7 +37,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 ### この判断をした作品
 
-#### Into the Breach
+#### Into the Breach (roguelite)
 
 マシュー・デイヴィスは2017年、ターン制のゲームで最後の1体を探してターンを送る掃討は面白くないと言い、戦闘に上限を置いてゲームを進ませたかったと語った。多くの任務を出すには、1時間かかる XCOM の戦闘とは違う形へ縮める必要があったという。
 
@@ -46,7 +46,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 ### ほかの問いに置いた関係する事例
 
-- Risk of Rain: 敵を強める時計。ただし1戦でなく run 全体の尺で → [10 難度の段をどう積むか](10-difficulty-tiers.md)
+- Risk of Rain: 敵を強める時計。ただし1戦でなく run 全体の尺で → [05 難度の段をどう積むか](../shared/05-difficulty-tiers.md)
 
 ### まだ記録に無いもの
 

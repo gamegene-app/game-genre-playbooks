@@ -14,7 +14,7 @@ Split luck into input randomness, dealt before the player chooses, and output ra
 
 ### Shipped games that faced this call
 
-#### Dicey Dungeons
+#### Dicey Dungeons (roguelite)
 
 Cavanagh found early on that random cards plus random dice felt too chaotic, so he focused on static equipment layouts, with the Jester as the exception. He calls the resulting core sorta like an inversion of RPG combat: you get the RNG up front and decide how to make the best of it.
 
@@ -23,7 +23,7 @@ Cavanagh found early on that random cards plus random dice felt too chaotic, so 
 - Source: [Road to the IGF: Cavanagh, Houston, & Dobbe's Dicey Dungeons](https://www.gamedeveloper.com/disciplines/road-to-the-igf-cavanagh-houston-dobbe-s-i-dicey-dungeons-i-) (Game Developer (Gamasutra), 2019)
 - GameGene: https://gamegene.app/en/library/records/claims/d1cd84b8-0244-4045-abd5-8c6b20cdd02f
 
-#### Darkest Dungeon II
+#### Darkest Dungeon II (roguelite, horror)
 
 Tyler Sigman says players disliked missing so much that Red Hook kept raising accuracy. So Darkest Dungeon II dropped accuracy as a stat, so there is no base hit chance: misses remain only as the effect of tokens such as dodge, and dodge and block chances became tokens with fixed effects, such as halving the next hit. Chris Bourassa says this wore down the habit of using damaging attacks all day.
 
@@ -31,12 +31,16 @@ Tyler Sigman says players disliked missing so much that Red Hook kept raising ac
 - Source: [Darkest Dungeon 2 charts a new path through terror in a roguelike road trip to save humanity](https://www.pcgamer.com/darkest-dungeon-2-charts-a-new-path-through-terror-in-a-roguelike-road-trip-to-save-humanity/) (PC Gamer, 2021)
 - GameGene: https://gamegene.app/en/library/records/claims/c65f10b3-584e-49f0-840a-afd46960368c
 
-#### Risk of Rain
+#### Risk of Rain (roguelite)
 
 Risk of Rain's maps are not procedurally generated: designers hand-craft them, and curated sets of monsters, loot and unlockables are placed into them at random. Paul Morse says this always felt a lot better than something truly random, which at its best can still feel disconnected for the player.
 
 - Source: [Why Risk of Rain Returns is taking the series back to 2D](https://www.gamedeveloper.com/design/risk-of-rain-interview) (Game Developer, 2024)
 - GameGene: https://gamegene.app/en/library/records/claims/ed071a4b-b23a-4d15-9496-52815ee552d6
+
+### Related cases filed under other questions
+
+- Clock Tower: a horror game that kept a dice roll after the choice on purpose: whether a hiding spot works → [horror 02 When the player can only run and hide, what should that cost?](../horror/02-escape-and-hiding.md)
 
 All cases, related games and newer records: the GameGene MCP server (`gamegene_joseki`, `gamegene_claims`).
 
@@ -60,7 +64,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 ### この判断をした作品
 
-#### Dicey Dungeons
+#### Dicey Dungeons (roguelite)
 
 カヴァナーは、札の運とさいころの運を重ねると混沌としすぎると早くに気づき、装備を固定の配置に絞った (道化師だけは例外)。出来た核を彼は «RPG の戦闘の裏返しのようなもの» と評する。先に乱数を受け取り、それをどう生かすかを決める。
 
@@ -69,7 +73,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - 出典: [Road to the IGF: Cavanagh, Houston, & Dobbe's Dicey Dungeons](https://www.gamedeveloper.com/disciplines/road-to-the-igf-cavanagh-houston-dobbe-s-i-dicey-dungeons-i-) (Game Developer (Gamasutra), 2019)
 - GameGene: https://gamegene.app/library/records/claims/d1cd84b8-0244-4045-abd5-8c6b20cdd02f
 
-#### Darkest Dungeon II
+#### Darkest Dungeon II (roguelite, horror)
 
 タイラー・シグマンは、遊び手が攻撃を外すのをひどく嫌うので命中率を上げる調整を重ねてきたと振り返る。そこで本作は命中率という能力値をなくし、素の確率で外れることはなくした。外れは回避などの札の効き目としてだけ残り、回避や防御の確率は «次の一撃を半分防ぐ» のように効き目の決まった札にまとめた。クリス・ブラッサは、ダメージ技を撃ち続けるだけの癖が薄れたと言う。
 
@@ -77,11 +81,15 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - 出典: [Darkest Dungeon 2 charts a new path through terror in a roguelike road trip to save humanity](https://www.pcgamer.com/darkest-dungeon-2-charts-a-new-path-through-terror-in-a-roguelike-road-trip-to-save-humanity/) (PC Gamer, 2021)
 - GameGene: https://gamegene.app/library/records/claims/c65f10b3-584e-49f0-840a-afd46960368c
 
-#### Risk of Rain
+#### Risk of Rain (roguelite)
 
 『Risk of Rain』の面は自動生成ではなく作り手が手で作り、選び揃えた敵・宝・解放の品を無作為に置く。ポール・モースは、真に無作為なものは良くても遊び手から切り離された感じになりうるとし、こちらのほうがいつもずっと良く感じられたと語る。
 
 - 出典: [Why Risk of Rain Returns is taking the series back to 2D](https://www.gamedeveloper.com/design/risk-of-rain-interview) (Game Developer, 2024)
 - GameGene: https://gamegene.app/library/records/claims/ed071a4b-b23a-4d15-9496-52815ee552d6
+
+### ほかの問いに置いた関係する事例
+
+- Clock Tower: 決めた後の運をわざと残したホラー、隠れ場所が通用するかどうか → [horror 02 逃げて隠れるしかないとき、それに何を払わせるか](../horror/02-escape-and-hiding.md)
 
 全部の事例・関連作・新しい記録は GameGene の MCP (`gamegene_joseki`・`gamegene_claims`) で引ける。

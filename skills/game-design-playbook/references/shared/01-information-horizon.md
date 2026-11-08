@@ -14,7 +14,7 @@ Decide how far ahead the player can see before new information arrives. Too clos
 
 ### Shipped games that faced this call
 
-#### Into the Breach
+#### Into the Breach (roguelite)
 
 Justin Ma wanted a game where every death felt like the player's own fault, so Subset cut down randomness and made showing enemy attacks in advance a core mechanic. With every attack visible and no chance in the player's attacks, Ma says, the game starts to feel like a puzzle.
 
@@ -23,14 +23,14 @@ Justin Ma wanted a game where every death felt like the player's own fault, so S
 - Source: [Everything you need to know about Into the Breach, the next game from the developers of FTL](https://www.pcgamer.com/into-the-breach-preview/) (PC Gamer, 2018)
 - GameGene: https://gamegene.app/en/library/records/claims/67f2dabf-d9e8-455e-b86d-9df52eaa9702
 
-#### Slay the Spire
+#### Slay the Spire (roguelite)
 
 Anthony Giovannetti says enemy intents were not in the original design. Monsters that picked random moves, as in a traditional JRPG, felt too random, so Mega Crit went through several systems with Twitch and YouTube viewers in mind. Knowing how hard an enemy will hit lets the player decide how much to block.
 
 - Source: [MA 8: Anthony Giovannetti on Mastery and Learning through Games](https://maintainersanonymous.com/games/) (Maintainers Anonymous)
 - GameGene: https://gamegene.app/en/library/records/claims/cdb7785b-e82b-4f35-804c-ff2867dfe054
 
-#### Wildfrost
+#### Wildfrost (roguelite)
 
 Gaz says the pair kept returning to a dynamic counter system where each action counts as a turn and both sides attack on a turn timer; Will Lewis says a physical card game helped iron out some of it. In a 2022 demo, standard actions removed one counter from every unit, and cards could delay enemies or hasten allies.
 
@@ -59,7 +59,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 ### この判断をした作品
 
-#### Into the Breach
+#### Into the Breach (roguelite)
 
 ジャスティン・マは、どの死も遊び手自身のせいだと感じられるゲームにしたかった。そこでランダムの要素を減らし、敵の攻撃を前もって見せる形を核の仕組みの1つにした。攻撃が全部見えて自分の攻撃に運が絡まなければ、遊びはパズルのようになるとマは言う。
 
@@ -68,14 +68,14 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - 出典: [Everything you need to know about Into the Breach, the next game from the developers of FTL](https://www.pcgamer.com/into-the-breach-preview/) (PC Gamer, 2018)
 - GameGene: https://gamegene.app/library/records/claims/67f2dabf-d9e8-455e-b86d-9df52eaa9702
 
-#### Slay the Spire
+#### Slay the Spire (roguelite)
 
 アンソニー・ジョヴァネッティによれば、敵の意図の表示は当初の設計に無かった。昔ながらの JRPG のように敵が無作為に動くと運任せに感じたため、配信で見る人にも伝わる形を考え、いくつもの仕組みを経て今の形に着いた。敵がどれだけ打ってくるか分かれば、どれだけ防ぐかを考えて決められる。
 
 - 出典: [MA 8: Anthony Giovannetti on Mastery and Learning through Games](https://maintainersanonymous.com/games/) (Maintainers Anonymous)
 - GameGene: https://gamegene.app/library/records/claims/cdb7785b-e82b-4f35-804c-ff2867dfe054
 
-#### Wildfrost
+#### Wildfrost (roguelite)
 
 ガジターは、行動ひとつが1手になり敵も味方も手数のタイマーで攻撃する «動くカウンター» の案に2人で何度も戻ったと語り、ルイスは紙のカードゲームでその一部を詰めたと語る。2022年の体験版では標準の行動ごとに全ユニットの残り手数が1つ減り、カードで敵を遅らせ味方を早められた。
 

@@ -1,6 +1,6 @@
 # Trial SKILL.md variants
 
-A variant replaces only the playbook's `SKILL.md`; its `references/` are the playbook's own. To try a change, copy the current `skills/<genre>/SKILL.md` to `variants/<name>/SKILL.md`, edit it, and use it by adding `-<name>` to a skill condition: `A-<name>` (variant, no MCP) or `B-<name>` (variant + MCP). `run.mjs` copies the playbook into the condition's workspace, swaps in the variant `SKILL.md` and rewrites its `name:` to the playbook's skill name.
+A variant replaces only the playbook's `SKILL.md`; its `references/` are the playbook's own. To try a change, copy the current `skills/game-design-playbook/SKILL.md` to `variants/<name>/SKILL.md`, edit it, and use it by adding `-<name>` to a skill condition: `A-<name>` (variant, no MCP) or `B-<name>` (variant + MCP). `run.mjs` copies the playbook into the condition's workspace, swaps in the variant `SKILL.md` and rewrites its `name:` to the playbook's skill name.
 
 Compare a variant with the playbook's own on the same questions, e.g. `--conditions=A,A-<name>,B,B-<name>`.
 
@@ -17,7 +17,7 @@ No variant files are kept here: what worked went into the playbook itself.
 
 # SKILL.md の試作版（日本語）
 
-試作版は `SKILL.md` だけを差し替え、`references/` はプレイブックのものをそのまま使う。試すときは、今の `skills/<ジャンル>/SKILL.md` を `variants/<名前>/SKILL.md` にコピーして書き換え、スキルのある条件に `-<名前>` を付けて使う（`A-<名前>` = 試作版・MCP なし、`B-<名前>` = 試作版 + MCP）。`run.mjs` は条件ごとの作業フォルダにプレイブックをコピーし、`SKILL.md` を試作版に差し替えて `name:` をプレイブックのスキル名に書き換える。
+試作版は `SKILL.md` だけを差し替え、`references/` はプレイブックのものをそのまま使う。試すときは、今の `skills/game-design-playbook/SKILL.md` を `variants/<名前>/SKILL.md` にコピーして書き換え、スキルのある条件に `-<名前>` を付けて使う（`A-<名前>` = 試作版・MCP なし、`B-<名前>` = 試作版 + MCP）。`run.mjs` は条件ごとの作業フォルダにプレイブックをコピーし、`SKILL.md` を試作版に差し替えて `name:` をプレイブックのスキル名に書き換える。
 
 同じ問いで元の版と比べる（例: `--conditions=A,A-<名前>,B,B-<名前>`）。
 

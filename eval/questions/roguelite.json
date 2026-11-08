@@ -1,8 +1,9 @@
 {
   "version": 1,
   "genre": "roguelite",
-  "playbookCommit": "deb36c9",
-  "notes": "Genre-level design questions a deckbuilding roguelite developer typically asks. Each prompt is given in Japanese and English (run.mjs --lang picks one). goldQuestions = playbook question numbers (references/NN-*.md) a good answer should land on. goldCases = cases the playbook itself holds for those questions (any condition may find them; the MCP may find others). expectGap = what the playbook lists as not on record, so a good answer says so instead of inventing; null when the playbook has no gap for it. The last question is a control with no matching reference. Re-check goldCases and expectGap against the references whenever the playbook is regenerated, and update playbookCommit.",
+  "playbook": "game-design-playbook",
+  "playbookCommit": "4f60938",
+  "notes": "Genre-level design questions a deckbuilding roguelite developer typically asks. Each prompt is given in Japanese and English (run.mjs --lang picks one). goldQuestions = ids of the playbook questions (references/**/NN-<id>.md) a good answer should land on; the shared and genre layers are both searched. goldCases = cases the playbook itself holds for those questions (any condition may find them; the MCP may find others). expectGap = what the playbook lists as not on record, so a good answer says so instead of inventing; null when the playbook has no gap for it. The last question is a control with no matching reference. Re-check goldCases and expectGap against the references whenever the playbook is regenerated, and update playbookCommit.",
   "questions": [
     {
       "id": "Q01-stalemate",
@@ -10,7 +11,10 @@
         "ja": "プレイヤーも敵もブロック（防御）を積めるので、たまに双方がダメージを通せないまま20ターン以上続く戦闘が起きる。山札が尽きたらダメージを受ける『疲労』ルール、ターンごとに増える固定ダメージ、ターン上限のどれかを入れるべき？ほかに手はある？",
         "en": "Both the player and enemies can stack block, so some fights drag on for 20+ turns with neither side getting damage through. Should we add a deck-out fatigue rule, damage that escalates every turn, or a hard turn cap? Is there another option?"
       },
-      "goldQuestions": [14, 10],
+      "goldQuestions": [
+        "stalemates",
+        "difficulty-tiers"
+      ],
       "goldCases": [
         "Into the Breach (hard limit on battle length so mopping up never drags)",
         "Risk of Rain (a clock that strengthens enemies, run-wide rather than per battle)"
@@ -23,7 +27,10 @@
         "ja": "テストプレイのデータで、ある1つの型（ドローを回し続ける無限コンボ）だけが他よりずっと勝率が高い。ナーフすべき？それとも一人用ゲームだから残していい？目標は『最強デッキが1つに決まらず、いろいろな組み方が通用する』こと。",
         "en": "Playtest data shows one archetype (an infinite draw engine) wins far more often than anything else. Should we nerf it, or is it fine to leave in because the game is single-player? Our goal is no single best deck, with many builds viable."
       },
-      "goldQuestions": [5, 16],
+      "goldQuestions": [
+        "broken-combos",
+        "unused-options"
+      ],
       "goldCases": [
         "Principle: a solo run can afford broken power",
         "Peglin (crazy relics without worrying about skewing balance)",
@@ -39,7 +46,10 @@
         "ja": "戦闘のあとにカードを3枚見せて1枚選ばせている。報酬をスキップ（断る）できるようにすべき？デッキが太るのを嫌うプレイヤーもいれば、全部取るプレイヤーもいる。",
         "en": "After each fight we show three cards and the player picks one. Should they be able to skip the reward? Some players hate bloating the deck; others take everything."
       },
-      "goldQuestions": [2, 1],
+      "goldQuestions": [
+        "card-rewards",
+        "deck-size"
+      ],
       "goldCases": [
         "Vault of the Void (rewards shown in advance; any card can be purged)",
         "Roguebook (rewards for keeping a big deck; Garfield on games being about removing cards)",
@@ -53,7 +63,10 @@
         "ja": "カード除去はいくらにすべき？今はショップで安く1枚消せて、上手いプレイヤーは毎回デッキを8枚くらいまで削ってしまう。値上げ・回数制限・除去そのものを減らす、どれがいい？",
         "en": "How expensive should card removal be? Right now the shop removes a card cheaply, and skilled players thin down to about eight cards every run. Raise the price, cap the number of removals, or offer removal less often?"
       },
-      "goldQuestions": [1, 2],
+      "goldQuestions": [
+        "deck-size",
+        "card-rewards"
+      ],
       "goldCases": [
         "Roguebook (passive power each time the deck passes a size threshold)",
         "Luck be a Landlord (added a removal currency, then raised rent because the game got easier)"
@@ -66,7 +79,11 @@
         "ja": "ターン終わりに手札を全部捨てて引き直す方式をやめて、使わなかったカードを次のターンに持ち越せるようにするか迷っている。何が変わる？気をつける点は？",
         "en": "We are thinking of letting players keep unplayed cards between turns instead of discarding the whole hand and redrawing. What changes, and what should we watch out for?"
       },
-      "goldQuestions": [13, 3, 12],
+      "goldQuestions": [
+        "hand-and-draw",
+        "card-costs",
+        "what-to-change"
+      ],
       "goldCases": [
         "Aeon's End (discard pile not shuffled; the order of discards decides later draws)",
         "One Turn Kill (drawing from the deck is the cost of playing a card)",
@@ -81,7 +98,10 @@
         "ja": "敵の次の行動をどこまで見せるべき？正確なダメージ量まで出す、行動の種類だけ出す、何も出さない、で迷っている。全部見せると戦闘が解き切れるパズルになりそうで心配。",
         "en": "How much of the enemy's next action should we show: exact damage numbers, only the type of action, or nothing? We worry that full information turns every fight into a solved puzzle."
       },
-      "goldQuestions": [4, 6],
+      "goldQuestions": [
+        "information-horizon",
+        "randomness"
+      ],
       "goldCases": [
         "Principle: set the information horizon",
         "Slay the Spire (intents added because random enemy moves felt too random)",
@@ -97,7 +117,10 @@
         "ja": "初回クリア率や全体のクリア率はどのくらいを目標にすべき？発売前で試遊データが少ない中、どうやってそこへ調整していけばいい？",
         "en": "What clear rate should we aim for, for a first run and overall? Before launch, with little playtest data, how do we tune toward it?"
       },
-      "goldQuestions": [15, 10],
+      "goldQuestions": [
+        "tuning-to-a-target",
+        "difficulty-tiers"
+      ],
       "goldCases": [
         "Slay the Spire (balanced around the base difficulty, Ascension built on top; losses accepted because permutations keep replay high)",
         "Luck be a Landlord (retuned rent and multipliers through early access)",
@@ -111,7 +134,9 @@
         "ja": "基本の難易度の上に20段階の高難度を作ろうとしている。ほとんどの段は敵のHPと攻撃力を上げるだけでいい？",
         "en": "We are building 20 difficulty levels on top of the base game. Is it fine if most levels just raise enemy HP and damage?"
       },
-      "goldQuestions": [10],
+      "goldQuestions": [
+        "difficulty-tiers"
+      ],
       "goldCases": [
         "Principle: raise difficulty with new patterns and speed, not inflated numbers",
         "Slay the Spire (balanced the base game first, Ascension on top)",
@@ -127,7 +152,10 @@
         "ja": "負け続けるプレイヤーも前に進めるように、ラン間で残る恒久強化（初期HPアップなど）を入れるべき？腕で勝つゲームにしたい気持ちもある。",
         "en": "Should we add permanent upgrades between runs (more starting HP and so on) so players who keep losing still make progress? We also want wins to come from skill."
       },
-      "goldQuestions": [9, 7],
+      "goldQuestions": [
+        "meta-progression",
+        "losing"
+      ],
       "goldCases": [
         "Rogue Legacy (rewarding death was a goal; gold and growth carry over)",
         "Shiren the Wanderer 2 (a castle built from carried-home materials; a full reset is hard on some players)",
@@ -141,7 +169,11 @@
         "ja": "採用率が2%を切るカードがいくつかある。ほとんどは特定の条件が揃ったときだけ強い条件つきのカード。強化する？作り直す？外す？",
         "en": "Several cards have a pick rate under 2%. Most are conditional cards that are only strong when a specific setup lines up. Buff them, rework them, or cut them?"
       },
-      "goldQuestions": [16, 5, 11],
+      "goldQuestions": [
+        "unused-options",
+        "broken-combos",
+        "complexity"
+      ],
       "goldCases": [
         "Rogue Legacy 2 (gave every trait a trade-off so unpicked options got a payoff)",
         "Monster Train 2 (moved a mode few players reached to earlier in the game)",
@@ -156,7 +188,10 @@
         "ja": "1回のランがだいたい90分かかる。短くすべき？短くするならどこを削る？",
         "en": "A full run takes about 90 minutes. Should we make it shorter, and if so, what should we cut?"
       },
-      "goldQuestions": [8, 14],
+      "goldQuestions": [
+        "run-length",
+        "stalemates"
+      ],
       "goldCases": [
         "Principle: value the player's time",
         "Into the Breach (felt FTL's two or three hours were too long; let players choose how many islands)",

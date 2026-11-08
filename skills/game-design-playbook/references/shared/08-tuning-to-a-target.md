@@ -6,7 +6,7 @@
 
 ### Shipped games that faced this call
 
-#### Slay the Spire
+#### Slay the Spire (roguelite)
 
 Asked in 2020 how to keep players motivated through roguelike losses, Anthony Giovannetti said Mega Crit was not particularly worried: the many deck permutations made replayability high even in early playtests, and the key was letting players quickly try new strategies. In 2018 he called the low win rate intentional, to keep the game skill-based.
 
@@ -16,8 +16,8 @@ Asked in 2020 how to keep players motivated through roguelike losses, Anthony Gi
 
 ### Related cases filed under other questions
 
-- Luck be a Landlord: retuned rent and multipliers through early access after a change made the game easier → [01 How thick should the deck be, and how easy should removing cards be?](01-deck-size.md)
-- Darkest Dungeon II: kept raising hit chance because players hated misses, then removed the stat → [06 Where should randomness live?](06-randomness.md)
+- Luck be a Landlord: retuned rent and multipliers through early access after a change made the game easier → [roguelite 01 How thick should the deck be, and how easy should removing cards be?](../roguelite/01-deck-size.md)
+- Darkest Dungeon II: kept raising hit chance because players hated misses, then removed the stat → [03 Where should randomness live?](../shared/03-randomness.md)
 
 ### Not on record yet
 
@@ -39,7 +39,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 ### この判断をした作品
 
-#### Slay the Spire
+#### Slay the Spire (roguelite)
 
 ローグライクの負けで遊び手の気持ちが折れないかと2020年に問われたアンソニー・ジョヴァネッティは、特に心配しなかったと答えた。組めるデッキの幅で試遊の初めから繰り返し遊ばれ、大事なのは新しい戦い方をすぐ試させることだと言う。2018年には、勝率の低さは腕で勝つゲームにする意図だと語った。
 
@@ -49,8 +49,8 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 ### ほかの問いに置いた関係する事例
 
-- Luck be a Landlord: 易しくなる変更の後、早期アクセスの間に家賃と倍率を調整し直した → [01 デッキの厚さと、札を取り除く手段をどこまで用意するか](01-deck-size.md)
-- Darkest Dungeon II: 遊び手が外れを嫌うので命中率を上げ続け、最後は能力値ごとなくした → [06 運をどこに残すか](06-randomness.md)
+- Luck be a Landlord: 易しくなる変更の後、早期アクセスの間に家賃と倍率を調整し直した → [roguelite 01 デッキの厚さと、札を取り除く手段をどこまで用意するか](../roguelite/01-deck-size.md)
+- Darkest Dungeon II: 遊び手が外れを嫌うので命中率を上げ続け、最後は能力値ごとなくした → [03 運をどこに残すか](../shared/03-randomness.md)
 
 ### まだ記録に無いもの
 

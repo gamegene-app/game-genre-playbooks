@@ -2,7 +2,7 @@
 
 **Also matches:** overpowered, infinite combo, dominant strategy, one best deck, nerf, a card numbers cannot fix, cutting a card
 
-**What to weigh:** In a single-player run, overpowered builds can be the reward; they become a problem when one easy build replaces all the others.
+**What to weigh:** In a single-player game, overpowered builds can be the reward; they become a problem when one easy build replaces all the others.
 
 ### Principle: A solo run can afford broken power
 
@@ -13,7 +13,7 @@ In a single-player game whose runs close on their own, overpowered combos and re
 
 ### Shipped games that faced this call
 
-#### Peglin
+#### Peglin (roguelite)
 
 After the jam, Dylan Gedig's team planned to grow the game into an RPG, but while experimenting they found a roguelike fit better. That let them create really crazy relics without worrying too much about skewing the balance of an entire 10-plus-hour campaign.
 
@@ -22,7 +22,7 @@ After the jam, Dylan Gedig's team planned to grow the game into an RPG, but whil
 - Source: [From Game Jam to winning Best Design: The story behind Peglin](https://www.gamedeveloper.com/press-release/from-game-jam-to-winning-best-design-the-story-behind-peglin) (Game Developer, 2022)
 - GameGene: https://gamegene.app/en/library/records/claims/4ac14eba-a153-44b0-9142-4b63d3da9b21
 
-#### Roguebook
+#### Roguebook (roguelite)
 
 Jean-Michel Vilain reasoned that in a single-player game the team could let players do wild things without caring how an opponent would feel. Before release he called letting players access incredibly powerful synergies of cards, gems, treasures and talents an opportunity card gamers had dreamed about and said they want players to break the game, though they designed against trimming decks down to a few strong cards by giving players reasons to keep large decks.
 
@@ -31,7 +31,7 @@ Jean-Michel Vilain reasoned that in a single-player game the team could let play
 - Source: [Tackling deckbuilding and roguelite design in Abrakam's Roguebook](https://www.gamedeveloper.com/design/tackling-deckbuilding-design-in-abrakam-s-roguebook) (Game Developer, 2022)
 - GameGene: https://gamegene.app/en/library/records/claims/0540e942-364e-4dfe-b6d4-ac9c04ff80f6
 
-#### Balatro
+#### Balatro (roguelite)
 
 Asked about player strategies and Joker combinations that almost break the game, LocalThunk said something can sometimes be overpowered in a fun way, but not when an easy approach done every run shuts players out of the game's other fun. He said he didn't really consider a lot of the strategies strong players found. In a separate answer, he said that over a beta/demo of about seven months some Jokers proved way too overpowered, ignored or too niche; some had their numbers tweaked, but more often a Joker with a bad effect was removed.
 
@@ -42,7 +42,7 @@ Asked about player strategies and Joker combinations that almost break the game,
 
 ### Games that went the other way
 
-#### Monster Train
+#### Monster Train (roguelite)
 
 Mark Cooke names as a design goal the moment when the one piece you were hoping for completes a drafted build and you shout "Yes!". Yet a spell that grants multistrike was nerfed over and over, its Ember cost raised and a Fragile effect added. Nerfs are sometimes needed, he says, because picking the same thing every time is not interesting.
 
@@ -52,7 +52,7 @@ Mark Cooke names as a design goal the moment when the one piece you were hoping 
 
 ### Related cases filed under other questions
 
-- Rogue Legacy 2: the opposite problem: options too weak to pick, fixed by attaching a payoff → [16 What to do with cards and options that almost nobody uses?](16-unused-options.md)
+- Rogue Legacy 2: the opposite problem: options too weak to pick, fixed by attaching a payoff → [09 What to do with cards and options that almost nobody uses?](../shared/09-unused-options.md)
 
 All cases, related games and newer records: the GameGene MCP server (`gamegene_joseki`, `gamegene_claims`).
 
@@ -64,7 +64,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 **この言葉でも当たる:** 壊れ, 無限コンボ, 最強デッキ, ナーフ, 数値で直らない, 外す, 作り直す
 
-**何を量るか:** 1人で遊ぶ run では、強すぎる組み合わせがご褒美になりうる。どの回も同じ1つの楽な組み方になると、問題になる。
+**何を量るか:** 1人で遊ぶゲームでは、強すぎる組み合わせがご褒美になりうる。どの回も同じ1つの楽な組み方になると、問題になる。
 
 ### 定石: 一人用・一回で閉じるなら、壊れた強さを許す
 
@@ -75,7 +75,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 ### この判断をした作品
 
-#### Peglin
+#### Peglin (roguelite)
 
 ディラン・ゲディグらはジャムの後、本作を RPG として広げるつもりだったが、試すうちにローグライクのほうが合うと気づいた。10時間を超えるキャンペーン全体の釣り合いを崩す心配をあまりせずに、とんでもない遺物を作れるからだ。
 
@@ -84,7 +84,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - 出典: [From Game Jam to winning Best Design: The story behind Peglin](https://www.gamedeveloper.com/press-release/from-game-jam-to-winning-best-design-the-story-behind-peglin) (Game Developer, 2022)
 - GameGene: https://gamegene.app/library/records/claims/4ac14eba-a153-44b0-9142-4b63d3da9b21
 
-#### Roguebook
+#### Roguebook (roguelite)
 
 ジャン＝ミシェル・ヴィランは、一人用なら相手の気持ちを気にせず遊び手に無茶をさせられると考えた。発売前には、札・宝石・宝物・タレントの強いシナジーに届かせることを夢見てきた機会と呼び、«ゲームを壊してほしい» と語った。ただし山札を少数の強い札に削る型は、大きな山札を持つ理由を与えて避けたという。
 
@@ -93,7 +93,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - 出典: [Tackling deckbuilding and roguelite design in Abrakam's Roguebook](https://www.gamedeveloper.com/design/tackling-deckbuilding-design-in-abrakam-s-roguebook) (Game Developer, 2022)
 - GameGene: https://gamegene.app/library/records/claims/0540e942-364e-4dfe-b6d4-ac9c04ff80f6
 
-#### Balatro
+#### Balatro (roguelite)
 
 ローカルサンクは、遊び手が見つけたゲームを壊しかける戦い方について、強すぎても面白い場合があるが、簡単で毎回それで済み他の面白さを締め出す強さは望まないと語る。上手な遊び手の戦い方の多くはあまり考えていなかったともいう。約7か月のベータ・体験版では、強すぎる・誰も取らない・狭すぎる札は数値を直すより外すほうが多かった。
 
@@ -104,7 +104,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 ### 逆を選んだ作品
 
-#### Monster Train
+#### Monster Train (roguelite)
 
 マーク・クックは、一回の旅で拾った札や品が噛み合い、«これさえ来れば完璧» と待った1枚が揃って声が出る瞬間を作ることを設計の目標に挙げる。一方、多段攻撃を与える呪文の札は強すぎて何度も弱め、エンバーのコストを上げ、脆弱 (Fragile) を付ける効果も足した。弱体化は時に要る、毎回同じものを取るのが最善では面白くないからだという。
 
@@ -114,6 +114,6 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 ### ほかの問いに置いた関係する事例
 
-- Rogue Legacy 2: 逆の問題、弱すぎて選ばれない選択肢に見返りを付けて直した → [16 ほとんど使われない札や選択肢をどうするか](16-unused-options.md)
+- Rogue Legacy 2: 逆の問題、弱すぎて選ばれない選択肢に見返りを付けて直した → [09 ほとんど使われない札や選択肢をどうするか](../shared/09-unused-options.md)
 
 全部の事例・関連作・新しい記録は GameGene の MCP (`gamegene_joseki`・`gamegene_claims`) で引ける。
