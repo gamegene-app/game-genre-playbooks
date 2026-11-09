@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "genre": "cozy",
+  "playbook": "game-design-playbook",
+  "playbookCommit": "",
+  "team": {
+    "ja": "のんびりした生活シミュレーション（町で暮らし、住人と仲良くなるゲーム）を作っている小さなインディーチーム",
+    "en": "a small indie team making a relaxed life sim (the player lives in a town and befriends its residents)"
+  },
+  "notes": "Genre-level design questions a cozy / life-sim developer typically asks. Same fields as roguelite.json. The records hold no farming game yet (Stardew Valley and Harvest Moon / Story of Seasons are not on record), so questions that lean on farming expect a gap. The last question is a control with no matching reference. Re-check goldCases and expectGap whenever the playbook is regenerated, and update playbookCommit.",
+  "questions": [
+    {
+      "id": "C01-real-clock",
+      "prompt": {
+        "ja": "ゲーム内の1日を現実の時計と同じにするか、ゲームの中だけの時計（1日20分など）にするか迷っている。現実の時計だと夜しか遊べない人が困りそう。",
+        "en": "Should a day in our game follow the real clock, or a clock of its own (say 20 minutes per day)? With the real clock, people who can only play at night may miss out."
+      },
+      "goldQuestions": [
+        "game-clock",
+        "coming-back"
+      ],
+      "goldCases": [
+        "Dobutsu no Mori / Animal Crossing (a village on the real clock; fish and bugs change with the hour; a father who plays at night can still catch a great fish)",
+        "Shenmue (every townsperson has a daily schedule the player reads to find them)"
+      ],
+      "expectGap": "No farming-game developer on record explaining how long an in-game day lasts"
+    },
+    {
+      "id": "C02-daily-energy",
+      "prompt": {
+        "ja": "1日に行動できる回数（体力）に上限を付けるべき？付けると『あれもこれもできない』とストレスになり、付けないと毎日が作業になりそう。",
+        "en": "Should we cap how much the player can do in one day (an energy or stamina limit)? A cap may feel stressful, but without one each day may turn into a grind."
+      },
+      "goldQuestions": [
+        "limited-days",
+        "game-clock"
+      ],
+      "goldCases": [
+        "Persona 3 (a school-year calendar with relationships on top)",
+        "Fire Emblem: Three Houses (time management as a selling point; an early strict limit on whom you can talk to was opposed)",
+        "Persona 4 (weather-driven deadlines made players rush dungeons and split them from relationships)",
+        "Persona 3 Reload (removed the condition system because it led to save-and-reload against the odds)"
+      ],
+      "expectGap": "No farming or life-sim developer on record explaining a daily energy or stamina limit"
+    },
+    {
+      "id": "C03-affinity-gauge",
+      "prompt": {
+        "ja": "住人との仲の良さを、ハートのゲージで見せるか、会話や態度だけで分かるようにするか。新しく引っ越してくる住人とも、ちゃんと仲良くなれる流れにしたい。",
+        "en": "Should we show how close the player is to each resident as a heart gauge, or only through their dialogue and behaviour? We also want residents who move in later to become friends in a believable way."
+      },
+      "goldQuestions": [
+        "relationships"
+      ],
+      "goldCases": [
+        "Persona 5 Royal (a new character everyone fawns over would feel unearned; bonds grow naturally, modelled on Marie in Persona 4 Golden)",
+        "Fire Emblem: Three Houses (meet most of the cast before the war so bonds exist when it matters)"
+      ],
+      "expectGap": "No cozy-game developer on record explaining whether to show relationship values as a number or gauge"
+    },
+    {
+      "id": "C04-play-with-family",
+      "prompt": {
+        "ja": "家族や友だちと一緒に遊べるようにしたいが、同時にオンラインで遊ぶのは予定を合わせるのが大変。どうすればいい？",
+        "en": "We want families and friends to share the game, but getting everyone online at the same time is hard. What can we do?"
+      },
+      "goldQuestions": [
+        "together-apart"
+      ],
+      "goldCases": [
+        "Dobutsu no Mori (up to four people live in one village but never at the same time; letters and a notice board pass messages)",
+        "Dobutsu no Mori (kept the shared field and built the game around players' communication)",
+        "Nintendogs (StreetPass brings the dog-park chats of owners passing each other)"
+      ],
+      "expectGap": null
+    },
+    {
+      "id": "C05-daily-return",
+      "prompt": {
+        "ja": "毎日少しずつ遊んでもらいたい。ログインボーナスのような仕組みは嫌われそうだが、ほかにどんな方法がある？",
+        "en": "We want people to play a little every day. Login bonuses feel cheap. What else works?"
+      },
+      "goldQuestions": [
+        "coming-back",
+        "game-clock"
+      ],
+      "goldCases": [
+        "Personal Trainer: Walking (hoarding steps was not enough motivation; a review of daily rhythm was)",
+        "Personal Trainer: Walking (hides the step count so checking at the end of the day is a small joy)",
+        "Club Penguin (free party items as proof of having been there)",
+        "Dobutsu no Mori (a real-clock village that ends each day with 'see you tomorrow')"
+      ],
+      "expectGap": null
+    },
+    {
+      "id": "C06-endless",
+      "prompt": {
+        "ja": "メインのストーリーを終えた後も、ずっと遊び続けられるようにすべき？それとも、きれいに終わらせたほうがいい？",
+        "en": "After the main story ends, should the player be able to keep playing forever, or should the game end cleanly?"
+      },
+      "goldQuestions": [
+        "ending"
+      ],
+      "goldCases": [
+        "Wilmot's Warehouse (ends after about six hours on purpose; an endless treadmill would be unethical)",
+        "Club Penguin (went the other way: run like a weekly activity magazine with new content)"
+      ],
+      "expectGap": "No farming or life-sim developer on record explaining why their game has no ending"
+    },
+    {
+      "id": "C07-no-fail",
+      "prompt": {
+        "ja": "失敗やゲームオーバーを一切なくすつもりだが、それだと張り合いがなくて退屈になるのでは、と言われた。どう考えればいい？",
+        "en": "We plan to have no failure or game over at all, but someone said it will be boring with nothing at stake. How should we think about it?"
+      },
+      "goldQuestions": [
+        "low-stakes",
+        "losing"
+      ],
+      "goldCases": [
+        "Keep Talking and Nobody Explodes (dropped the serious bomb so it is tense but not scary)",
+        "Keep Talking and Nobody Explodes (kept inputs simple so a loss never feels like clumsiness; the difficulty is in the decisions)"
+      ],
+      "expectGap": "No cozy or farming-game developer on record explaining a no-fail design or the pressure kept instead"
+    },
+    {
+      "id": "C08-tutorial",
+      "prompt": {
+        "ja": "最初のチュートリアルが長いとテストで言われた。説明を減らして自分で見つけてもらう形にしたいが、迷う人が出るのが心配。",
+        "en": "Playtesters say our opening tutorial is too long. We'd like to explain less and let players discover things, but we worry some will get lost."
+      },
+      "goldQuestions": [
+        "teaching-and-discovery"
+      ],
+      "goldCases": [
+        "The Witness (removed jumping and picking up so the puzzles teach without words)",
+        "Strange Horticulture (no tutorial, like opening a board game box; eye-catching animation to keep players from getting lost)",
+        "TUNIC (hints hidden as manual pages in the world, because full-screen tutorials can spoil surprises)",
+        "Rain World (started with no guidance; playtests forced a short line of text and a small guide creature)"
+      ],
+      "expectGap": null
+    },
+    {
+      "id": "C09-pricing-control",
+      "prompt": {
+        "ja": "町のお店の品物の値段は、季節や需要で変動させたほうがいい？",
+        "en": "Should prices in the town's shops change with the season or demand?"
+      },
+      "goldQuestions": [],
+      "goldCases": [],
+      "expectGap": "Control question: the playbook has no case on shop price fluctuation; a good answer says there is no direct precedent instead of inventing one"
+    }
+  ]
+}
