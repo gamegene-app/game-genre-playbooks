@@ -1,6 +1,6 @@
 // Answer each question under each condition with headless `claude -p`, and record what was used.
 //
-//   node run.mjs --conditions=A,B,C,D --reps=3   (add --questions-file=questions/horror.json for horror)
+//   node run.mjs --conditions=A,B,C,D --reps=3   (add --questions-file=questions/horror.json or questions/cozy.json for those genres)
 //   node run.mjs --questions=Q01,Q02 --conditions=A,A-trial --run=trial1
 //
 // Each condition answers from its own empty temp folder that holds only its playbook skill (or

@@ -35,7 +35,7 @@ function skillNameOf(skillMd) {
 
 /**
  * Resolve the eval config for a new run from CLI flags and env:
- *   --questions-file  questions file (default questions/roguelite.json; questions/horror.json for horror)
+ *   --questions-file  questions file (default questions/roguelite.json; questions/horror.json, questions/cozy.json)
  *   --playbook   playbook folder holding SKILL.md + references/ (env PLAYBOOK_DIR;
  *                default <kit>/../skills/<playbook> from the questions file, or <genre> for
  *                older files)

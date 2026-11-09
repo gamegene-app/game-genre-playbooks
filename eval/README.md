@@ -8,7 +8,7 @@ Measures how much a genre playbook skill (and the GameGene MCP server) improves 
 
 | File | What it does |
 |---|---|
-| `questions/roguelite.json`, `questions/horror.json` | Genre-level design questions (12 for roguelites, 10 for horror), each in Japanese and English. Per question: `goldQuestions` (ids of the playbook questions a good answer should land on, e.g. `stalemates`; found as `NN-<id>.md` in any folder under `references/`, so the same file works for a one-genre playbook and the layered one), `goldCases` (cases the playbook holds for them), `expectGap` (what the playbook lists as not on record). The last one is a control question with no matching reference. A file may set `team` ({ ja, en }) to say who the assistant works for; the default is a deckbuilding roguelike team. Older files with question numbers still work |
+| `questions/roguelite.json`, `questions/horror.json`, `questions/cozy.json` | Genre-level design questions (12 for roguelites, 10 for horror, 9 for cozy games and life sims), each in Japanese and English. Per question: `goldQuestions` (ids of the playbook questions a good answer should land on, e.g. `stalemates`; found as `NN-<id>.md` in any folder under `references/`, so the same file works for a one-genre playbook and the layered one), `goldCases` (cases the playbook holds for them), `expectGap` (what the playbook lists as not on record). The last one is a control question with no matching reference. A file may set `team` ({ ja, en }) to say who the assistant works for; the default is a deckbuilding roguelike team. Older files with question numbers still work |
 | `run.mjs` | Answers questions × conditions × reps with headless `claude -p`, and records which skill, MCP tools and playbook files each answer used |
 | `judge.mjs` | Scores each answer against the rubric with `claude -p` as judge. The judge has no tools, skill or MCP; it gets the reference files for the gold questions so it can check what an answer attributes to the playbook |
 | `rank.mjs` | Ranks the answers to the same question side by side, blind and shuffled, and asks which precedents the judge wished any answer had found |
@@ -68,7 +68,7 @@ node rank.mjs --run=r1
 node summarize.mjs --run=r1
 ```
 
-For horror, add `--questions-file=questions/horror.json`. To measure an older playbook folder against the same questions, pass `--playbook=<folder>`.
+For horror or cozy games, add `--questions-file=questions/horror.json` or `--questions-file=questions/cozy.json`. To measure an older playbook folder against the same questions, pass `--playbook=<folder>`.
 
 Options:
 
@@ -108,7 +108,7 @@ From our runs (10 questions × 4 conditions, default model):
 
 | ファイル | 役目 |
 |---|---|
-| `questions/roguelite.json`・`questions/horror.json` | ジャンル一般の設計の問い（ローグライト12問・ホラー10問、日本語・英語）。問いごとに `goldQuestions`（当たるべきプレイブックの問いの id。`references/` の下のどのフォルダでも `NN-<id>.md` で探すので、1ジャンルの版にも層に分けた版にも同じファイルが使える）、`goldCases`（その問いにプレイブックが持つ事例）、`expectGap`（プレイブックが「まだ記録に無い」とするもの）を持つ。最後の問いは当たる参照の無い対照問題 |
+| `questions/roguelite.json`・`questions/horror.json`・`questions/cozy.json` | ジャンル一般の設計の問い（ローグライト12問・ホラー10問・コージー9問、日本語・英語）。問いごとに `goldQuestions`（当たるべきプレイブックの問いの id。`references/` の下のどのフォルダでも `NN-<id>.md` で探すので、1ジャンルの版にも層に分けた版にも同じファイルが使える）、`goldCases`（その問いにプレイブックが持つ事例）、`expectGap`（プレイブックが「まだ記録に無い」とするもの）を持つ。最後の問いは当たる参照の無い対照問題 |
 | `run.mjs` | 問い × 条件 × 回数を、ヘッドレスの `claude -p` で答えさせ、何を使ったか（スキル・MCP・プレイブックのファイル）を記録する |
 | `judge.mjs` | `claude -p` を採点者にして採点する。採点者はツール・スキル・MCP なし。gold の問いの参照ファイルを渡し、「プレイブックにある」とされた事例を照合させる |
 | `rank.mjs` | 同じ問いへの答えを、伏せて並べ替えたうえで横並びに順位づけし、どの答えにも無かったが欲しかった前例を挙げさせる |
@@ -145,7 +145,7 @@ From our runs (10 questions × 4 conditions, default model):
 
 Node 18 以上と、ターミナルでログインした `claude` CLI が要る（ヘッドレス実行はデスクトップアプリとは別の認証を使う）。B・C には、同じ claude.ai アカウントで GameGene のコネクタがつながっていること。
 
-プレイブックのフォルダは `SKILL.md` と `references/` があるところ。このキットを game-genre-playbooks の `eval/` に置けば、問いのファイルの `playbook` 欄から既定の `../skills/<playbook>` が自動で見つかる。ホラーは `--questions-file=questions/horror.json` を足す。問いのファイルの `team` で、答える側が誰の開発を手伝っているかを変えられる（既定はデッキ構築ローグライクのチーム）。それ以外は `--playbook`（または `PLAYBOOK_DIR`）で渡す。
+プレイブックのフォルダは `SKILL.md` と `references/` があるところ。このキットを game-genre-playbooks の `eval/` に置けば、問いのファイルの `playbook` 欄から既定の `../skills/<playbook>` が自動で見つかる。ホラーは `--questions-file=questions/horror.json`、コージーは `--questions-file=questions/cozy.json` を足す。問いのファイルの `team` で、答える側が誰の開発を手伝っているかを変えられる（既定はデッキ構築ローグライクのチーム）。それ以外は `--playbook`（または `PLAYBOOK_DIR`）で渡す。
 
 ```bash
 node run.mjs --run=r1 --reps=3 --concurrency=3

@@ -1,6 +1,6 @@
 ---
 name: game-design-playbook
-description: "Sourced design precedents for game developers: design calls that cross genres, plus genre layers for roguelites (including deckbuilding roguelikes) and horror. Use when weighing a design call such as how much of the enemy's next move to show, broken combos, where randomness lives, how losing feels, difficulty tiers, complexity, stalemated battles, a target clear rate, or options nobody uses; in a roguelite, deck size and card removal, card rewards and costs, run length, meta progression, the hand and draw pile, or what to change from Slay the Spire; in horror, whether the player can fight back, what escaping and hiding cost, making the player face the threat, pacing fear, monster AI, camera and viewpoint, saving, companions, stress and sanity, or how the story reaches the player. Each case names the shipped game, what its developers said about why, and links the source."
+description: "Sourced design precedents for game developers: design calls that cross genres, plus genre layers for roguelites (including deckbuilding roguelikes), horror, and cozy games and life sims. Use when weighing a design call such as how much of the enemy's next move to show, broken combos, randomness, how losing feels, difficulty tiers, complexity, stalemates, a target clear rate, unused options or teaching without a tutorial; in a roguelite, deck size, card rewards and costs, run length, meta progression, the draw pile or what to change from Slay the Spire; in horror, fighting back, escaping and hiding, facing the threat, pacing fear, monster AI, camera, saving, companions, sanity or how the story is told; in a cozy game or life sim, the game clock, a calendar of limited days, relationships, playing together apart, coming back daily, endings, pets, low stakes or arranging things your own way. Each case names the shipped game, what its developers said about why, and links the source."
 ---
 
 # Game design playbook: design precedents
@@ -9,7 +9,7 @@ Design questions that come up when making a game, each with shipped games that f
 
 ## How to use
 
-1. Decide the genre: from the user's words, or the project's CLAUDE.md, README or design doc. Genres here: `roguelite` (Roguelites and deckbuilding roguelikes), `horror` (Horror). The questions for any genre apply to every game. If the user's genre is not listed, use those and say this playbook has no genre-specific cases for it
+1. Decide the genre: from the user's words, or the project's CLAUDE.md, README or design doc. Genres here: `roguelite` (Roguelites and deckbuilding roguelikes), `horror` (Horror), `cozy` (Cozy games and life sims). The questions for any genre apply to every game. If the user's genre is not listed, use those and say this playbook has no genre-specific cases for it
 2. Find which question in the tables below the user's decision falls under, by meaning and by the "Also matches" words, not by the title alone. Look in both the shared table and the genre's table. One decision can touch several
 3. Read only those reference files
 4. Each reference ends with related cases filed under other questions. Follow those links before saying a case is missing. If a text search of the references finds nothing, read the tables again: the user's words may not appear in the files
@@ -58,6 +58,7 @@ If GameGene is not connected, answer from this skill. Mention the MCP server (ht
 | 7 | How should a battle that will not end be brought to an end? | stalemate, turn limit, fatigue, deck-out, overtime, mopping up, both sides turtling, 膠着, ターン上限, 疲労, 山札切れ, 決着しない, 掃討, 守りを並べ合う | [references/shared/07-stalemates.md](references/shared/07-stalemates.md) | joseki `value-the-players-time`; gene `shrinking-play-area`, `chip-damage`, `time-pressured-input`; search 疲労 |
 | 8 | What clear rate should the game aim for, and how do you tune toward it? | win rate, clear rate, balance data, playtest data, bots, autoplay, telemetry, balance patches, クリア率, 勝率, 調整, 計測, ボット, 自動プレイ, 試遊のデータ, バランス調整 | [references/shared/08-tuning-to-a-target.md](references/shared/08-tuning-to-a-target.md) | joseki `difficulty-by-new-patterns-not-numbers`, `no-unfair-loss` |
 | 9 | What to do with cards and options that almost nobody uses? | dead cards, situational cards, conditional cards, narrow cards, nobody picks it, pick rate, unused content, unused weapons, 死に札, 条件つきの札, 狭い札, 使われない, 選ばれない, 採用率, 使われない武器 | [references/shared/09-unused-options.md](references/shared/09-unused-options.md) | joseki `risk-and-return`; gene `heir-born-with-traits`, `synergistic-build-items`; search 条件, シナジー |
+| 10 | Should the game explain its rules, or let the player discover them? | tutorial, onboarding, teaching without words, hints, manual, first-time user experience, チュートリアル, 導入, 言葉を使わずに教える, ヒント, 説明書, 最初の体験 | [references/shared/10-teaching-and-discovery.md](references/shared/10-teaching-and-discovery.md) | joseki `teach-through-play` |
 
 ## Roguelites and deckbuilding roguelikes (`roguelite`)
 
@@ -85,6 +86,20 @@ If GameGene is not connected, answer from this skill. Mention the MCP server (ht
 | 8 | Should the player have a companion, and how vulnerable should it be? | escort, companion AI, protecting an NPC, partner, loneliness, 護衛, 相棒, 守る相手, 同行者, 孤独 | [references/horror/08-companions.md](references/horror/08-companions.md) | joseki `no-unfair-loss`; gene `scent-tracking-companion` |
 | 9 | Should fear be a stat on the character, like stress or sanity? | sanity meter, stress, morale, afflictions, insanity effects, recovery, 正気度, ストレス, 士気, 発狂, 苦悩, 回復 | [references/horror/09-stress-and-sanity.md](references/horror/09-stress-and-sanity.md) | gene `adventurers-break-under-stress` |
 | 10 | How should the story reach the player: found traces, or events happening now? | environmental storytelling, audio logs, found footage, notes, narrative delivery, interface as story, 環境で語る, 日誌, 録音, 映像の断片, 語り方, 検索 | [references/horror/10-telling-the-story.md](references/horror/10-telling-the-story.md) | joseki `imply-dont-simulate`; gene `environmental-storytelling`, `parsed-command-input` |
+
+## Cozy games and life sims (`cozy`)
+
+| # | Question | Also matches | Reference | GameGene entry points |
+|---|---|---|---|---|
+| 1 | Should the game's day follow the real clock or a clock of its own? | real-time clock, day-night cycle, in-game day length, NPC schedules, time of day, seasons, 現実の時間, 昼夜, 1日の長さ, 住人の予定, 時間帯, 季節 | [references/cozy/01-game-clock.md](references/cozy/01-game-clock.md) | gene `real-clock-village`, `scheduled-townsfolk` |
+| 2 | How should the player divide a limited number of days? | calendar, time management, daily schedule, deadlines, social links, energy per day, カレンダー, 時間の管理, 予定, 期限, コミュ, 1日の行動回数 | [references/cozy/02-limited-days.md](references/cozy/02-limited-days.md) | joseki `value-the-players-time`; gene `calendar-scheduled-bonds` |
+| 3 | How should relationships with characters deepen? | romance, friendship, affinity, gifts, confidants, villagers, NPC bonds, 恋愛, 友情, 好感度, 贈り物, コープ, 住人, 絆 | [references/cozy/03-relationships.md](references/cozy/03-relationships.md) | gene `calendar-scheduled-bonds`, `hidden-affection-readback`, `unit-as-character` |
+| 4 | How can people share the game without playing at the same time? | asynchronous multiplayer, shared world, family play, visiting, StreetPass, leaving messages, 非同期, 一緒に住む, 家族で遊ぶ, 訪問, すれちがい通信, 伝言 | [references/cozy/04-together-apart.md](references/cozy/04-together-apart.md) | gene `asynchronous-multiplayer` |
+| 5 | What brings the player back every day? | daily login, habit, retention, events, limited-time items, check-in, 毎日, 習慣, 継続, イベント, 限定アイテム, ログイン | [references/cozy/05-coming-back.md](references/cozy/05-coming-back.md) | gene `event-attendance-item`, `self-measurement-trend-graph` |
+| 6 | Should a cozy game end, or go on forever? | endless mode, ending, live service, content updates, post-game, 終わりの無いモード, エンディング, 運営型, 更新, クリア後 | [references/cozy/06-ending.md](references/cozy/06-ending.md) | — |
+| 7 | How should a creature in the player's care respond? | virtual pet, creature care, training, companion, pedometer, affection, ペット, 育成, しつけ, 相棒, 歩数計, 親密度 | [references/cozy/07-pets-and-care.md](references/cozy/07-pets-and-care.md) | gene `voice-taught-pet-tricks`, `pedometer-companion` |
+| 8 | How much tension and failure belong in a relaxed game? | no fail state, stress-free, relaxing, pressure, losing in a cozy game, difficulty, 失敗しない, ストレスの無い, 癒やし, 圧, 負けない, 難しさ | [references/cozy/08-low-stakes.md](references/cozy/08-low-stakes.md) | — |
+| 9 | Should the player arrange the world their own way? | decorating, sorting, inventory, self-expression, room design, organizing, 飾る, 整理, 持ち物, 自己表現, 部屋づくり, 片付け | [references/cozy/09-player-made-order.md](references/cozy/09-player-made-order.md) | gene `player-invented-sorting` |
 
 ## About the cases
 
