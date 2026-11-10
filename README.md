@@ -93,8 +93,27 @@ Claude Code answered the same design questions under four conditions, and a sepa
 - No graded answer under any condition contained an invented precedent.
 - The playbook used about half the tokens of the MCP alone. MCP-only answers cited their sources less clearly (1.2 of 2 against 1.9 with the playbook).
 - The grader is the same model family as the answerer and the samples are small, so read these as a rough guide.
+- "No playbook" in this table is Claude with web search turned off. The comparison with web search is in the next section.
 
 Method, per-run notes and how to re-run: [eval/RESULTS.md](eval/RESULTS.md) and the [eval kit](eval/).
+
+## How it compares
+
+12 roguelite questions × 2 answers under five conditions, graded blind, and the five answers to each question also ranked side by side (10 November 2026). The web-search condition was told to search for precedents before answering, and the Game Studios condition to use its genre sheet and agents, so each alternative was measured at its best.
+
+| Condition | Score (0–1) | Rank (1 = best of 5) | Sourcing (of 2) | Tokens |
+|---|---|---|---|---|
+| **This playbook + web search** | **0.94** | **1.3** | 1.4 | 317k |
+| Web search only | 0.86 | 1.9 | 1.0 | 254k |
+| This playbook only (no search) | 0.94 | 2.9 | 1.6 | 167k |
+| Neither | 0.56 | 4.4 | 0.8 | 73k |
+| [Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) 1.3.0 | 0.47 | 4.5 | 0.6 | 165k |
+
+- **Keep web search on.** With the playbook and search together, the answer ranked first or tied first on 11 of 12 questions.
+- **The playbook alone ranked below search alone.** Search finds recent, exactly matching cases, such as Slay the Spire 2's. The playbook brings developers' own words and what they gave up, with sources you can check, but on some questions its closest record was a step away from the question. Slay the Spire's core calls (the price of card removal, why rewards can be skipped) are not yet on GameGene's records from primary sources.
+- **Search alone mixes in fan estimates and secondhand articles.** Keeping the developer's words apart from its own reading (1.5 of 2) and sourcing (1.0) both rose with the playbook added (2.0 and 1.4).
+- **Claude-Code-Game-Studios builds a prototype of a genre's usual shape.** Its 1.3.0 added sheets for about 70 genres: defaults, why, and when to break them, not a record of which developer gave up what. On design-decision questions it scored below no help at all. Use Game Studios to build the prototype, and this playbook to decide where to depart from the usual shape.
+- The grader is the same model family as the answerer and did not check whether sources found by search were real.
 
 ## Where the data comes from
 

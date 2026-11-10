@@ -9,8 +9,8 @@ import {
   rmSync,
   writeFileSync,
 } from "node:fs";
-import { tmpdir } from "node:os";
-import { dirname, isAbsolute, join, resolve } from "node:path";
+import { homedir, tmpdir } from "node:os";
+import { dirname, isAbsolute, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 export const KIT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -63,6 +63,11 @@ export function resolveConfig(args) {
     skillName,
     lang,
     variantsDir: abs(args["variants-dir"] ?? join(KIT_DIR, "variants")),
+    // Only condition G reads it; checked when its workspace is built, so other runs need nothing.
+    studiosDir:
+      (args["game-studios"] ?? process.env.GAME_STUDIOS_DIR)
+        ? abs(args["game-studios"] ?? process.env.GAME_STUDIOS_DIR)
+        : null,
   };
 }
 
@@ -113,17 +118,24 @@ export const GAMEGENE_SERVERS = (
 
 // The four base conditions. Append -<variant> to a skill condition (A-trial, B-trial) to use a trial
 // SKILL.md from variants/<variant>/ in place of the playbook's own.
+// W and G are the comparisons a reader asks about first: W is Claude with web search (the real
+// alternative to any knowledge skill), G is Claude-Code-Game-Studios, the most-starred game-dev
+// kit for Claude Code, which ships genre sheets since its 1.3.0 (9 Nov 2026).
 export const BASE_CONDITIONS = {
   A: { label: "skill only", skill: true, mcp: false },
   B: { label: "skill + MCP", skill: true, mcp: true },
   C: { label: "MCP only", skill: false, mcp: true },
   D: { label: "neither", skill: false, mcp: false },
+  W: { label: "web search", skill: false, mcp: false, web: true },
+  // A developer who installs the playbook still has web search; V is that everyday setup.
+  V: { label: "skill + web search", skill: true, mcp: false, web: true },
+  G: { label: "Claude-Code-Game-Studios", skill: false, mcp: false, studios: true },
 };
 
 /** Parse a condition key like "A" or "B-v3a". */
 export function parseCondition(key) {
-  const m = String(key).match(/^([A-D])(?:-([\w.-]+))?$/);
-  if (!m) throw new Error(`unknown condition ${key} (use A, B, C, D, or A-<variant>)`);
+  const m = String(key).match(/^([A-DWGV])(?:-([\w.-]+))?$/);
+  if (!m) throw new Error(`unknown condition ${key} (use A, B, C, D, W, V, G, or A-<variant>)`);
   const base = BASE_CONDITIONS[m[1]];
   const variant = m[2] ?? null;
   if (variant && !base.skill) throw new Error(`condition ${key}: ${m[1]} has no skill to vary`);
@@ -168,6 +180,21 @@ export function prepareWorkspace(cfg, runId, condKey) {
       writeFileSync(join(dest, "SKILL.md"), text);
     }
   }
+  if (c.studios) {
+    const src = cfg.studiosDir;
+    if (!src || !existsSync(join(src, ".claude", "agents")))
+      throw new Error(
+        "condition G: pass --game-studios=<clone of Donchitos/Claude-Code-Game-Studios> or set GAME_STUDIOS_DIR",
+      );
+    // The kit's agents, skills, genre sheets, rules, docs and CLAUDE.md, as a project using it
+    // would have them. Its settings.json is left out: it wires shell hooks and a status line,
+    // which a design answer does not need and which would run third-party scripts.
+    const skip = new Set([".git", join(".claude", "settings.json"), join(".claude", "hooks")]);
+    cpSync(src, dir, {
+      recursive: true,
+      filter: (p) => !skip.has(relative(src, p)),
+    });
+  }
   return dir;
 }
 
@@ -192,18 +219,40 @@ export function conditionArgs(cfg, condKey) {
   // Every condition: the kit folder holds the gold notes and earlier answers, and the playbook's
   // source folder would let a skill-off condition read it by absolute path.
   const deny = [denyRead(KIT_DIR), denyRead(cfg.playbookDir)];
+  // Run compare-1110 leaked once: a skill-off answer searched the user's Claude memory, found the
+  // path of another clone of this repo there, and read the playbook from it. Every condition is
+  // kept out of the memory folders, and a skill-off condition out of any copy of the playbook.
+  const claudeHome = join(homedir(), ".claude");
+  deny.push(denyRead(join(claudeHome, "projects")), denyRead(join(claudeHome, "insights")));
+  if (!c.skill) deny.push(`Read(//**/skills/${cfg.skillName}/**)`);
   const settings = { permissions: { deny } };
   // A copy of the playbook installed at user level or as a plugin would otherwise still show up.
   if (!c.skill) settings.skillOverrides = { [cfg.skillName]: "off" };
   if (!c.mcp) settings.disableClaudeAiConnectors = true;
-  const allowed = c.mcp ? [...COMMON_ALLOWED, ...GAMEGENE_SERVERS] : COMMON_ALLOWED;
+  // W gets the web; G gets subagents, since Game Studios works through its own agents.
+  const extra = [
+    ...(c.mcp ? GAMEGENE_SERVERS : []),
+    ...(c.web ? ["WebSearch", "WebFetch"] : []),
+    ...(c.studios ? ["Agent"] : []),
+  ];
+  const allowed = [...COMMON_ALLOWED, ...extra];
+  const disallowed = COMMON_DISALLOWED.filter((t) => !extra.includes(t));
+  // Left to itself, the model answered W and G from memory (smoke run, 10 Nov 2026: no search,
+  // no genre sheet opened), which would make them stand-ins for D. Both get told to use what
+  // they have, so the comparison is against each alternative at its best, not at its laziest.
+  const nudge = c.web
+    ? "Before answering, search the web for shipped games that faced this decision and for what their developers said about it (talks, interviews, postmortems). Cite the pages you used."
+    : c.studios
+      ? "This project uses Claude-Code-Game-Studios. Before answering, read the genre sheet for this game's genre under .claude/genres/ and use the project's design agents or skills where they fit."
+      : null;
   return [
+    ...(nudge ? ["--append-system-prompt", nudge] : []),
     "--settings",
     JSON.stringify(settings),
     "--allowedTools",
     ...allowed,
     "--disallowedTools",
-    ...COMMON_DISALLOWED,
+    ...disallowed,
   ];
 }
 
@@ -528,7 +577,9 @@ export function maskSources(cfg, text) {
   return text
     .replace(/https?:\/\/(?:stg\.)?gamegene\.app\/\S*/gi, "[record link]")
     .replace(new RegExp(`${skill}|GameGene(?:\\s*MCP)?|プレイブック|playbook`, "gi"), "[source]")
-    .replace(/スキル|\bskill\b|MCP/gi, "[source]");
+    .replace(/スキル|\bskill\b|MCP/gi, "[source]")
+    // Condition G names its kit and its genre sheets ("chipsets"); hide those the same way.
+    .replace(/Claude[- ]Code[- ]Game[- ]Studios|Game Studios|chipsets?|チップセット/gi, "[source]");
 }
 
 /** The last successful answer for each key in a run (failed attempts are retried under the same key). */
