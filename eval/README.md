@@ -27,6 +27,11 @@ Conditions are switched by launch flags, not by the prompt, so the answering mod
 | C | no | yes |
 | D | no | no |
 | A-`<variant>`, B-`<variant>` | trial `SKILL.md` from `variants/<variant>/` | as A / B |
+| W | no (web search on) | no |
+| V | yes (web search on) | no |
+| G | no (Claude-Code-Game-Studios installed) | no |
+
+W, V and G compare the playbook with other tools. W and V are told to search for precedents and cite pages, and G to use its genre sheet and agents (without that, both answered from memory). Pass G the kit with `--game-studios=<clone of Claude-Code-Game-Studios>` or `GAME_STUDIOS_DIR`; its `settings.json` and hooks are not copied, so no third-party shell runs.
 
 How each condition is isolated:
 
@@ -34,7 +39,8 @@ How each condition is isolated:
 - Every condition **denies reading** the kit folder (it holds the gold notes and earlier answers) and the playbook's source folder (so C and D cannot read it by absolute path).
 - C and D also turn the skill off with `skillOverrides`, in case a copy is installed at user level or as a plugin.
 - A and D turn GameGene off with `disableClaudeAiConnectors` (GameGene is a claude.ai connector). B and C pre-approve its tools, since a headless run cannot answer a permission prompt. If your connectors are named differently, set `GAMEGENE_SERVERS` (comma-separated, default `mcp__claude_ai_GameGene,mcp__claude_ai_GameGeneStg`).
-- No condition may use web search or fetch, edits, shells or subagents.
+- No condition may use web search or fetch, edits, shells or subagents, except web search and fetch in W and V, and subagents in G.
+- Every condition denies reading Claude's memory folders (`~/.claude/projects`, `~/.claude/insights`), and a skill-off condition denies reading any copy of the playbook, wherever it is (in the 10 November comparison, one answer read a clone it found named in the memory).
 - Any use of a source a condition should lack is recorded in `leaks` (and listed in the summary). Treat a leaked answer as out of the comparison.
 
 ## Rubric
@@ -127,6 +133,11 @@ From our runs (10 questions × 4 conditions, default model):
 | C | なし | あり |
 | D | なし | なし |
 | A-`<版>`, B-`<版>` | `variants/<版>/` の試作版 `SKILL.md` | A / B と同じ |
+| W | なし (Web 検索あり) | なし |
+| V | あり (Web 検索あり) | なし |
+| G | なし (Claude-Code-Game-Studios あり) | なし |
+
+W・V・G は、ほかの道具との比べに使う。W・V には «先例を検索して出典を示せ»、G には «ジャンルの資料とエージェントを使え» と指示を足す (指示なしでは、どちらも記憶だけで答えた)。G は `--game-studios=<Claude-Code-Game-Studios の clone>` か `GAME_STUDIOS_DIR` で場所を渡す。`settings.json` と hooks は写さない (第三者のシェルを走らせないため)。
 
 切り分け方:
 
@@ -134,7 +145,8 @@ From our runs (10 questions × 4 conditions, default model):
 - どの条件でも、キットのフォルダ（gold のメモと過去の答えがある）と、プレイブックの元フォルダ（C・D が絶対パスで読めないように）の**読み取りを禁止**する
 - C・D は、ユーザー単位やプラグインで入っている場合に備えて `skillOverrides` でもスキルを切る
 - A・D は `disableClaudeAiConnectors` で GameGene を切る（GameGene は claude.ai のコネクタ）。B・C はツールを事前に許可する（ヘッドレスでは許可の確認に答えられない）。コネクタ名が違うときは `GAMEGENE_SERVERS`（カンマ区切り、既定 `mcp__claude_ai_GameGene,mcp__claude_ai_GameGeneStg`）を設定する
-- どの条件でも Web 検索・Web 取得・編集・シェル・サブエージェントは使わせない
+- どの条件でも Web 検索・Web 取得・編集・シェル・サブエージェントは使わせない。例外は W・V の Web 検索・取得と、G のサブエージェント
+- どの条件でも、Claude の記憶のフォルダ (`~/.claude/projects`・`~/.claude/insights`) の読み取りを禁止する。スキルのない条件は、どこにあるプレイブックの写しも読めない (11-10 の比較で、記憶に書かれた別の clone から読んだ回があった)
 - 条件が持たないはずの情報源を使ったら `leaks` に記録する（要約にも出る）。その回は比較から外して考える
 
 ### 採点
