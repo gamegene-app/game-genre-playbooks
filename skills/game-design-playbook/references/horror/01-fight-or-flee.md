@@ -22,15 +22,31 @@ Recalling it in 2025, Alistair Hope said he asked his team what they would do if
 - Source: [How Creative Assembly Built Its Perfectly Evolved AI Xenomorph](https://www.gameinformer.com/retrospective/2025/06/24/how-creative-assembly-built-its-perfectly-evolved-ai-xenomorph) (Game Informer, 2025)
 - GameGene: https://gamegene.app/en/library/records/claims/77aea121-adec-456f-991c-162b7b52d320
 
-#### Clock Tower
+#### Outlast
 
-Clock Tower's director Hifumi Kono names Alone in the Dark as his biggest inspiration, and says what he took from it was the helplessness of dying over and over without understanding the rules. Clock Tower keeps that helplessness and withholds the weapons Alone in the Dark handed the player.
+Red Barrels wavered between a Resident Evil-style approach with guns and very limited ammo and an Amnesia-style approach with no combat at all, and chose no combat because it would allow a more focused experience. They kept considering weapon sections until player feedback at PAX East showed those were not needed.
 
-- Source: [Interview: Hifumi Kono of Nude Maker and Project Scissors/NightCry](http://gaming.moe/?p=713) (Gaming.moe, 2015)
-- Source: [本当に知りたい“怖さ”や“お金”の話──『クロックタワー』、『NightCry』河野一二三氏によるホラーゲーム制作のヒント解説](https://news.denfaminicogamer.jp/kikakuthetower/indiesgame_fest_mv_02) (電ファミニコゲーマー, 2016)
-- GameGene: https://gamegene.app/en/library/records/claims/a55804d7-4ec1-4303-93c2-2539602a0140
+- Source: [Horror in the Making: How Red Barrels outlasted Outlast](https://gamedeveloper.com/design/horror-in-the-making-how-red-barrels-outlasted-i-outlast-i-) (Game Developer, 2015)
+- Source: [Discussing Mainstream Horror And Influences With Red Barrels](https://gameinformer.com/games/outlast/b/pc/archive/2013/04/25/discussing-mainstream-horror-and-influences-with-red-barrels.aspx) (Game Informer, 2013)
+- GameGene: https://gamegene.app/en/library/records/claims/2730f86d-121a-4234-bf5d-d61ece57f924
 
 ### Games that went the other way
+
+#### Penumbra: Overture
+
+Players asked for weapons, so Thomas Grip's team added a deliberately clumsy fight modeled on the horror hero's last line of defense, calling the pickaxe and hammer tools. Instead, many players grabbed the tools and went on the attack, and the team took weapons out of the next game.
+
+- Source: [Interview: How Frictional Games Does Frightening Without Fighting](https://www.gamedeveloper.com/game-platforms/interview-how-frictional-games-does-frightening-without-fighting) (Gamasutra (Game Developer), 2008)
+- Source: [Evoking Emotions and Achieving Success by Breaking All the Rules (Thomas Grip, GDC Independent Games Summit)](https://www.youtube.com/watch?v=zBhiE6QZjzY&t=246s) (GDC)
+- GameGene: https://gamegene.app/en/library/records/claims/415570c2-3aa0-4b96-bb92-c2128d2016c5
+
+#### Amnesia: The Bunker
+
+In the very first small prototype you could already shoot a padlock, and Fredrik Olsson's team decided very early that the gun would not kill the monster but would be a tool. Bullets are very few, and shooting the stalker makes it take two next time. Once a bullet has a value, he says, you start asking whether to spend it here, and the game is no longer only about hiding.
+
+- Source: [Amnesia: The Bunker Interview – Semi-Open World, Structure, Stalker, and More](https://gamingbolt.com/amnesia-the-bunker-interview-semi-open-world-structure-stalker-and-more) (GamingBolt, 2023)
+- Source: [The Making of Amnesia: The Bunker (interview with Fredrik Olsson)](https://superjumpmagazine.com/the-making-of-amnesia-the-bunker) (SUPERJUMP, 2024)
+- GameGene: https://gamegene.app/en/library/records/claims/745d748f-969d-4213-97b2-af6efbc3ddc7
 
 #### Bloodborne
 
@@ -74,15 +90,31 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - 出典: [How Creative Assembly Built Its Perfectly Evolved AI Xenomorph](https://www.gameinformer.com/retrospective/2025/06/24/how-creative-assembly-built-its-perfectly-evolved-ai-xenomorph) (Game Informer, 2025)
 - GameGene: https://gamegene.app/library/records/claims/77aea121-adec-456f-991c-162b7b52d320
 
-#### Clock Tower
+#### Outlast
 
-クロックタワーのディレクター河野一二三は、最大の着想源にアローン・イン・ザ・ダークを挙げ、規則が分からないまま死に続けた無力さを受け取ったと語る。クロックタワーはその無力さを残し、アローン・イン・ザ・ダークが持たせた武器をプレイヤーに渡さない。
+レッドバレルズは、弾の乏しい銃で戦うバイオハザード型と、戦いを一切持たないアムネジア型の間で迷い、より焦点の絞れた体験を作れるとして戦い無しを選んだ。武器を持つ区間はその後も検討し続け、要らないと分かったのは PAX East での遊び手の反応からだった。
 
-- 出典: [Interview: Hifumi Kono of Nude Maker and Project Scissors/NightCry](http://gaming.moe/?p=713) (Gaming.moe, 2015)
-- 出典: [本当に知りたい“怖さ”や“お金”の話──『クロックタワー』、『NightCry』河野一二三氏によるホラーゲーム制作のヒント解説](https://news.denfaminicogamer.jp/kikakuthetower/indiesgame_fest_mv_02) (電ファミニコゲーマー, 2016)
-- GameGene: https://gamegene.app/library/records/claims/a55804d7-4ec1-4303-93c2-2539602a0140
+- 出典: [Horror in the Making: How Red Barrels outlasted Outlast](https://gamedeveloper.com/design/horror-in-the-making-how-red-barrels-outlasted-i-outlast-i-) (Game Developer, 2015)
+- 出典: [Discussing Mainstream Horror And Influences With Red Barrels](https://gameinformer.com/games/outlast/b/pc/archive/2013/04/25/discussing-mainstream-horror-and-influences-with-red-barrels.aspx) (Game Informer, 2013)
+- GameGene: https://gamegene.app/library/records/claims/2730f86d-121a-4234-bf5d-d61ece57f924
 
 ### 逆を選んだ作品
+
+#### Penumbra: Overture
+
+トーマス・グリップらは、武器を求める遊び手の声に応え、ホラーの主人公が身近な物で身を守る «最後の抵抗» をまねて、わざと扱いにくい戦闘を入れ、つるはしや金槌を «道具» と呼んだ。だが多くの遊び手は道具を握って攻めかかり、次の作では武器を外した。
+
+- 出典: [Interview: How Frictional Games Does Frightening Without Fighting](https://www.gamedeveloper.com/game-platforms/interview-how-frictional-games-does-frightening-without-fighting) (Gamasutra (Game Developer), 2008)
+- 出典: [Evoking Emotions and Achieving Success by Breaking All the Rules (Thomas Grip, GDC Independent Games Summit)](https://www.youtube.com/watch?v=zBhiE6QZjzY&t=246s) (GDC)
+- GameGene: https://gamegene.app/library/records/claims/415570c2-3aa0-4b96-bb92-c2128d2016c5
+
+#### Amnesia: The Bunker
+
+最初の小さな試作から銃で錠を撃てた。フレドリック・オルソンらはごく早くに、弾は怪物を殺さず銃は道具にすると決めた。弾はごく少なく、追跡者を1度撃てば次は2発要る。1発に値段が付くと «ここで使うか» の迷いが生まれ、隠れるだけのゲームではなくなるとオルソンは語る。
+
+- 出典: [Amnesia: The Bunker Interview – Semi-Open World, Structure, Stalker, and More](https://gamingbolt.com/amnesia-the-bunker-interview-semi-open-world-structure-stalker-and-more) (GamingBolt, 2023)
+- 出典: [The Making of Amnesia: The Bunker (interview with Fredrik Olsson)](https://superjumpmagazine.com/the-making-of-amnesia-the-bunker) (SUPERJUMP, 2024)
+- GameGene: https://gamegene.app/library/records/claims/745d748f-969d-4213-97b2-af6efbc3ddc7
 
 #### Bloodborne
 

@@ -68,12 +68,16 @@ After the playbook was split into a shared layer and genre layers (8 November 20
 |---|---|---|
 | 12 roguelite questions | 0.94 | 0.95 |
 
-And the new horror layer, 10 horror questions × 2 answers each:
+And the horror layer, 10 horror questions × 2 answers each. It was measured again on 10 November 2026, after adding new developer statements (Frictional, Outlast, Resident Evil 2 (2019), Left 4 Dead, Alien: Isolation's search behaviour), this time with all four conditions. The ranking compares the four conditions, so 1 is best and 4 is worst:
 
-| Condition | Score (0–1) | Blind ranking (1 = best) |
+| Condition | Score (0–1) | Blind ranking (1–4) |
 |---|---|---|
-| No playbook, no GameGene | 0.56 | 2.0 |
-| This playbook | 0.94 | 1.0 (first on all 10 questions) |
+| No playbook, no GameGene | 0.56 | 4.0 |
+| GameGene MCP only | 0.84 | 1.8 |
+| This playbook | 0.95 | 2.1 |
+| This playbook + GameGene MCP | 0.96 | 2.1 |
+
+With MCP only, answers rank well but cite their sources less clearly (sourcing 1.2 of 2 against 1.9 with the playbook). The first measurement (8 November, playbook vs none) gave 0.94 and 0.56.
 
 And the cozy layer (9 November 2026), 9 cozy and life-sim questions × 2 answers each:
 
@@ -142,7 +146,7 @@ With the GameGene MCP server connected, the playbook tells your agent to use it 
 
 同じ開発者が、自分のゲームの設計判断10問を各条件で3回ずつ答えさせ、条件を伏せて別の Claude に採点させました（[方法と詳細](../../issues/3)）。前例の情報源が無いと 0.31、GameGene MCP だけで 0.74、この作戦帳で 0.92、作戦帳と MCP で 0.94 でした。作戦帳だけのときのトークンは MCP だけのときの半分ほどで、どの条件でも作り話の前例は出ませんでした。採点者は答える側と同じ系統のモデルで、1条件30回答の規模なので、目安として読んでください。作戦帳の2行は今の SKILL.md を同じ問いで測り直した値で、ほかの2行は最初の計測の値です。
 
-共通の層とジャンルの層に分けた後（2026年11月8日）、[評価キット](eval/)で空のフォルダから作戦帳だけ（MCP なし）を測り直しました。ローグライトの12問（各3回）は分ける前 0.94、分けた後 0.95。新しいホラーの層は、ホラーの10問（各2回）で作戦帳なし 0.56、作戦帳あり 0.94 で、条件を伏せた順位づけでは10問すべてで作戦帳ありが1位でした。コージー・生活シミュの層（2026年11月9日）は9問（各2回）で作戦帳なし 0.42、作戦帳あり 0.92、順位は9問すべてで作戦帳ありが1位でした。どの回答にも作り話の前例はありませんでした。
+共通の層とジャンルの層に分けた後（2026年11月8日）、[評価キット](eval/)で空のフォルダから作戦帳だけ（MCP なし）を測り直しました。ローグライトの12問（各3回）は分ける前 0.94、分けた後 0.95。ホラーの層は、ホラーの10問（各2回）で作戦帳なし 0.56、作戦帳あり 0.94 で、条件を伏せた順位づけでは10問すべてで作戦帳ありが1位でした。11月10日に新しく入った作り手の言（Frictional・Outlast・バイオハザード RE:2・Left 4 Dead・Alien: Isolation の隠れ場所の探し方）を足して4条件で測り直すと、作戦帳なし 0.56、MCP だけ 0.84、作戦帳 0.95、作戦帳と MCP 0.96 でした。MCP だけの回答は順位では健闘しましたが、出典の示し方が弱くなりました（2点中 1.2、作戦帳ありは 1.9）。コージー・生活シミュの層（2026年11月9日）は9問（各2回）で作戦帳なし 0.42、作戦帳あり 0.92、順位は9問すべてで作戦帳ありが1位でした。どの回答にも作り話の前例はありませんでした。
 
 ### 入れ方と依頼
 
