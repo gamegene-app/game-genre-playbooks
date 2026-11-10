@@ -1,0 +1,14 @@
+{
+  "name": "gamegene",
+  "owner": { "name": "GameGene", "url": "https://gamegene.app" },
+  "metadata": {
+    "description": "Game design playbooks for AI agents, built from what developers said they decided and threw away, with sources."
+  },
+  "plugins": [
+    {
+      "name": "game-design-playbook",
+      "source": "./",
+      "description": "Sourced design precedents for game developers: cross-genre design calls plus roguelite, horror, and cozy layers."
+    }
+  ]
+}

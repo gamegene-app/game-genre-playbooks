@@ -2,8 +2,8 @@
 
 [![Genres: 3 + shared](https://img.shields.io/badge/genres-3%20%2B%20shared-2ea043)](#genres)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Data: GameGene](https://img.shields.io/badge/data-GameGene-c8553d)](https://gamegene.app/about)
-[![Connect the GameGene MCP](https://img.shields.io/badge/MCP-connect%20GameGene-6e56cf)](https://gamegene.app/mcp)
+[![Data: GameGene](https://img.shields.io/badge/data-GameGene-c8553d)](https://gamegene.app/about?utm_source=game-genre-playbooks&utm_medium=readme)
+[![Connect the GameGene MCP](https://img.shields.io/badge/MCP-connect%20GameGene-6e56cf)](https://gamegene.app/mcp?utm_source=game-genre-playbooks&utm_medium=readme)
 [![mcptry](https://mcptry.com/badge/app.gamegene/gamegene)](https://mcptry.com/servers/app.gamegene/gamegene)
 [![GameGene MCP connector – tool definition quality and endpoint health on Glama](https://glama.ai/mcp/connectors/app.gamegene/gamegene/badges/score.svg)](https://glama.ai/mcp/connectors/app.gamegene/gamegene)
 
@@ -15,7 +15,20 @@ This playbook gives your AI agent (Claude Code, Codex, Cursor and others that re
 
 ## Install
 
-Copy the playbook folder into your agent's skills folder. For Claude Code:
+In Claude Code (2.1.275 or later), install it as a plugin in one step:
+
+```
+/plugin install game-design-playbook --marketplace gamegene-app/game-genre-playbooks
+```
+
+On older versions, add the marketplace first, then install:
+
+```
+/plugin marketplace add gamegene-app/game-genre-playbooks
+/plugin install game-design-playbook@gamegene
+```
+
+Or copy the playbook folder into your agent's skills folder by hand. For Claude Code:
 
 ```bash
 git clone https://github.com/gamegene-app/game-genre-playbooks.git
@@ -99,13 +112,13 @@ All in one skill, [`game-design-playbook`](skills/game-design-playbook/SKILL.md)
 | **Horror** | 10 | whether the player can fight back, what escaping and hiding cost, pacing fear, monster AI, camera, saving, sanity |
 | **Cozy games and life sims** | 9 | the game clock, a calendar of limited days, relationships, playing together apart, coming back daily, endings, pets, low stakes |
 
-Roguelites came first because the records are thickest there; horror second, because its developers' own statements are nearly as many; then cozy games and life sims. The cozy layer has no farming game yet (Stardew Valley and Harvest Moon / Story of Seasons are not on GameGene's records), so farming decisions are listed as "not on record yet" in its references. A genre is scoped by GameGene's game tags, and each case in the shared layer is labelled with its game's genres, so the agent can prefer a precedent from your genre and still reach across genres. More genres are added once their records are complete enough; the next candidate is puzzle games.
+Roguelites came first because the records are thickest there; horror second, because its developers' own statements are nearly as many; then cozy games and life sims. The cozy layer has no farming game yet (Stardew Valley and Harvest Moon / Story of Seasons are not on GameGene's records), so farming decisions are listed as "not on record yet" in its references. A genre is scoped by GameGene's game tags, and each case in the shared layer is labelled with its game's genres, so the agent can prefer a precedent from your genre and still reach across genres. More genres are added once their records are complete enough; the next is tactics and strategy games, then puzzle games built on deduction and knowledge.
 
 ## Where the data comes from
 
-Everything here is generated from [**GameGene**](https://gamegene.app/about), a sourced database of game design lineage. GameGene records where a mechanic came from and where it went, in the developers' own words, and keeps a developer's statement apart from a critic's reading.
+Everything here is generated from [**GameGene**](https://gamegene.app/about?utm_source=game-genre-playbooks&utm_medium=readme), a sourced database of game design lineage. GameGene records where a mechanic came from and where it went, in the developers' own words, and keeps a developer's statement apart from a critic's reading.
 
-The playbook carries the questions, the principles and a few hand-picked cases for each. For the full set of cases, records that arrived after the last update, and games in other genres, connect the [**GameGene MCP server**](https://gamegene.app/mcp) to your AI app (a free account is enough).
+The playbook carries the questions, the principles and a few hand-picked cases for each. For the full set of cases, records that arrived after the last update, and games in other genres, connect the [**GameGene MCP server**](https://gamegene.app/mcp?utm_source=game-genre-playbooks&utm_medium=readme) to your AI app (a free account is enough).
 
 ## Requests
 
@@ -113,7 +126,7 @@ The playbook carries the questions, the principles and a few hand-picked cases f
 |---|---|
 | A new **genre** playbook | [Open an issue here](../../issues/new?template=genre-request.yml) |
 | A new **design question** or viewpoint for an existing genre | [Open an issue here](../../issues/new?template=viewpoint-request.yml) |
-| A specific **game**, or a **research question** about one | [Send a research request on GameGene](https://gamegene.app/feedback?panel=submit). It goes straight into GameGene's research queue, so it is usually handled sooner than an issue here, and the result reaches every playbook that uses it |
+| A specific **game**, or a **research question** about one | [Send a research request on GameGene](https://gamegene.app/feedback?panel=submit&utm_source=game-genre-playbooks&utm_medium=readme). It goes straight into GameGene's research queue, so it is usually handled sooner than an issue here, and the result reaches every playbook that uses it |
 
 ## How it works
 
@@ -150,11 +163,11 @@ With the GameGene MCP server connected, the playbook tells your agent to use it 
 
 ### 入れ方と依頼
 
-- 入れ方は上の Install。`skills/game-design-playbook` を `~/.claude/skills/` へ写す（1つのプロジェクトだけなら `<プロジェクト>/.claude/skills/` へ）
-- 中身は [`game-design-playbook`](skills/game-design-playbook/SKILL.md) の1つで、ジャンルをまたぐ問い10本・ローグライト（デッキ構築ローグライクを含む）7本・ホラー10本・コージー・生活シミュ9本。ジャンルの範囲は GameGene の作品のタグで切る。コージーの層には農場ものがまだ無い（Stardew Valley・牧場物語は GameGene に未収録）。次の候補はパズル
+- 入れ方は上の Install。Claude Code なら `/plugin install game-design-playbook --marketplace gamegene-app/game-genre-playbooks` の1行で入る。手で入れるなら `skills/game-design-playbook` を `~/.claude/skills/` へ写す（1つのプロジェクトだけなら `<プロジェクト>/.claude/skills/` へ）
+- 中身は [`game-design-playbook`](skills/game-design-playbook/SKILL.md) の1つで、ジャンルをまたぐ問い10本・ローグライト（デッキ構築ローグライクを含む）7本・ホラー10本・コージー・生活シミュ9本。ジャンルの範囲は GameGene の作品のタグで切る。コージーの層には農場ものがまだ無い（Stardew Valley・牧場物語は GameGene に未収録）。次はタクティクス・戦略、その次は推理・知識で解くパズル
 - 2026年11月8日までの `skills/roguelite`（`roguelite-playbook` として入れたもの）は、16問すべてがこのスキルに入った（9問は共通の層へ、7問はローグライトの層へ）。古いフォルダは消す（`rm -rf ~/.claude/skills/roguelite-playbook`）
-- データの出どころは [GameGene](https://gamegene.app/about)。全部の事例と出典は [GameGene MCP](https://gamegene.app/mcp)（無料のアカウントで使えます）で引ける
-- 新しいジャンルや観点の依頼は、このリポジトリの Issue へ。個別の作品や調査の依頼は [GameGene の調査依頼](https://gamegene.app/feedback?panel=submit) へ（GameGene の調査の順番に直接入るので、こちらのほうが早い）
+- データの出どころは [GameGene](https://gamegene.app/about?utm_source=game-genre-playbooks&utm_medium=readme)。全部の事例と出典は [GameGene MCP](https://gamegene.app/mcp?utm_source=game-genre-playbooks&utm_medium=readme)（無料のアカウントで使えます）で引ける
+- 新しいジャンルや観点の依頼は、このリポジトリの Issue へ。個別の作品や調査の依頼は [GameGene の調査依頼](https://gamegene.app/feedback?panel=submit&utm_source=game-genre-playbooks&utm_medium=readme) へ（GameGene の調査の順番に直接入るので、こちらのほうが早い）
 
 ## License
 
