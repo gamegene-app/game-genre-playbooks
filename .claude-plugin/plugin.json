@@ -1,0 +1,10 @@
+{
+  "name": "game-design-playbook",
+  "description": "Sourced design precedents for game developers: design calls that cross genres, plus genre layers for roguelites (including deckbuilding roguelikes), horror, and cozy games and life sims. Each case names the shipped game, what its developers said about why, and links the source.",
+  "version": "1.0.0",
+  "author": { "name": "GameGene", "url": "https://gamegene.app" },
+  "homepage": "https://github.com/gamegene-app/game-genre-playbooks",
+  "repository": "https://github.com/gamegene-app/game-genre-playbooks",
+  "license": "MIT",
+  "keywords": ["game-design", "gamedev", "indie-game", "roguelite", "deckbuilder", "horror", "cozy-games"]
+}
