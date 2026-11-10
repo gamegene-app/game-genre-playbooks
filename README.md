@@ -118,7 +118,7 @@ Roguelites came first because the records are thickest there; horror second, bec
 
 Everything here is generated from [**GameGene**](https://gamegene.app/about?utm_source=game-genre-playbooks&utm_medium=readme), a sourced database of game design lineage. GameGene records where a mechanic came from and where it went, in the developers' own words, and keeps a developer's statement apart from a critic's reading.
 
-The playbook carries the questions, the principles and a few hand-picked cases for each. For the full set of cases, records that arrived after the last update, and games in other genres, connect the [**GameGene MCP server**](https://gamegene.app/mcp?utm_source=game-genre-playbooks&utm_medium=readme) to your AI app (a free account is enough).
+The playbook carries the questions, the principles and a few hand-picked cases for each. For the full set of cases, records that arrived after the last update, and games in other genres, connect the [**GameGene MCP server**](https://gamegene.app/mcp?utm_source=game-genre-playbooks&utm_medium=readme) to your AI app (a free account is enough). Problems with the server itself, or ideas for its tools, go to [**gamegene-mcp**](https://github.com/gamegene-app/gamegene-mcp/issues).
 
 ## Requests
 
@@ -166,7 +166,7 @@ With the GameGene MCP server connected, the playbook tells your agent to use it 
 - 入れ方は上の Install。Claude Code なら `/plugin install game-design-playbook --marketplace gamegene-app/game-genre-playbooks` の1行で入る。手で入れるなら `skills/game-design-playbook` を `~/.claude/skills/` へ写す（1つのプロジェクトだけなら `<プロジェクト>/.claude/skills/` へ）
 - 中身は [`game-design-playbook`](skills/game-design-playbook/SKILL.md) の1つで、ジャンルをまたぐ問い10本・ローグライト（デッキ構築ローグライクを含む）7本・ホラー10本・コージー・生活シミュ9本。ジャンルの範囲は GameGene の作品のタグで切る。コージーの層には農場ものがまだ無い（Stardew Valley・牧場物語は GameGene に未収録）。次はタクティクス・戦略、その次は推理・知識で解くパズル
 - 2026年11月8日までの `skills/roguelite`（`roguelite-playbook` として入れたもの）は、16問すべてがこのスキルに入った（9問は共通の層へ、7問はローグライトの層へ）。古いフォルダは消す（`rm -rf ~/.claude/skills/roguelite-playbook`）
-- データの出どころは [GameGene](https://gamegene.app/about?utm_source=game-genre-playbooks&utm_medium=readme)。全部の事例と出典は [GameGene MCP](https://gamegene.app/mcp?utm_source=game-genre-playbooks&utm_medium=readme)（無料のアカウントで使えます）で引ける
+- データの出どころは [GameGene](https://gamegene.app/about?utm_source=game-genre-playbooks&utm_medium=readme)。全部の事例と出典は [GameGene MCP](https://gamegene.app/mcp?utm_source=game-genre-playbooks&utm_medium=readme)（無料のアカウントで使えます）で引ける。MCP サーバーそのものの不具合やツールへの要望は [gamegene-mcp](https://github.com/gamegene-app/gamegene-mcp/issues) の Issue へ
 - 新しいジャンルや観点の依頼は、このリポジトリの Issue へ。個別の作品や調査の依頼は [GameGene の調査依頼](https://gamegene.app/feedback?panel=submit&utm_source=game-genre-playbooks&utm_medium=readme) へ（GameGene の調査の順番に直接入るので、こちらのほうが早い）
 
 ## License
