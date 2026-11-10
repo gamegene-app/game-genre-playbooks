@@ -1,0 +1,116 @@
+# game-genre-playbooks
+
+[English](README.md) | **日本語**
+
+[![Genres: 3 + shared](https://img.shields.io/badge/genres-3%20%2B%20shared-2ea043)](#ジャンル)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Data: GameGene](https://img.shields.io/badge/data-GameGene-c8553d)](https://gamegene.app/about?utm_source=game-genre-playbooks&utm_medium=readme)
+[![Connect the GameGene MCP](https://img.shields.io/badge/MCP-connect%20GameGene-6e56cf)](https://gamegene.app/mcp?utm_source=game-genre-playbooks&utm_medium=readme)
+
+**ジャンルの設計判断で迷ったら、同じジャンルの作り手が出した答えと、その代償を手元に。**
+
+人の多いジャンルでは、同じ判断を何度も迫られます。数値を直しても強くならない札は、直すか外すか。次の戦いをどこまで見せるか。自分のひねりは新しいのか、見た目を替えただけか。AI に聞けば一般論は返ってきます。けれど本当に要るのは、同じ判断をした作品と、その作り手が何を選び、なぜそうし、何を捨てたかです。
+
+この作戦帳は、それを講演・インタビュー・ポストモーテムの出典つきで AI エージェント (Claude Code・Codex・Cursor などスキルを読むもの) に渡します。ジャンルをまたぐ判断の層と、ジャンルごとの判断の層の2段でできた、1つのスキルです。
+
+## 入れ方
+
+Claude Code (2.1.275 以降) なら1行です。
+
+```
+/plugin install game-design-playbook --marketplace gamegene-app/game-genre-playbooks
+```
+
+<details>
+<summary>古い Claude Code・ほかのエージェント・1つのプロジェクトだけに入れる</summary>
+
+古い Claude Code では、先にマーケットプレイスを足します。
+
+```
+/plugin marketplace add gamegene-app/game-genre-playbooks
+/plugin install game-design-playbook@gamegene
+```
+
+手で入れるならフォルダを写します。`SKILL.md` のフォルダを読むほかのエージェント (Codex・Cursor など) も同じフォルダで動きます。
+
+```bash
+git clone https://github.com/gamegene-app/game-genre-playbooks.git
+cp -R game-genre-playbooks/skills/game-design-playbook ~/.claude/skills/game-design-playbook
+# 1つのプロジェクトだけなら:
+cp -R game-genre-playbooks/skills/game-design-playbook <プロジェクト>/.claude/skills/game-design-playbook
+```
+
+**ローグライトの作戦帳から移る場合** (2026年11月8日までの `roguelite-playbook`): 16問はすべてこのスキルに入りました。両方が見えないよう、古いフォルダを消してください: `rm -rf ~/.claude/skills/roguelite-playbook`
+
+</details>
+
+あとは、いつもの言葉で設計の判断を相談するだけです。
+
+- «デッキ構築で、カードの報酬を飛ばせるようにすべき？»
+- «ホラーで、プレイヤーに反撃させるべき？»
+- «生活シミュの時計を、現実の時刻と合わせるべき？»
+
+スキルの名前を出す必要はありません。プロジェクトの CLAUDE.md や README にジャンルが書いてあれば、そのジャンルの問いを選びます。
+
+## 作り手が受け取るもの
+
+自分のデッキ構築ローグライクで使い込んだソロ開発者の声から ([全文](../../issues/2)):
+
+- **堂々巡りが短くなる。** 数値を直しても強くならない札に悩んでいたとき、«Balatro の作り手は数値を直すより外すことが多かった» と返ってきて、直すか外すかを1枚ずつ決める方針に切り替えられた
+- **選ばなかった案の代償が、作る前に分かる。** Into the Breach が戦闘に上限を置いた判断は、«戦いは進むが、慎重に遊ぶ人を罰する» という代償と一緒に届いた
+- **決めた理由を人に説明できる。** 作品・作り手・出典を指せるので、チームやパブリッシャー、遊ぶ人、未来の自分に話せる
+- **«記録が無い» も答えになる。** 作り話をせず «まだ記録に無い» と言うので、そこが自分で確かめる場所だと分かる
+- **自分のゲームの芯を言葉にできる。** «情報の地平線» «入力の運と出力の運» のような定石の言葉で、なぜ面白いのかを設計書に書ける
+
+最後に決めるのは、自分のゲームの試遊と数字です。作戦帳はその判断に出典つきの前例を添えます。
+
+## ジャンル
+
+中身は1つのスキル [`game-design-playbook`](skills/game-design-playbook/SKILL.md) です。
+
+| 層 | 問い | 例 |
+|---|---|---|
+| **ジャンルをまたぐ** (共通) | 10 | 敵の次の手をどこまで見せるか、運をどこに置くか、負けの感じ方、難易度の段、膠着、誰も使わない選択肢、チュートリアルなしで教える |
+| **ローグライト** (デッキ構築ローグライクを含む) | 7 | デッキの大きさとカード削除、カードの報酬、ランの長さ、恒久の成長、Slay the Spire から何を変えるか |
+| **ホラー** | 10 | 反撃させるか、逃げる・隠れることの代償、恐怖の緩急、怪物の AI、カメラ、セーブ、正気度 |
+| **コージー・生活シミュ** | 9 | ゲームの時計、限られた日数の暦、人間関係、離れて一緒に遊ぶ、毎日戻ってくる理由、エンディング、ペット、低い緊張 |
+
+共通の層の事例にはそれぞれ作品のジャンルが付いているので、エージェントは自分のジャンルの前例を優先しつつ、ほかのジャンルにも手を伸ばせます。ジャンルは GameGene の記録が十分に厚くなったら足します。**次はタクティクス・戦略**、その次は推理・知識で解くパズルです。コージーの層には農場ものがまだありません (Stardew Valley・牧場物語は GameGene に未収録)。農場ものの判断は «まだ記録に無い» と出ます。
+
+## 効果の計測
+
+同じ設計の問いに4つの条件で Claude Code に答えさせ、条件を伏せて別の Claude に採点させました (0〜1)。
+
+| 問い | 作戦帳なし | GameGene MCP だけ | この作戦帳 | 作戦帳 + MCP |
+|---|---|---|---|---|
+| 開発者自身のデッキ構築、10問 × 3回 | 0.31 | 0.74 | 0.92 | 0.94 |
+| ホラー、10問 × 2回 (2026年11月10日) | 0.56 | 0.84 | 0.95 | 0.96 |
+| コージー・生活シミュ、9問 × 2回 (11月9日) | 0.42 | | 0.92 | |
+| ローグライト、12問 × 3回 (11月8日) | | | 0.95 | |
+
+- どの条件の回答にも、作り話の前例はありませんでした。
+- 作戦帳のトークンは MCP だけのときの半分ほどでした。MCP だけの回答は出典の示し方が弱くなりました (2点中 1.2、作戦帳ありは 1.9)。
+- 採点者は答える側と同じ系統のモデルで、数も小さいので、目安として読んでください。
+
+方法・回ごとの注記・回し方は [eval/RESULTS.md](eval/RESULTS.md) (英語) と [評価キット](eval/) にあります。
+
+## データの出どころ
+
+すべて [**GameGene**](https://gamegene.app/about?utm_source=game-genre-playbooks&utm_medium=readme) から作っています。GameGene はゲームの設計の系譜を出典つきで記録するデータベースで、仕組みがどこから来てどこへ渡ったかを作り手自身の言葉で残し、作り手の発言と評論家の読みを分けて持っています。
+
+作戦帳は GameGene のデータベースから LLM を使わずに作り、変わったときだけここにコミットします。このリポジトリのスキルが自分からネットワークにつなぐことはありません。
+
+作戦帳が持つのは、問いと定石と、問いごとに選んだ少しの事例です。全部の事例、前回の更新の後に入った記録、ほかのジャンルの作品は、[**GameGene の MCP サーバー**](https://gamegene.app/mcp?utm_source=game-genre-playbooks&utm_medium=readme) をつなぐと引けます (無料のアカウントで使えます)。つないだときに作戦帳が MCP を使わせるのは2つだけです。問いの «まだ記録に無い» を埋めること、同じ仕組みを持つほかのジャンルの作品を探すことです。問いごとに GameGene の入口が書いてあるので、エージェントは検索せずに記録へ直行します。
+
+## 依頼
+
+| したいこと | 出す先 |
+|---|---|
+| 新しい**ジャンル**の作戦帳 | [ここで Issue を立てる](../../issues/new?template=genre-request.yml) |
+| 既存のジャンルに**設計の問い**を足す | [ここで Issue を立てる](../../issues/new?template=viewpoint-request.yml) |
+| 個別の**作品**や、作品についての**調査の問い** | [GameGene の調査依頼](https://gamegene.app/feedback?panel=submit&utm_source=game-genre-playbooks&utm_medium=readme)。GameGene の調査の順番に直接入るので、こちらのほうが早い |
+| **MCP サーバー**の不具合・ツールへの要望 | [gamegene-mcp の Issue](https://github.com/gamegene-app/gamegene-mcp/issues) |
+
+## ライセンス
+
+MIT

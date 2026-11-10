@@ -1,5 +1,7 @@
 # game-genre-playbooks
 
+**English** | [日本語](README.ja.md)
+
 [![Genres: 3 + shared](https://img.shields.io/badge/genres-3%20%2B%20shared-2ea043)](#genres)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Data: GameGene](https://img.shields.io/badge/data-GameGene-c8553d)](https://gamegene.app/about?utm_source=game-genre-playbooks&utm_medium=readme)
@@ -15,91 +17,54 @@ This playbook gives your AI agent (Claude Code, Codex, Cursor and others that re
 
 ## Install
 
-In Claude Code (2.1.275 or later), install it as a plugin in one step:
+In Claude Code (2.1.275 or later):
 
 ```
 /plugin install game-design-playbook --marketplace gamegene-app/game-genre-playbooks
 ```
 
-On older versions, add the marketplace first, then install:
+<details>
+<summary>Older Claude Code, other agents, or a single project</summary>
+
+On older Claude Code, add the marketplace first:
 
 ```
 /plugin marketplace add gamegene-app/game-genre-playbooks
 /plugin install game-design-playbook@gamegene
 ```
 
-Or copy the playbook folder into your agent's skills folder by hand. For Claude Code:
+Or copy the folder by hand. Other agents that read `SKILL.md` folders (Codex, Cursor and others) take the same folder.
 
 ```bash
 git clone https://github.com/gamegene-app/game-genre-playbooks.git
 cp -R game-genre-playbooks/skills/game-design-playbook ~/.claude/skills/game-design-playbook
-```
-
-To use it in one project only, copy it into that project's `.claude/skills/` instead:
-
-```bash
+# one project only:
 cp -R game-genre-playbooks/skills/game-design-playbook <your-project>/.claude/skills/game-design-playbook
 ```
 
-Other agents that read `SKILL.md` folders (Codex, Cursor and others) take the same folder. Then ask your agent about a design call, for example "Should my deckbuilder let players skip card rewards?" "Should the player in my horror game be able to fight back?" or "Should my life sim run on the real clock?" If your project's CLAUDE.md or README names the genre, the agent picks the genre's questions from there.
+**Upgrading from the roguelite playbook** (`roguelite-playbook`, until 8 November 2026): its 16 questions are all in this skill now. Delete the old folder so the agent does not see both: `rm -rf ~/.claude/skills/roguelite-playbook`
 
-**Upgrading from the roguelite playbook.** Until 8 November 2026 this repository shipped `skills/roguelite`, installed as `roguelite-playbook`. Its 16 questions are all in `game-design-playbook` now: 9 moved to the shared layer and 7 stayed in the roguelite layer. Delete the old folder (`rm -rf ~/.claude/skills/roguelite-playbook`) so the agent does not see both.
+</details>
 
-## What a game maker gets
+Then ask your agent about a design call in your own words, for example:
 
-From a solo developer who used the roguelite playbook on their own deckbuilder ([full write-up](../../issues/2)):
+- "Should my deckbuilder let players skip card rewards?"
+- "Should the player in my horror game be able to fight back?"
+- "Should my life sim run on the real clock?"
+
+You do not need to name the skill. If your project's CLAUDE.md or README names the genre, the agent picks that genre's questions.
+
+## What you get
+
+From a solo developer who used it on their own deckbuilder ([full write-up](../../issues/2)):
 
 - **Less time going in circles.** A card that numbers could not fix stopped being an endless tuning loop once the answer came back that Balatro's developer cut cards more often than he retuned them.
 - **The cost of the road not taken, before you build it.** Into the Breach's cap on battle length came with its downside: it keeps fights moving, and it punishes slow, careful play.
 - **A reason you can point to.** Each decision rests on a named game, a named developer and a source, so you can explain it to your team, a publisher, players, or your future self.
 - **"Not on record" is an answer too.** When nothing is recorded, the playbook says so instead of inventing a case. That marks the spot you will have to test yourself, and maybe where you are doing something new.
-- **Words for your game's core.** Principles such as "information horizon" and "input vs output randomness" turn a hunch about why your battles work into something you can write in a design doc.
-- **No digging.** You do not have to hunt through talks and postmortems. Ask in your own language; the agent picks up the playbook without being told its name.
+- **Words for your game's core.** Principles such as "information horizon" and "input vs output randomness" turn a hunch into something you can write in a design doc.
 
 The playbook adds sourced precedents to a decision. Your own playtests and numbers still decide it.
-
-## Does it help? (measured)
-
-The same developer had Claude Code answer 10 design questions from their project, 3 times each, under each condition. A separate Claude graded the answers without knowing the condition ([method and details](../../issues/3)).
-
-| Condition | Score (0–1) |
-|---|---|
-| No playbook, no GameGene | 0.31 |
-| GameGene MCP only | 0.74 |
-| This playbook | 0.92 |
-| This playbook + GameGene MCP | 0.94 |
-
-- Without a source of precedents, every precedent-related item scored zero
-- The playbook alone used about half the tokens of the MCP alone
-- No condition produced an invented precedent in the graded answers
-
-The grader is the same model family as the answerer and each condition has 30 answers, so read the numbers as a rough guide. The two playbook rows are the current SKILL.md, measured in a second run on the same questions; the other two rows are from the first run.
-
-After the playbook was split into a shared layer and genre layers (8 November 2026), we re-ran the [eval kit](eval/) without a project, from empty folders, playbook only (no MCP), 3 answers per question:
-
-| Questions | Before the split | After the split |
-|---|---|---|
-| 12 roguelite questions | 0.94 | 0.95 |
-
-And the horror layer, 10 horror questions × 2 answers each. It was measured again on 10 November 2026, after adding new developer statements (Frictional, Outlast, Resident Evil 2 (2019), Left 4 Dead, Alien: Isolation's search behaviour), this time with all four conditions. The ranking compares the four conditions, so 1 is best and 4 is worst:
-
-| Condition | Score (0–1) | Blind ranking (1–4) |
-|---|---|---|
-| No playbook, no GameGene | 0.56 | 4.0 |
-| GameGene MCP only | 0.84 | 1.8 |
-| This playbook | 0.95 | 2.1 |
-| This playbook + GameGene MCP | 0.96 | 2.1 |
-
-With MCP only, answers rank well but cite their sources less clearly (sourcing 1.2 of 2 against 1.9 with the playbook). The first measurement (8 November, playbook vs none) gave 0.94 and 0.56.
-
-And the cozy layer (9 November 2026), 9 cozy and life-sim questions × 2 answers each:
-
-| Condition | Score (0–1) | Blind ranking (1 = best) |
-|---|---|---|
-| No playbook, no GameGene | 0.42 | 2.0 |
-| This playbook | 0.92 | 1.0 (first on all 9 questions) |
-
-No invented precedent was found in any of these answers either. Same caveats as above: same-family grader, small numbers.
 
 ## Genres
 
@@ -112,62 +77,41 @@ All in one skill, [`game-design-playbook`](skills/game-design-playbook/SKILL.md)
 | **Horror** | 10 | whether the player can fight back, what escaping and hiding cost, pacing fear, monster AI, camera, saving, sanity |
 | **Cozy games and life sims** | 9 | the game clock, a calendar of limited days, relationships, playing together apart, coming back daily, endings, pets, low stakes |
 
-Roguelites came first because the records are thickest there; horror second, because its developers' own statements are nearly as many; then cozy games and life sims. The cozy layer has no farming game yet (Stardew Valley and Harvest Moon / Story of Seasons are not on GameGene's records), so farming decisions are listed as "not on record yet" in its references. A genre is scoped by GameGene's game tags, and each case in the shared layer is labelled with its game's genres, so the agent can prefer a precedent from your genre and still reach across genres. More genres are added once their records are complete enough; the next is tactics and strategy games, then puzzle games built on deduction and knowledge.
+Each case in the shared layer is labelled with its game's genres, so the agent can prefer a precedent from your genre and still reach across genres. A genre is added once GameGene's records for it are thick enough. **Next: tactics and strategy**, then puzzle games built on deduction and knowledge. The cozy layer has no farming game yet (Stardew Valley and Story of Seasons are not on GameGene's records), so farming decisions show as "not on record yet".
+
+## Does it help?
+
+Claude Code answered the same design questions under four conditions, and a separate Claude graded the answers without knowing the condition (0–1).
+
+| Questions | No playbook | GameGene MCP only | This playbook | Playbook + MCP |
+|---|---|---|---|---|
+| A developer's own deckbuilder, 10 × 3 answers | 0.31 | 0.74 | 0.92 | 0.94 |
+| Horror, 10 × 2 (10 Nov 2026) | 0.56 | 0.84 | 0.95 | 0.96 |
+| Cozy games and life sims, 9 × 2 (9 Nov 2026) | 0.42 | | 0.92 | |
+| Roguelites, 12 × 3 (8 Nov 2026) | | | 0.95 | |
+
+- No graded answer under any condition contained an invented precedent.
+- The playbook used about half the tokens of the MCP alone. MCP-only answers cited their sources less clearly (1.2 of 2 against 1.9 with the playbook).
+- The grader is the same model family as the answerer and the samples are small, so read these as a rough guide.
+
+Method, per-run notes and how to re-run: [eval/RESULTS.md](eval/RESULTS.md) and the [eval kit](eval/).
 
 ## Where the data comes from
 
 Everything here is generated from [**GameGene**](https://gamegene.app/about?utm_source=game-genre-playbooks&utm_medium=readme), a sourced database of game design lineage. GameGene records where a mechanic came from and where it went, in the developers' own words, and keeps a developer's statement apart from a critic's reading.
 
-The playbook carries the questions, the principles and a few hand-picked cases for each. For the full set of cases, records that arrived after the last update, and games in other genres, connect the [**GameGene MCP server**](https://gamegene.app/mcp?utm_source=game-genre-playbooks&utm_medium=readme) to your AI app (a free account is enough). Problems with the server itself, or ideas for its tools, go to [**gamegene-mcp**](https://github.com/gamegene-app/gamegene-mcp/issues).
+The playbooks are generated from GameGene's database without an LLM, and committed here only when something changed. No skill in this repository calls the network on its own.
+
+The playbook carries the questions, the principles and a few hand-picked cases for each. For the full set of cases, records added since the last update, and games in other genres, connect the [**GameGene MCP server**](https://gamegene.app/mcp?utm_source=game-genre-playbooks&utm_medium=readme) (a free account is enough). With it connected, the playbook tells your agent to use it for two things only: filling a question's "not on record yet" gaps, and finding games in other genres that share the same mechanism. Each question lists GameGene entry points, so the agent goes straight to the records instead of searching.
 
 ## Requests
 
-| What you want | Where to ask |
+| What you want | Where |
 |---|---|
 | A new **genre** playbook | [Open an issue here](../../issues/new?template=genre-request.yml) |
-| A new **design question** or viewpoint for an existing genre | [Open an issue here](../../issues/new?template=viewpoint-request.yml) |
-| A specific **game**, or a **research question** about one | [Send a research request on GameGene](https://gamegene.app/feedback?panel=submit&utm_source=game-genre-playbooks&utm_medium=readme). It goes straight into GameGene's research queue, so it is usually handled sooner than an issue here, and the result reaches every playbook that uses it |
-
-## How it works
-
-The playbooks are generated from GameGene's database, without an LLM, and committed here only when something changed. No skill in this repository calls the network on its own.
-
-With the GameGene MCP server connected, the playbook tells your agent to use it for two things only: filling a question's "not on record yet" gaps, and finding games in other genres that share the same mechanism. Each question lists GameGene entry points (principle and gene slugs), so the agent can go straight to the records instead of searching.
-
----
-
-## 日本語
-
-**ジャンルの設計判断で迷ったら、同じジャンルの作り手が出した答えと、その代償を手元に。**
-
-人の多いジャンルでは、同じ判断を何度も迫られます。数値を直しても強くならない札は、直すか外すか。次の戦いをどこまで見せるか。自分のひねりは新しいのか、見た目を替えただけか。AI に聞けば一般論は返ってきます。けれど本当に要るのは、同じ判断をした作品と、その作り手が何を選び、なぜそうし、何を捨てたかです。この作戦帳は、それを講演・インタビュー・ポストモーテムの出典つきで AI に渡します。ジャンルをまたぐ判断の層と、ジャンルごとの判断の層の2段でできた、1つのスキルです。
-
-### 作り手が受け取るもの
-
-自分のデッキ構築ローグライクで使い込んだソロ開発者の声から（[全文](../../issues/2)）:
-
-- **堂々巡りが短くなる。** 数値を直しても強くならない札に悩んでいたとき、«Balatro の作り手は数値を直すより外すことが多かった» と返ってきて、直すか外すかを1枚ずつ決める方針に切り替えられた
-- **選ばなかった案の代償が、作る前に分かる。** Into the Breach が戦闘に上限を置いた判断は、«戦いは進むが、慎重に遊ぶ人を罰する» という代償と一緒に届いた
-- **決めた理由を人に説明できる。** 作品・作り手・出典を指せるので、チームやパブリッシャー、遊ぶ人、未来の自分に話せる
-- **«記録が無い» も答えになる。** 作り話をせず «まだ記録に無い» と言うので、そこが自分で確かめる場所だと分かる
-- **自分のゲームの芯を言葉にできる。** «情報の地平線» «入力の運と出力の運» のような定石の言葉で、なぜ面白いのかを設計書に書ける
-- **調べ物が要らない。** 日本語で相談するだけで、スキル名を出さなくても前例が添えられる
-
-最後に決めるのは、自分のゲームの試遊と数字です。作戦帳はその判断に出典つきの前例を添えます。
-
-### 効果の計測
-
-同じ開発者が、自分のゲームの設計判断10問を各条件で3回ずつ答えさせ、条件を伏せて別の Claude に採点させました（[方法と詳細](../../issues/3)）。前例の情報源が無いと 0.31、GameGene MCP だけで 0.74、この作戦帳で 0.92、作戦帳と MCP で 0.94 でした。作戦帳だけのときのトークンは MCP だけのときの半分ほどで、どの条件でも作り話の前例は出ませんでした。採点者は答える側と同じ系統のモデルで、1条件30回答の規模なので、目安として読んでください。作戦帳の2行は今の SKILL.md を同じ問いで測り直した値で、ほかの2行は最初の計測の値です。
-
-共通の層とジャンルの層に分けた後（2026年11月8日）、[評価キット](eval/)で空のフォルダから作戦帳だけ（MCP なし）を測り直しました。ローグライトの12問（各3回）は分ける前 0.94、分けた後 0.95。ホラーの層は、ホラーの10問（各2回）で作戦帳なし 0.56、作戦帳あり 0.94 で、条件を伏せた順位づけでは10問すべてで作戦帳ありが1位でした。11月10日に新しく入った作り手の言（Frictional・Outlast・バイオハザード RE:2・Left 4 Dead・Alien: Isolation の隠れ場所の探し方）を足して4条件で測り直すと、作戦帳なし 0.56、MCP だけ 0.84、作戦帳 0.95、作戦帳と MCP 0.96 でした。MCP だけの回答は順位では健闘しましたが、出典の示し方が弱くなりました（2点中 1.2、作戦帳ありは 1.9）。コージー・生活シミュの層（2026年11月9日）は9問（各2回）で作戦帳なし 0.42、作戦帳あり 0.92、順位は9問すべてで作戦帳ありが1位でした。どの回答にも作り話の前例はありませんでした。
-
-### 入れ方と依頼
-
-- 入れ方は上の Install。Claude Code なら `/plugin install game-design-playbook --marketplace gamegene-app/game-genre-playbooks` の1行で入る。手で入れるなら `skills/game-design-playbook` を `~/.claude/skills/` へ写す（1つのプロジェクトだけなら `<プロジェクト>/.claude/skills/` へ）
-- 中身は [`game-design-playbook`](skills/game-design-playbook/SKILL.md) の1つで、ジャンルをまたぐ問い10本・ローグライト（デッキ構築ローグライクを含む）7本・ホラー10本・コージー・生活シミュ9本。ジャンルの範囲は GameGene の作品のタグで切る。コージーの層には農場ものがまだ無い（Stardew Valley・牧場物語は GameGene に未収録）。次はタクティクス・戦略、その次は推理・知識で解くパズル
-- 2026年11月8日までの `skills/roguelite`（`roguelite-playbook` として入れたもの）は、16問すべてがこのスキルに入った（9問は共通の層へ、7問はローグライトの層へ）。古いフォルダは消す（`rm -rf ~/.claude/skills/roguelite-playbook`）
-- データの出どころは [GameGene](https://gamegene.app/about?utm_source=game-genre-playbooks&utm_medium=readme)。全部の事例と出典は [GameGene MCP](https://gamegene.app/mcp?utm_source=game-genre-playbooks&utm_medium=readme)（無料のアカウントで使えます）で引ける。MCP サーバーそのものの不具合やツールへの要望は [gamegene-mcp](https://github.com/gamegene-app/gamegene-mcp/issues) の Issue へ
-- 新しいジャンルや観点の依頼は、このリポジトリの Issue へ。個別の作品や調査の依頼は [GameGene の調査依頼](https://gamegene.app/feedback?panel=submit&utm_source=game-genre-playbooks&utm_medium=readme) へ（GameGene の調査の順番に直接入るので、こちらのほうが早い）
+| A new **design question** for an existing genre | [Open an issue here](../../issues/new?template=viewpoint-request.yml) |
+| A specific **game**, or a **research question** about one | [Research request on GameGene](https://gamegene.app/feedback?panel=submit&utm_source=game-genre-playbooks&utm_medium=readme). It goes straight into GameGene's research queue, so it is usually handled sooner |
+| A problem with the **MCP server**, or an idea for its tools | [gamegene-mcp issues](https://github.com/gamegene-app/gamegene-mcp/issues) |
 
 ## License
 
