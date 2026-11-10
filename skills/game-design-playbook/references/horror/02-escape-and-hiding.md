@@ -16,14 +16,6 @@ Split luck into input randomness, dealt before the player chooses, and output ra
 
 #### Clock Tower
 
-In Clock Tower the vitality that keeps Jennifer alive is also what pays for every escape: running spends it, the panic button that breaks the Scissorman's grip spends a lot of it, and it comes back only while she sits down. The rule its director states is that a horror heroine cannot run indefinitely.
-
-- Source: [VC クロックタワー（Wii バーチャルコンソール） 遊びかた](https://www.nintendo.co.jp/wii/vc/vc_ct/vc_ct_04.html) (任天堂)
-- Source: [The Making Of: Clock Tower, The SNES Horror That's Getting A Second Chance To Scare](https://www.timeextension.com/features/the-making-of-clock-tower-the-snes-horror-thats-getting-a-second-chance-to-scare) (Time Extension, 2023)
-- GameGene: https://gamegene.app/en/library/records/claims/2438f970-fbe5-4152-ba9b-170d3d60449f
-
-#### Clock Tower
-
 Clock Tower put a haunted-house exploration game on top of an encounter system made only of flight and concealment: the player has no attack action, nothing done during an encounter defeats the Scissorman, and whether a hiding place works is settled by chance, which its director says was deliberate.
 
 - Went against this principle (`reduce-output-randomness`)
@@ -31,16 +23,25 @@ Clock Tower put a haunted-house exploration game on top of an encounter system m
 - Source: [The making of Clock Tower: "The most important thing for me was the stillness"](https://www.gamesradar.com/the-making-of-clock-tower-1995-snes/) (GamesRadar+ (Retro Gamer issue 218), 2021)
 - GameGene: https://gamegene.app/en/library/records/claims/0e0c7b49-d693-4c74-acc2-7fc4e8adfe9e
 
+#### Amnesia: The Bunker
+
+Fredrik Olsson checked every new mechanic against whether hiding under a table would still be the answer. While the generator burns fuel, a Shepard tone that seems to fall forever plays under its sound, an idea taken from the sense of time in Christopher Nolan's Dunkirk, so the longer you hide, the closer the dark feels.
+
+- Source: [The Making of Amnesia: The Bunker (interview with Fredrik Olsson)](https://superjumpmagazine.com/the-making-of-amnesia-the-bunker) (SUPERJUMP, 2024)
+- Source: [A Dark Descent Into Amnesia: The Bunker, With Its Creators](https://www.dualshockers.com/amnesia-the-bunker-interview-need-to-know/) (DualShockers, 2023)
+- GameGene: https://gamegene.app/en/library/records/claims/664516b9-2e77-4d74-9142-471e8c694312
+
 #### Alien: Isolation
 
-Because the team saw loops as a key need of the alien's AI, every level is built on loops with barely any dead ends. Level designer James Green says the noise made by whatever pushes the player toward an objective is no accident, and his team's levels followed the mantra of low frequency, high impact.
+Asked in 2014 how the alien knew a player was in a locker, Gary Napper said its search was modelled on a person looking for someone in an unfamiliar building. It looks around at first, narrows to a room once it hears something and checks every area there, and does not leave if it senses someone is present.
 
-- Source: [How Creative Assembly Built Its Perfectly Evolved AI Xenomorph](https://www.gameinformer.com/retrospective/2025/06/24/how-creative-assembly-built-its-perfectly-evolved-ai-xenomorph) (Game Informer, 2025)
-- GameGene: https://gamegene.app/en/library/records/claims/9ad70766-53b4-4a9c-b174-90ed92f7504e
+- Source: ['Alien: Isolation' Dev On Staying True To The Film And Evoking "Total Fear"](https://bloody-disgusting.com/news/3279615/alien-isolation-dev-on-staying-true-to-the-film-and-evoking-total-fear/) (Bloody Disgusting, 2014)
+- Source: [Alien Isolation Mega Interview: 'No Game Comes Close To The Dynamic AI of The Alien We Have'](https://gamingbolt.com/alien-isolation-mega-interview-no-game-comes-close-to-the-dynamic-ai-of-the-alien-we-have) (GamingBolt, 2014)
+- GameGene: https://gamegene.app/en/library/records/claims/cd346f9e-363c-40f1-9e24-f6942dc6ee36
 
 ### Not on record yet
 
-- Developers explaining how a hiding spot tells the player whether it is safe, or how often the monster should search one
+- Developers explaining how a hiding spot tells the player whether it is safe
 
 Ask GameGene to research it: https://gamegene.app/en/feedback?panel=submit
 
@@ -68,14 +69,6 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 #### Clock Tower
 
-クロックタワーでは、ジェニファーを生かしている体力が、逃げるたびに削られる。走れば減り、シザーマンの手を振りほどくパニックボタンは大きく減らし、体力は座り込んで休んでいる間しか戻らない。ディレクターの河野一二三が挙げている決まりは、ホラー映画のヒロインは走り続けられない、というものである。
-
-- 出典: [VC クロックタワー（Wii バーチャルコンソール） 遊びかた](https://www.nintendo.co.jp/wii/vc/vc_ct/vc_ct_04.html) (任天堂)
-- 出典: [The Making Of: Clock Tower, The SNES Horror That's Getting A Second Chance To Scare](https://www.timeextension.com/features/the-making-of-clock-tower-the-snes-horror-thats-getting-a-second-chance-to-scare) (Time Extension, 2023)
-- GameGene: https://gamegene.app/library/records/claims/2438f970-fbe5-4152-ba9b-170d3d60449f
-
-#### Clock Tower
-
 クロックタワーは、洋館を歩く探索の上に、逃げることと隠れることだけでできた遭遇を載せた。プレイヤーは攻撃をアクションとして持たず、遭遇のなかでシザーマンを倒せる操作は用意されていない。隠れ場所が通用するかどうかは確率で決まり、ディレクターの河野一二三はそれを意図してそうしたと述べている。
 
 - この定石の逆を選んだ (`reduce-output-randomness`)
@@ -83,16 +76,25 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 - 出典: [The making of Clock Tower: "The most important thing for me was the stillness"](https://www.gamesradar.com/the-making-of-clock-tower-1995-snes/) (GamesRadar+ (Retro Gamer issue 218), 2021)
 - GameGene: https://gamegene.app/library/records/claims/0e0c7b49-d693-4c74-acc2-7fc4e8adfe9e
 
+#### Amnesia: The Bunker
+
+フレドリック・オルソンは、仕組みを足すたびに «机の下に隠れていれば済むか» を問い直した。燃料を食う発電機が回る間、下がり続けて聞こえるシェパードトーンを鳴らしたのは、時間を意識させるクリストファー・ノーランの『ダンケルク』からの着想で、隠れて待つほど暗闇が近づくと感じさせる。
+
+- 出典: [The Making of Amnesia: The Bunker (interview with Fredrik Olsson)](https://superjumpmagazine.com/the-making-of-amnesia-the-bunker) (SUPERJUMP, 2024)
+- 出典: [A Dark Descent Into Amnesia: The Bunker, With Its Creators](https://www.dualshockers.com/amnesia-the-bunker-interview-need-to-know/) (DualShockers, 2023)
+- GameGene: https://gamegene.app/library/records/claims/664516b9-2e77-4d74-9142-471e8c694312
+
 #### Alien: Isolation
 
-チームは輪の構造をエイリアンのAIに欠かせないものと見て、どの面も輪の形に組み、行き止まりはほとんど無い。レベルデザイナーのジェームズ・グリーンは、目的地へ押し出す仕掛けが大きな音を立てるのは偶然ではないと語り、彼のチームの面は «頻度は低く、衝撃は大きく» に従った。
+ゲイリー・ナッパーは2014年、ロッカーに隠れた遊び手になぜ気づいたのかと問われ、エイリアンの探し方は知らない建物で人を探す人に倣ったと答えた。初めは辺りを見て回り、物音を聞くとその部屋に絞って隅々まで調べ、誰かいると感じれば立ち去らない。
 
-- 出典: [How Creative Assembly Built Its Perfectly Evolved AI Xenomorph](https://www.gameinformer.com/retrospective/2025/06/24/how-creative-assembly-built-its-perfectly-evolved-ai-xenomorph) (Game Informer, 2025)
-- GameGene: https://gamegene.app/library/records/claims/9ad70766-53b4-4a9c-b174-90ed92f7504e
+- 出典: ['Alien: Isolation' Dev On Staying True To The Film And Evoking "Total Fear"](https://bloody-disgusting.com/news/3279615/alien-isolation-dev-on-staying-true-to-the-film-and-evoking-total-fear/) (Bloody Disgusting, 2014)
+- 出典: [Alien Isolation Mega Interview: 'No Game Comes Close To The Dynamic AI of The Alien We Have'](https://gamingbolt.com/alien-isolation-mega-interview-no-game-comes-close-to-the-dynamic-ai-of-the-alien-we-have) (GamingBolt, 2014)
+- GameGene: https://gamegene.app/library/records/claims/cd346f9e-363c-40f1-9e24-f6942dc6ee36
 
 ### まだ記録に無いもの
 
-- 隠れ場所が安全かどうかをどう伝えるか、怪物がどのくらいの頻度で隠れ場所を探すかを語った作り手
+- 隠れ場所が安全かどうかを遊び手にどう伝えるかを語った作り手
 
 GameGene に調査を依頼する: https://gamegene.app/feedback?panel=submit
 

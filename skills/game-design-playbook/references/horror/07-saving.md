@@ -20,7 +20,7 @@ Gary Napper, who loved how Gears of War's active reload added emotion to a plain
 
 ### Not on record yet
 
-- The developer's own reasoning for limiting saves with a consumable item (Resident Evil's ink ribbons are on record, but not yet in the developer's words)
+- The developer's own reasoning for limiting saves with a consumable item, and for making it optional (Resident Evil 2 (2019) keeps ink ribbons only on Hardcore; the reason is on record only as reported speech)
 
 Ask GameGene to research it: https://gamegene.app/en/feedback?panel=submit
 
@@ -52,7 +52,7 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 ### まだ記録に無いもの
 
-- 消耗品でセーブの回数を限った理由を作り手の言葉で (バイオハザードのインクリボンは記録に在るが、作り手の言はまだ)
+- 消耗品でセーブの回数を限った理由と、それを選べる難度に絞った理由を作り手の言葉で (バイオハザード RE:2 はインクリボンを Hardcore だけに残したが、理由は報道の又聞きしか記録に無い)
 
 GameGene に調査を依頼する: https://gamegene.app/feedback?panel=submit
 

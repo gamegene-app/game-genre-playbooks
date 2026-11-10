@@ -21,10 +21,6 @@ Heroes shed stress between missions by resting at town facilities such as the ta
 - Source: [Game Design Deep Dive: Darkest Dungeon's Affliction System](https://www.gamedeveloper.com/design/game-design-deep-dive-i-darkest-dungeon-s-i-affliction-system) (Gamasutra, 2015)
 - GameGene: https://gamegene.app/en/library/records/claims/e43c8097-34bf-4c79-8d08-266528b7b736
 
-### Related cases filed under other questions
-
-- Clock Tower: a single vitality meter that panic and running drain, recovered only by resting → [02 When the player can only run and hide, what should that cost?](../horror/02-escape-and-hiding.md)
-
 ### Not on record yet
 
 - Developers explaining a sanity effect that distorts what the player sees or hears, and why they kept or cut it
@@ -59,10 +55,6 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 - 出典: [Game Design Deep Dive: Darkest Dungeon's Affliction System](https://www.gamedeveloper.com/design/game-design-deep-dive-i-darkest-dungeon-s-i-affliction-system) (Gamasutra, 2015)
 - GameGene: https://gamegene.app/library/records/claims/e43c8097-34bf-4c79-8d08-266528b7b736
-
-### ほかの問いに置いた関係する事例
-
-- Clock Tower: パニックと走りで削られ、休むことでしか戻らない体力 → [02 逃げて隠れるしかないとき、それに何を払わせるか](../horror/02-escape-and-hiding.md)
 
 ### まだ記録に無いもの
 

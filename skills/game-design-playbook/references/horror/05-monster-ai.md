@@ -13,6 +13,14 @@ Andy Bray and the team reasoned that a player scared all the time would give up,
 - Source: [The Design of Alien: Isolation](https://www.youtube.com/watch?v=wNIfQzAOKT4&t=612s) (Noclip (YouTube))
 - GameGene: https://gamegene.app/en/library/records/claims/c7ce22a7-616a-46bb-91af-9eb6377b60cf
 
+#### Resident Evil 2
+
+Kazunori Kadoi deliberately brought in the Tyrant after players had learned the police station's layout and creature placement, to throw that familiar place into disorder. The Tyrant reacts to sound and tracks the player across rooms. Hiding and staying quiet can get players through, but key moments such as finding an important item force an encounter, and his senses sharpen if he fails to find the player.
+
+- Source: [シリーズ最新作『バイオハザード RE：2』で意識したのはプレイフィール!? 恐怖のポイントやこだわりを語る](https://dengekionline.com/elem/000/001/846/1846340/) (電撃オンライン, 2018)
+- Source: [Resident Evil 2 director talks Mr. X's AI, scary footsteps, and the DMX mod](https://www.pcgamer.com/resident-evil-2s-director-talks-mr-xs-ai-scary-footsteps-and-the-dmx-mod) (PC Gamer, 2019)
+- GameGene: https://gamegene.app/en/library/records/claims/7e94afcc-8d0c-40bc-a817-baad64bdb745
+
 #### Rain World
 
 Joar Jakobsson built Rain World's creature AI by asking how each creature could find food and get home before night, not how it could serve as an obstacle, and gave it no set patrol paths. The player gets no special treatment and gets by reading their hunting habits, hiding, tricking and outwitting them.
@@ -47,6 +55,14 @@ All cases, related games and newer records: the GameGene MCP server (`gamegene_j
 
 - 出典: [The Design of Alien: Isolation](https://www.youtube.com/watch?v=wNIfQzAOKT4&t=612s) (Noclip (YouTube))
 - GameGene: https://gamegene.app/library/records/claims/c7ce22a7-616a-46bb-91af-9eb6377b60cf
+
+#### Resident Evil 2
+
+門井一憲は、地形とクリーチャーの配置を覚えた警察署にタイラントをあえて登場させ、慣れた場所を引っかき回すことを狙った。タイラントは音に反応して部屋を越えて追う。隠れて音を立てなければ切り抜けられるが、重要な品を拾う場面などでは遭遇が強いられ、見つけられずにいると感覚が鋭くなる。
+
+- 出典: [シリーズ最新作『バイオハザード RE：2』で意識したのはプレイフィール!? 恐怖のポイントやこだわりを語る](https://dengekionline.com/elem/000/001/846/1846340/) (電撃オンライン, 2018)
+- 出典: [Resident Evil 2 director talks Mr. X's AI, scary footsteps, and the DMX mod](https://www.pcgamer.com/resident-evil-2s-director-talks-mr-xs-ai-scary-footsteps-and-the-dmx-mod) (PC Gamer, 2019)
+- GameGene: https://gamegene.app/library/records/claims/7e94afcc-8d0c-40bc-a817-baad64bdb745
 
 #### Rain World
 

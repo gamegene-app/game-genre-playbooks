@@ -2,12 +2,12 @@
   "version": 1,
   "genre": "horror",
   "playbook": "game-design-playbook",
-  "playbookCommit": "4f60938",
+  "playbookCommit": "613e750",
   "team": {
     "ja": "一人称のサバイバルホラーを作っている小さなインディーチーム",
     "en": "a small indie team making a first-person survival horror game"
   },
-  "notes": "Genre-level design questions a horror developer typically asks. Same fields as roguelite.json: goldQuestions are playbook question ids (shared or horror layer), goldCases the cases the playbook holds for them, expectGap what the playbook lists as not on record (null when it has no gap for it). The last question is a control with no matching reference. Fear and feel are hard to score with a rubric, so read rank.mjs alongside the scores (game-genre-playbooks#4 §6). Re-check goldCases and expectGap whenever the playbook is regenerated, and update playbookCommit.",
+  "notes": "Genre-level design questions a horror developer typically asks. Same fields as roguelite.json: goldQuestions are playbook question ids (shared or horror layer), goldCases the cases the playbook holds for them, expectGap what the playbook lists as not on record (null when it has no gap for it). The last question is a control with no matching reference. Fear and feel are hard to score with a rubric, so read rank.mjs alongside the scores (game-genre-playbooks#4 §6). Re-check goldCases and expectGap whenever the playbook is regenerated, and update playbookCommit. 2026-11-10: gold cases updated for the horror layer refresh (GameGene#3070).",
   "questions": [
     {
       "id": "H01-no-weapons",
@@ -23,7 +23,9 @@
       "goldCases": [
         "Amnesia (no means of defence: a weapon would define the player's role)",
         "Alien: Isolation (the alien cannot be killed; flamethrower and noise only drive it off; the player is prey)",
-        "Clock Tower (kept Alone in the Dark's helplessness, removed its weapons)",
+        "Outlast (weighed Resident Evil-style scarce guns against Amnesia-style no combat and chose no combat for a more focused experience)",
+        "Penumbra: Overture (went the other way: deliberately clumsy 'tools', but players attacked with them, so the next game removed weapons)",
+        "Amnesia: The Bunker (went the other way: a revolver with very few bullets that never kills the monster, so each shot is a choice)",
         "Bloodborne (went the other way: added guns, but kept them weak so it did not become a shooter)",
         "Fatal Frame (a camera as the weapon, which works only when the player looks at the ghost)"
       ],
@@ -41,10 +43,10 @@
       ],
       "goldCases": [
         "Clock Tower (whether a hiding place works is settled by chance, on purpose)",
-        "Clock Tower (running and panicking drain vitality, recovered only by resting)",
-        "Alien: Isolation (levels built as loops with almost no dead ends, for the alien's AI)"
+        "Amnesia: The Bunker (hiding burns generator fuel, so waiting lets the dark close in)",
+        "Alien: Isolation (the alien searches like a person hunting a room: looks around, narrows to the room it heard, and will not leave if it senses someone)"
       ],
-      "expectGap": "No developer on record explaining how a hiding spot tells the player whether it is safe, or how often the monster should search one"
+      "expectGap": "No developer on record explaining how a hiding spot tells the player whether it is safe"
     },
     {
       "id": "H03-stalker-ai",
@@ -59,6 +61,7 @@
       ],
       "goldCases": [
         "Alien: Isolation (a director that always knows the player's position measures pressure, gives the alien hints and sends it into the vents; the alien finds the player by its own senses)",
+        "Resident Evil 2 (2019) (the Tyrant is let loose in a station the player has learned, follows sound across rooms, and its senses sharpen when it cannot find the player)",
         "Rain World (creatures act on their own goals with no fixed patrol routes)"
       ],
       "expectGap": "No developer on record explaining when they chose scripted scares over a systemic monster, and what they gave up"
@@ -74,9 +77,10 @@
         "monster-ai"
       ],
       "goldCases": [
+        "Left 4 Dead (the AI Director estimates each survivor's intensity and holds back big threats when it is too high)",
         "Fatal Frame II (after the first game was called too scary to finish, started gentle and ramped up, carried by the story)",
-        "Alien: Isolation (constant fear makes players quit, so the director lets the alien withdraw when pressure peaks)",
-        "Alien: Isolation (scripted moments follow 'low frequency, high impact')"
+        "SOMA (added a Safe Mode after players found the monsters too hard; the player cannot die, but monsters stay dangerous if pushed)",
+        "Alien: Isolation (constant fear makes players quit, so the director lets the alien withdraw when pressure peaks)"
       ],
       "expectGap": "No developer on record explaining how they measured or tuned the rhythm of scares in playtests"
     },
@@ -141,8 +145,7 @@
       ],
       "goldCases": [
         "Darkest Dungeon (stress as wargame morale: stressed heroes disobey)",
-        "Darkest Dungeon (stress is worked off in town buildings with limited slots, like a board game)",
-        "Clock Tower (one vitality meter drained by panic and running, recovered only by resting)"
+        "Darkest Dungeon (stress is worked off in town buildings with limited slots, like a board game)"
       ],
       "expectGap": "No developer on record explaining a sanity effect that distorts what the player sees or hears, and why they kept or cut it"
     },
