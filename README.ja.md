@@ -1,5 +1,7 @@
 # game-genre-playbooks
 
+> **アーカイブしました (2026-11-12)。** このリポジトリはもう更新しません。作り手の狙い・捨てた案・定石を出典つきで引くには、GameGene の MCP をつないでください: https://gamegene.app/mcp
+
 [English](README.md) | **日本語**
 
 [![Genres: 3 + shared](https://img.shields.io/badge/genres-3%20%2B%20shared-2ea043)](#ジャンル)

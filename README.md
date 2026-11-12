@@ -1,5 +1,7 @@
 # game-genre-playbooks
 
+> **Archived (2026-11-12).** This repository is no longer updated. For sourced game-design precedents (makers' intent, rejected ideas, and recurring design judgements), connect the GameGene MCP server instead: https://gamegene.app/mcp
+
 **English** | [日本語](README.ja.md)
 
 [![Genres: 3 + shared](https://img.shields.io/badge/genres-3%20%2B%20shared-2ea043)](#genres)
